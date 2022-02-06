@@ -1,4 +1,4 @@
-# swagger_client.SitesApi
+# aqualink_sdk.SitesApi
 
 All URIs are relative to */*
 
@@ -25,14 +25,14 @@ Adds exclusion dates to spotter's data
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = swagger_client.SitesApi(swagger_client.ApiClient(configuration))
-body = swagger_client.ExcludeSpotterDatesDto() # ExcludeSpotterDatesDto | 
+api_instance = aqualink_sdk.SitesApi(aqualink_sdk.ApiClient(configuration))
+body = aqualink_sdk.ExcludeSpotterDatesDto() # ExcludeSpotterDatesDto | 
 site_id = 1.2 # float | 
 
 try:
@@ -73,14 +73,14 @@ Creates a new site and its site application
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = swagger_client.SitesApi(swagger_client.ApiClient(configuration))
-body = swagger_client.SitesBody() # SitesBody | 
+api_instance = aqualink_sdk.SitesApi(aqualink_sdk.ApiClient(configuration))
+body = aqualink_sdk.SitesBody() # SitesBody | 
 
 try:
     # Creates a new site and its site application
@@ -120,13 +120,13 @@ Deletes specified site
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = swagger_client.SitesApi(swagger_client.ApiClient(configuration))
+api_instance = aqualink_sdk.SitesApi(aqualink_sdk.ApiClient(configuration))
 site_id = 1.2 # float | 
 
 try:
@@ -166,14 +166,14 @@ Deploys site's spotter
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = swagger_client.SitesApi(swagger_client.ApiClient(configuration))
-body = swagger_client.DeploySpotterDto() # DeploySpotterDto | 
+api_instance = aqualink_sdk.SitesApi(aqualink_sdk.ApiClient(configuration))
+body = aqualink_sdk.DeploySpotterDto() # DeploySpotterDto | 
 site_id = 1.2 # float | 
 
 try:
@@ -214,12 +214,12 @@ Returns sites filtered by provided filters
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SitesApi()
+api_instance = aqualink_sdk.SitesApi()
 name = 'name_example' # str |  (optional)
 region_id = 1.2 # float |  (optional)
 admin_id = 1.2 # float |  (optional)
@@ -268,12 +268,12 @@ Returns daily data of the specified site
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SitesApi()
+api_instance = aqualink_sdk.SitesApi()
 id = 1.2 # float | 
 start = 'start_example' # str | 
 end = 'end_example' # str | 
@@ -318,13 +318,13 @@ Returns exclusion dates of specified site's spotter
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = swagger_client.SitesApi(swagger_client.ApiClient(configuration))
+api_instance = aqualink_sdk.SitesApi(aqualink_sdk.ApiClient(configuration))
 site_id = 1.2 # float | 
 
 try:
@@ -365,12 +365,12 @@ Returns live data of the specified site
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SitesApi()
+api_instance = aqualink_sdk.SitesApi()
 id = 1.2 # float | 
 
 try:
@@ -411,12 +411,12 @@ Returns specified site
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SitesApi()
+api_instance = aqualink_sdk.SitesApi()
 id = 1.2 # float | 
 
 try:
@@ -457,12 +457,12 @@ Returns spotter data of the specified site
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SitesApi()
+api_instance = aqualink_sdk.SitesApi()
 id = 1.2 # float | 
 start_date = 'start_date_example' # str | 
 end_date = 'end_date_example' # str | 
@@ -507,14 +507,14 @@ Updates specified site
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = swagger_client.SitesApi(swagger_client.ApiClient(configuration))
-body = swagger_client.UpdateSiteDto() # UpdateSiteDto | 
+api_instance = aqualink_sdk.SitesApi(aqualink_sdk.ApiClient(configuration))
+body = aqualink_sdk.UpdateSiteDto() # UpdateSiteDto | 
 site_id = 1.2 # float | 
 
 try:

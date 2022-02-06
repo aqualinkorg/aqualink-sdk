@@ -1,4 +1,4 @@
-# swagger_client.CollectionsApi
+# aqualink_sdk.CollectionsApi
 
 All URIs are relative to */*
 
@@ -22,14 +22,14 @@ Creates a new collection
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = swagger_client.CollectionsApi(swagger_client.ApiClient(configuration))
-body = swagger_client.CreateCollectionDto() # CreateCollectionDto | 
+api_instance = aqualink_sdk.CollectionsApi(aqualink_sdk.ApiClient(configuration))
+body = aqualink_sdk.CreateCollectionDto() # CreateCollectionDto | 
 
 try:
     # Creates a new collection
@@ -69,13 +69,13 @@ Delete specified collection
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = swagger_client.CollectionsApi(swagger_client.ApiClient(configuration))
+api_instance = aqualink_sdk.CollectionsApi(aqualink_sdk.ApiClient(configuration))
 collection_id = 1.2 # float | 
 
 try:
@@ -115,13 +115,13 @@ Fetch all user's private collections
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = swagger_client.CollectionsApi(swagger_client.ApiClient(configuration))
+api_instance = aqualink_sdk.CollectionsApi(aqualink_sdk.ApiClient(configuration))
 name = 'name_example' # str |  (optional)
 site_id = 1.2 # float |  (optional)
 
@@ -164,13 +164,13 @@ Fetch detailed data from specified private collection
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = swagger_client.CollectionsApi(swagger_client.ApiClient(configuration))
+api_instance = aqualink_sdk.CollectionsApi(aqualink_sdk.ApiClient(configuration))
 collection_id = 1.2 # float | 
 
 try:
@@ -211,12 +211,12 @@ Fetch detailed data from specified public collection
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CollectionsApi()
+api_instance = aqualink_sdk.CollectionsApi()
 collection_id = 1.2 # float | 
 
 try:
@@ -257,12 +257,12 @@ Fetch all public collections
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CollectionsApi()
+api_instance = aqualink_sdk.CollectionsApi()
 name = 'name_example' # str |  (optional)
 site_id = 1.2 # float |  (optional)
 
@@ -305,12 +305,12 @@ Fetch the heat stress tracker
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CollectionsApi()
+api_instance = aqualink_sdk.CollectionsApi()
 
 try:
     # Fetch the heat stress tracker
@@ -347,14 +347,14 @@ Update specified collection
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = swagger_client.CollectionsApi(swagger_client.ApiClient(configuration))
-body = swagger_client.UpdateCollectionDto() # UpdateCollectionDto | 
+api_instance = aqualink_sdk.CollectionsApi(aqualink_sdk.ApiClient(configuration))
+body = aqualink_sdk.UpdateCollectionDto() # UpdateCollectionDto | 
 collection_id = 1.2 # float | 
 
 try:

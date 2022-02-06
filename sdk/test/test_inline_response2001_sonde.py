@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.inline_response2001_sonde import InlineResponse2001Sonde  # noqa: E501
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.models.inline_response2001_sonde import InlineResponse2001Sonde  # noqa: E501
+from aqualink_sdk.rest import ApiException
 
 
 class TestInlineResponse2001Sonde(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestInlineResponse2001Sonde(unittest.TestCase):
     def testInlineResponse2001Sonde(self):
         """Test InlineResponse2001Sonde"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.inline_response2001_sonde.InlineResponse2001Sonde()  # noqa: E501
+        # model = aqualink_sdk.models.inline_response2001_sonde.InlineResponse2001Sonde()  # noqa: E501
         pass
 
 

@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.time_series_point import TimeSeriesPoint  # noqa: E501
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.models.time_series_point import TimeSeriesPoint  # noqa: E501
+from aqualink_sdk.rest import ApiException
 
 
 class TestTimeSeriesPoint(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestTimeSeriesPoint(unittest.TestCase):
     def testTimeSeriesPoint(self):
         """Test TimeSeriesPoint"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.time_series_point.TimeSeriesPoint()  # noqa: E501
+        # model = aqualink_sdk.models.time_series_point.TimeSeriesPoint()  # noqa: E501
         pass
 
 

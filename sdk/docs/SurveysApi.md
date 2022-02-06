@@ -1,4 +1,4 @@
-# swagger_client.SurveysApi
+# aqualink_sdk.SurveysApi
 
 All URIs are relative to */*
 
@@ -24,14 +24,14 @@ Creates a new survey
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = swagger_client.SurveysApi(swagger_client.ApiClient(configuration))
-body = swagger_client.CreateSurveyDto() # CreateSurveyDto | 
+api_instance = aqualink_sdk.SurveysApi(aqualink_sdk.ApiClient(configuration))
+body = aqualink_sdk.CreateSurveyDto() # CreateSurveyDto | 
 site_id = 1.2 # float | 
 
 try:
@@ -73,14 +73,14 @@ Creates a new survey media
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = swagger_client.SurveysApi(swagger_client.ApiClient(configuration))
-body = swagger_client.CreateSurveyMediaDto() # CreateSurveyMediaDto | 
+api_instance = aqualink_sdk.SurveysApi(aqualink_sdk.ApiClient(configuration))
+body = aqualink_sdk.CreateSurveyMediaDto() # CreateSurveyMediaDto | 
 site_id = 1.2 # float | 
 id = 1.2 # float | 
 
@@ -124,13 +124,13 @@ Deletes a specified survey
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = swagger_client.SurveysApi(swagger_client.ApiClient(configuration))
+api_instance = aqualink_sdk.SurveysApi(aqualink_sdk.ApiClient(configuration))
 site_id = 1.2 # float | 
 id = 1.2 # float | 
 
@@ -172,13 +172,13 @@ Deletes a specified survey media
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = swagger_client.SurveysApi(swagger_client.ApiClient(configuration))
+api_instance = aqualink_sdk.SurveysApi(aqualink_sdk.ApiClient(configuration))
 site_id = 1.2 # float | 
 id = 1.2 # float | 
 
@@ -220,12 +220,12 @@ Returns all site's survey
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SurveysApi()
+api_instance = aqualink_sdk.SurveysApi()
 site_id = 1.2 # float | 
 
 try:
@@ -266,12 +266,12 @@ Returns all media of a specified survey
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SurveysApi()
+api_instance = aqualink_sdk.SurveysApi()
 site_id = 1.2 # float | 
 id = 1.2 # float | 
 
@@ -314,12 +314,12 @@ Returns specified survey
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SurveysApi()
+api_instance = aqualink_sdk.SurveysApi()
 site_id = 1.2 # float | 
 id = 1.2 # float | 
 
@@ -362,14 +362,14 @@ Updates a specified survey
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = swagger_client.SurveysApi(swagger_client.ApiClient(configuration))
-body = swagger_client.EditSurveyDto() # EditSurveyDto | 
+api_instance = aqualink_sdk.SurveysApi(aqualink_sdk.ApiClient(configuration))
+body = aqualink_sdk.EditSurveyDto() # EditSurveyDto | 
 site_id = 1.2 # float | 
 id = 1.2 # float | 
 
@@ -413,14 +413,14 @@ Updates a specified survey media
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = swagger_client.SurveysApi(swagger_client.ApiClient(configuration))
-body = swagger_client.EditSurveyMediaDto() # EditSurveyMediaDto | 
+api_instance = aqualink_sdk.SurveysApi(aqualink_sdk.ApiClient(configuration))
+body = aqualink_sdk.EditSurveyMediaDto() # EditSurveyMediaDto | 
 site_id = 1.2 # float | 
 id = 1.2 # float | 
 
@@ -464,13 +464,13 @@ Uploads a new survey media
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = swagger_client.SurveysApi(swagger_client.ApiClient(configuration))
+api_instance = aqualink_sdk.SurveysApi(aqualink_sdk.ApiClient(configuration))
 file = 'file_example' # str | 
 site_id = 1.2 # float | 
 

@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.all_of_site_stream import AllOfSiteStream  # noqa: E501
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.models.all_of_site_stream import AllOfSiteStream  # noqa: E501
+from aqualink_sdk.rest import ApiException
 
 
 class TestAllOfSiteStream(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestAllOfSiteStream(unittest.TestCase):
     def testAllOfSiteStream(self):
         """Test AllOfSiteStream"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.all_of_site_stream.AllOfSiteStream()  # noqa: E501
+        # model = aqualink_sdk.models.all_of_site_stream.AllOfSiteStream()  # noqa: E501
         pass
 
 

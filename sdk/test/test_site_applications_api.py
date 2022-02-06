@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.api.site_applications_api import SiteApplicationsApi  # noqa: E501
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.api.site_applications_api import SiteApplicationsApi  # noqa: E501
+from aqualink_sdk.rest import ApiException
 
 
 class TestSiteApplicationsApi(unittest.TestCase):

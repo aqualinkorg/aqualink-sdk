@@ -1,4 +1,4 @@
-# swagger_client.TimeSeriesApi
+# aqualink_sdk.TimeSeriesApi
 
 All URIs are relative to */*
 
@@ -19,12 +19,12 @@ Returns specified time series data for a specified site
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.TimeSeriesApi()
+api_instance = aqualink_sdk.TimeSeriesApi()
 site_id = 1.2 # float | 
 metrics = ['metrics_example'] # list[str] | 
 start = 'start_example' # str | 
@@ -73,12 +73,12 @@ Returns the range of the available time series data for a specified site
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.TimeSeriesApi()
+api_instance = aqualink_sdk.TimeSeriesApi()
 site_id = 1.2 # float | 
 
 try:
@@ -119,12 +119,12 @@ Returns specified time series data for a specified site point of interest
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.TimeSeriesApi()
+api_instance = aqualink_sdk.TimeSeriesApi()
 site_id = 1.2 # float | 
 survey_point_id = 1.2 # float | 
 metrics = ['metrics_example'] # list[str] | 
@@ -175,12 +175,12 @@ Returns the range of the available time series data for a specified site point o
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.TimeSeriesApi()
+api_instance = aqualink_sdk.TimeSeriesApi()
 site_id = 1.2 # float | 
 survey_point_id = 1.2 # float | 
 
@@ -223,12 +223,12 @@ Upload time series data
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.TimeSeriesApi()
+api_instance = aqualink_sdk.TimeSeriesApi()
 site_id = 1.2 # float | 
 survey_point_id = 1.2 # float | 
 fail_on_warning = true # bool | 

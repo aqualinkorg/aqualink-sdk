@@ -1,4 +1,4 @@
-# swagger_client.SensorsApi
+# aqualink_sdk.SensorsApi
 
 All URIs are relative to */*
 
@@ -17,12 +17,12 @@ Get data from a specified sensor
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SensorsApi()
+api_instance = aqualink_sdk.SensorsApi()
 id = 'id_example' # str | 
 metrics = ['metrics_example'] # list[str] | 
 start_date = 'start_date_example' # str | 
@@ -69,12 +69,12 @@ Get surveys and survey media from a specified sensor
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SensorsApi()
+api_instance = aqualink_sdk.SensorsApi()
 id = 'id_example' # str | 
 
 try:
@@ -114,12 +114,12 @@ Get all sites having sensors
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SensorsApi()
+api_instance = aqualink_sdk.SensorsApi()
 
 try:
     # Get all sites having sensors

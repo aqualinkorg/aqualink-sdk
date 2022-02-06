@@ -1,4 +1,4 @@
-# swagger_client.HealthCheckApi
+# aqualink_sdk.HealthCheckApi
 
 All URIs are relative to */*
 
@@ -15,12 +15,12 @@ Checks if the backend is up and running.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.HealthCheckApi()
+api_instance = aqualink_sdk.HealthCheckApi()
 
 try:
     # Checks if the backend is up and running.

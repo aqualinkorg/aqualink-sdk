@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.inline_response404 import InlineResponse404  # noqa: E501
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.models.inline_response404 import InlineResponse404  # noqa: E501
+from aqualink_sdk.rest import ApiException
 
 
 class TestInlineResponse404(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestInlineResponse404(unittest.TestCase):
     def testInlineResponse404(self):
         """Test InlineResponse404"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.inline_response404.InlineResponse404()  # noqa: E501
+        # model = aqualink_sdk.models.inline_response404.InlineResponse404()  # noqa: E501
         pass
 
 

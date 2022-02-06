@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.edit_survey_media_dto import EditSurveyMediaDto  # noqa: E501
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.models.edit_survey_media_dto import EditSurveyMediaDto  # noqa: E501
+from aqualink_sdk.rest import ApiException
 
 
 class TestEditSurveyMediaDto(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestEditSurveyMediaDto(unittest.TestCase):
     def testEditSurveyMediaDto(self):
         """Test EditSurveyMediaDto"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.edit_survey_media_dto.EditSurveyMediaDto()  # noqa: E501
+        # model = aqualink_sdk.models.edit_survey_media_dto.EditSurveyMediaDto()  # noqa: E501
         pass
 
 

@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.api.sensors_api import SensorsApi  # noqa: E501
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.api.sensors_api import SensorsApi  # noqa: E501
+from aqualink_sdk.rest import ApiException
 
 
 class TestSensorsApi(unittest.TestCase):

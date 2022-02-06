@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.site_survey_point import SiteSurveyPoint  # noqa: E501
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.models.site_survey_point import SiteSurveyPoint  # noqa: E501
+from aqualink_sdk.rest import ApiException
 
 
 class TestSiteSurveyPoint(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestSiteSurveyPoint(unittest.TestCase):
     def testSiteSurveyPoint(self):
         """Test SiteSurveyPoint"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.site_survey_point.SiteSurveyPoint()  # noqa: E501
+        # model = aqualink_sdk.models.site_survey_point.SiteSurveyPoint()  # noqa: E501
         pass
 
 

@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.update_collection_dto import UpdateCollectionDto  # noqa: E501
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.models.update_collection_dto import UpdateCollectionDto  # noqa: E501
+from aqualink_sdk.rest import ApiException
 
 
 class TestUpdateCollectionDto(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestUpdateCollectionDto(unittest.TestCase):
     def testUpdateCollectionDto(self):
         """Test UpdateCollectionDto"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.update_collection_dto.UpdateCollectionDto()  # noqa: E501
+        # model = aqualink_sdk.models.update_collection_dto.UpdateCollectionDto()  # noqa: E501
         pass
 
 

@@ -1,4 +1,4 @@
-# swagger_client.UsersApi
+# aqualink_sdk.UsersApi
 
 All URIs are relative to */*
 
@@ -19,13 +19,13 @@ Creates a new user
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.UsersApi()
-body = swagger_client.CreateUserDto() # CreateUserDto | 
+api_instance = aqualink_sdk.UsersApi()
+body = aqualink_sdk.CreateUserDto() # CreateUserDto | 
 
 try:
     # Creates a new user
@@ -65,13 +65,13 @@ Deletes specified user
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = swagger_client.UsersApi(swagger_client.ApiClient(configuration))
+api_instance = aqualink_sdk.UsersApi(aqualink_sdk.ApiClient(configuration))
 id = 1.2 # float | 
 
 try:
@@ -111,13 +111,13 @@ Returns the administered sites of the signed in user
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = swagger_client.UsersApi(swagger_client.ApiClient(configuration))
+api_instance = aqualink_sdk.UsersApi(aqualink_sdk.ApiClient(configuration))
 
 try:
     # Returns the administered sites of the signed in user
@@ -154,13 +154,13 @@ Returns the currently signed in user
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = swagger_client.UsersApi(swagger_client.ApiClient(configuration))
+api_instance = aqualink_sdk.UsersApi(aqualink_sdk.ApiClient(configuration))
 
 try:
     # Returns the currently signed in user
@@ -197,14 +197,14 @@ Updates the access level of a user
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = swagger_client.UsersApi(swagger_client.ApiClient(configuration))
-body = swagger_client.SetAdminLevelDto() # SetAdminLevelDto | 
+api_instance = aqualink_sdk.UsersApi(aqualink_sdk.ApiClient(configuration))
+body = aqualink_sdk.SetAdminLevelDto() # SetAdminLevelDto | 
 id = 1.2 # float | 
 
 try:

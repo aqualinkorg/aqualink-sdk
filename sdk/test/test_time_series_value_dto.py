@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.time_series_value_dto import TimeSeriesValueDto  # noqa: E501
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.models.time_series_value_dto import TimeSeriesValueDto  # noqa: E501
+from aqualink_sdk.rest import ApiException
 
 
 class TestTimeSeriesValueDto(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestTimeSeriesValueDto(unittest.TestCase):
     def testTimeSeriesValueDto(self):
         """Test TimeSeriesValueDto"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.time_series_value_dto.TimeSeriesValueDto()  # noqa: E501
+        # model = aqualink_sdk.models.time_series_value_dto.TimeSeriesValueDto()  # noqa: E501
         pass
 
 

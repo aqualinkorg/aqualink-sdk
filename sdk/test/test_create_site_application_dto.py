@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.create_site_application_dto import CreateSiteApplicationDto  # noqa: E501
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.models.create_site_application_dto import CreateSiteApplicationDto  # noqa: E501
+from aqualink_sdk.rest import ApiException
 
 
 class TestCreateSiteApplicationDto(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestCreateSiteApplicationDto(unittest.TestCase):
     def testCreateSiteApplicationDto(self):
         """Test CreateSiteApplicationDto"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.create_site_application_dto.CreateSiteApplicationDto()  # noqa: E501
+        # model = aqualink_sdk.models.create_site_application_dto.CreateSiteApplicationDto()  # noqa: E501
         pass
 
 

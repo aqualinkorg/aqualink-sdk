@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.set_admin_level_dto import SetAdminLevelDto  # noqa: E501
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.models.set_admin_level_dto import SetAdminLevelDto  # noqa: E501
+from aqualink_sdk.rest import ApiException
 
 
 class TestSetAdminLevelDto(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestSetAdminLevelDto(unittest.TestCase):
     def testSetAdminLevelDto(self):
         """Test SetAdminLevelDto"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.set_admin_level_dto.SetAdminLevelDto()  # noqa: E501
+        # model = aqualink_sdk.models.set_admin_level_dto.SetAdminLevelDto()  # noqa: E501
         pass
 
 

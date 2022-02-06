@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.inline_response200_sonde_sonde_cable_power_voltage import InlineResponse200SondeSondeCablePowerVoltage  # noqa: E501
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.models.inline_response200_sonde_sonde_cable_power_voltage import InlineResponse200SondeSondeCablePowerVoltage  # noqa: E501
+from aqualink_sdk.rest import ApiException
 
 
 class TestInlineResponse200SondeSondeCablePowerVoltage(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestInlineResponse200SondeSondeCablePowerVoltage(unittest.TestCase):
     def testInlineResponse200SondeSondeCablePowerVoltage(self):
         """Test InlineResponse200SondeSondeCablePowerVoltage"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.inline_response200_sonde_sonde_cable_power_voltage.InlineResponse200SondeSondeCablePowerVoltage()  # noqa: E501
+        # model = aqualink_sdk.models.inline_response200_sonde_sonde_cable_power_voltage.InlineResponse200SondeSondeCablePowerVoltage()  # noqa: E501
         pass
 
 

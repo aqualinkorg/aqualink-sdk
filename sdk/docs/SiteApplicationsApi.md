@@ -1,4 +1,4 @@
-# swagger_client.SiteApplicationsApi
+# aqualink_sdk.SiteApplicationsApi
 
 All URIs are relative to */*
 
@@ -16,13 +16,13 @@ Returns site application of specified site
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = swagger_client.SiteApplicationsApi(swagger_client.ApiClient(configuration))
+api_instance = aqualink_sdk.SiteApplicationsApi(aqualink_sdk.ApiClient(configuration))
 site_id = 1.2 # float | 
 
 try:
@@ -63,14 +63,14 @@ Updates site application by providing its appId. Needs authentication.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = swagger_client.SiteApplicationsApi(swagger_client.ApiClient(configuration))
-body = swagger_client.SitesSiteIdBody() # SitesSiteIdBody | 
+api_instance = aqualink_sdk.SiteApplicationsApi(aqualink_sdk.ApiClient(configuration))
+body = aqualink_sdk.SitesSiteIdBody() # SitesSiteIdBody | 
 app_id = 1.2 # float | 
 
 try:

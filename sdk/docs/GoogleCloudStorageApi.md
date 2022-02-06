@@ -1,4 +1,4 @@
-# swagger_client.GoogleCloudStorageApi
+# aqualink_sdk.GoogleCloudStorageApi
 
 All URIs are relative to */*
 
@@ -16,13 +16,13 @@ Deletes all unused files stored
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = swagger_client.GoogleCloudStorageApi(swagger_client.ApiClient(configuration))
+api_instance = aqualink_sdk.GoogleCloudStorageApi(aqualink_sdk.ApiClient(configuration))
 
 try:
     # Deletes all unused files stored
@@ -58,13 +58,13 @@ Returns all files stored that are not used
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = swagger_client.GoogleCloudStorageApi(swagger_client.ApiClient(configuration))
+api_instance = aqualink_sdk.GoogleCloudStorageApi(aqualink_sdk.ApiClient(configuration))
 
 try:
     # Returns all files stored that are not used

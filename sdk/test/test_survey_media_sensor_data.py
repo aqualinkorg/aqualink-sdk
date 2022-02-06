@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.survey_media_sensor_data import SurveyMediaSensorData  # noqa: E501
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.models.survey_media_sensor_data import SurveyMediaSensorData  # noqa: E501
+from aqualink_sdk.rest import ApiException
 
 
 class TestSurveyMediaSensorData(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestSurveyMediaSensorData(unittest.TestCase):
     def testSurveyMediaSensorData(self):
         """Test SurveyMediaSensorData"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.survey_media_sensor_data.SurveyMediaSensorData()  # noqa: E501
+        # model = aqualink_sdk.models.survey_media_sensor_data.SurveyMediaSensorData()  # noqa: E501
         pass
 
 

@@ -1,4 +1,4 @@
-# swagger_client.SitePointsOfInterestApi
+# aqualink_sdk.SitePointsOfInterestApi
 
 All URIs are relative to */*
 
@@ -19,14 +19,14 @@ Creates a new site point of interest
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = swagger_client.SitePointsOfInterestApi(swagger_client.ApiClient(configuration))
-body = swagger_client.CreateSiteSurveyPointDto() # CreateSiteSurveyPointDto | 
+api_instance = aqualink_sdk.SitePointsOfInterestApi(aqualink_sdk.ApiClient(configuration))
+body = aqualink_sdk.CreateSiteSurveyPointDto() # CreateSiteSurveyPointDto | 
 
 try:
     # Creates a new site point of interest
@@ -66,13 +66,13 @@ Deletes specified site point of interest
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = swagger_client.SitePointsOfInterestApi(swagger_client.ApiClient(configuration))
+api_instance = aqualink_sdk.SitePointsOfInterestApi(aqualink_sdk.ApiClient(configuration))
 id = 1.2 # float | 
 
 try:
@@ -112,12 +112,12 @@ Returns site points of interest filtered by the provided filters
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SitePointsOfInterestApi()
+api_instance = aqualink_sdk.SitePointsOfInterestApi()
 name = 'name_example' # str |  (optional)
 site_id = 1.2 # float |  (optional)
 
@@ -160,12 +160,12 @@ Returns specified site point of interest
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SitePointsOfInterestApi()
+api_instance = aqualink_sdk.SitePointsOfInterestApi()
 id = 1.2 # float | 
 
 try:
@@ -206,14 +206,14 @@ Updates specified site point of interest
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = swagger_client.SitePointsOfInterestApi(swagger_client.ApiClient(configuration))
-body = swagger_client.UpdateSiteSurveyPointDto() # UpdateSiteSurveyPointDto | 
+api_instance = aqualink_sdk.SitePointsOfInterestApi(aqualink_sdk.ApiClient(configuration))
+body = aqualink_sdk.UpdateSiteSurveyPointDto() # UpdateSiteSurveyPointDto | 
 id = 1.2 # float | 
 
 try:

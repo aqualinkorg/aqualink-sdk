@@ -1,4 +1,4 @@
-# swagger_client.RegionsApi
+# aqualink_sdk.RegionsApi
 
 All URIs are relative to */*
 
@@ -19,14 +19,14 @@ Creates new region
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = swagger_client.RegionsApi(swagger_client.ApiClient(configuration))
-body = swagger_client.CreateRegionDto() # CreateRegionDto | 
+api_instance = aqualink_sdk.RegionsApi(aqualink_sdk.ApiClient(configuration))
+body = aqualink_sdk.CreateRegionDto() # CreateRegionDto | 
 
 try:
     # Creates new region
@@ -66,13 +66,13 @@ Deletes specified region
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = swagger_client.RegionsApi(swagger_client.ApiClient(configuration))
+api_instance = aqualink_sdk.RegionsApi(aqualink_sdk.ApiClient(configuration))
 id = 1.2 # float | 
 
 try:
@@ -112,12 +112,12 @@ Returns regions filtered by provided filters
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.RegionsApi()
+api_instance = aqualink_sdk.RegionsApi()
 name = 'name_example' # str |  (optional)
 parent = 1.2 # float |  (optional)
 
@@ -160,12 +160,12 @@ Returns specified region
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.RegionsApi()
+api_instance = aqualink_sdk.RegionsApi()
 id = 1.2 # float | 
 
 try:
@@ -206,14 +206,14 @@ Updates specified region
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aqualink_sdk
+from aqualink_sdk.rest import ApiException
 from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = swagger_client.RegionsApi(swagger_client.ApiClient(configuration))
-body = swagger_client.UpdateRegionDto() # UpdateRegionDto | 
+api_instance = aqualink_sdk.RegionsApi(aqualink_sdk.ApiClient(configuration))
+body = aqualink_sdk.UpdateRegionDto() # UpdateRegionDto | 
 id = 1.2 # float | 
 
 try:
