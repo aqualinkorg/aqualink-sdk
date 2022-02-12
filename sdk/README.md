@@ -148,7 +148,7 @@ except ApiException as e:
 
 ## Documentation for API Endpoints
 
-All URIs are relative to */*
+All URIs are relative to *https://ocean-systems.uc.r.appspot.com/api*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------

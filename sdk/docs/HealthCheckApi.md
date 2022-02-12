@@ -1,6 +1,6 @@
 # aqualink_sdk.HealthCheckApi
 
-All URIs are relative to */*
+All URIs are relative to *https://ocean-systems.uc.r.appspot.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
