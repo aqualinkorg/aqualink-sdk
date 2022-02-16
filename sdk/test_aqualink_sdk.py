@@ -1,4 +1,5 @@
 """Simple Test for the Aqualink Python SDK"""
+# pip install -i https://test.pypi.org/simple/ aqualink-api
 import aqualink_sdk
 
 def test_sdk():
@@ -24,4 +25,5 @@ def test_sdk():
     )
     print(data)
 
-test_sdk()
+if __name__ == '__main__':
+    test_sdk()
