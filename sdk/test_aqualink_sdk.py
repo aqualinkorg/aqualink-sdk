@@ -1,7 +1,4 @@
 """Simple Test for the Aqualink Python SDK"""
-# Test install from https://test.pypi.org/project/aqualink-api/1.0.1/
-# pip install -i https://test.pypi.org/simple/ aqualink-api==1.0.1
-
 import aqualink_sdk
 
 def test_sdk():
