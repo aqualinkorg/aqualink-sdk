@@ -107,9 +107,6 @@ class CollectionDataDto(object):
         :param bottom_temperature: The bottom_temperature of this CollectionDataDto.  # noqa: E501
         :type: float
         """
-        if bottom_temperature is None:
-            raise ValueError("Invalid value for `bottom_temperature`, must not be `None`")  # noqa: E501
-
         self._bottom_temperature = bottom_temperature
 
     @property
@@ -130,9 +127,6 @@ class CollectionDataDto(object):
         :param top_temperature: The top_temperature of this CollectionDataDto.  # noqa: E501
         :type: float
         """
-        if top_temperature is None:
-            raise ValueError("Invalid value for `top_temperature`, must not be `None`")  # noqa: E501
-
         self._top_temperature = top_temperature
 
     @property
@@ -153,9 +147,6 @@ class CollectionDataDto(object):
         :param satellite_temperature: The satellite_temperature of this CollectionDataDto.  # noqa: E501
         :type: float
         """
-        if satellite_temperature is None:
-            raise ValueError("Invalid value for `satellite_temperature`, must not be `None`")  # noqa: E501
-
         self._satellite_temperature = satellite_temperature
 
     @property
@@ -176,9 +167,6 @@ class CollectionDataDto(object):
         :param dhw: The dhw of this CollectionDataDto.  # noqa: E501
         :type: float
         """
-        if dhw is None:
-            raise ValueError("Invalid value for `dhw`, must not be `None`")  # noqa: E501
-
         self._dhw = dhw
 
     @property
@@ -199,9 +187,6 @@ class CollectionDataDto(object):
         :param temp_alert: The temp_alert of this CollectionDataDto.  # noqa: E501
         :type: float
         """
-        if temp_alert is None:
-            raise ValueError("Invalid value for `temp_alert`, must not be `None`")  # noqa: E501
-
         self._temp_alert = temp_alert
 
     @property
@@ -222,9 +207,6 @@ class CollectionDataDto(object):
         :param temp_weekly_alert: The temp_weekly_alert of this CollectionDataDto.  # noqa: E501
         :type: float
         """
-        if temp_weekly_alert is None:
-            raise ValueError("Invalid value for `temp_weekly_alert`, must not be `None`")  # noqa: E501
-
         self._temp_weekly_alert = temp_weekly_alert
 
     @property
@@ -245,9 +227,6 @@ class CollectionDataDto(object):
         :param sst_anomaly: The sst_anomaly of this CollectionDataDto.  # noqa: E501
         :type: float
         """
-        if sst_anomaly is None:
-            raise ValueError("Invalid value for `sst_anomaly`, must not be `None`")  # noqa: E501
-
         self._sst_anomaly = sst_anomaly
 
     @property
@@ -268,9 +247,6 @@ class CollectionDataDto(object):
         :param significant_wave_height: The significant_wave_height of this CollectionDataDto.  # noqa: E501
         :type: float
         """
-        if significant_wave_height is None:
-            raise ValueError("Invalid value for `significant_wave_height`, must not be `None`")  # noqa: E501
-
         self._significant_wave_height = significant_wave_height
 
     @property
@@ -291,9 +267,6 @@ class CollectionDataDto(object):
         :param wave_mean_direction: The wave_mean_direction of this CollectionDataDto.  # noqa: E501
         :type: float
         """
-        if wave_mean_direction is None:
-            raise ValueError("Invalid value for `wave_mean_direction`, must not be `None`")  # noqa: E501
-
         self._wave_mean_direction = wave_mean_direction
 
     @property
@@ -314,9 +287,6 @@ class CollectionDataDto(object):
         :param wave_mean_period: The wave_mean_period of this CollectionDataDto.  # noqa: E501
         :type: float
         """
-        if wave_mean_period is None:
-            raise ValueError("Invalid value for `wave_mean_period`, must not be `None`")  # noqa: E501
-
         self._wave_mean_period = wave_mean_period
 
     @property
@@ -337,9 +307,6 @@ class CollectionDataDto(object):
         :param wave_peak_period: The wave_peak_period of this CollectionDataDto.  # noqa: E501
         :type: float
         """
-        if wave_peak_period is None:
-            raise ValueError("Invalid value for `wave_peak_period`, must not be `None`")  # noqa: E501
-
         self._wave_peak_period = wave_peak_period
 
     @property
@@ -360,9 +327,6 @@ class CollectionDataDto(object):
         :param wind_direction: The wind_direction of this CollectionDataDto.  # noqa: E501
         :type: float
         """
-        if wind_direction is None:
-            raise ValueError("Invalid value for `wind_direction`, must not be `None`")  # noqa: E501
-
         self._wind_direction = wind_direction
 
     @property
@@ -383,9 +347,6 @@ class CollectionDataDto(object):
         :param wind_speed: The wind_speed of this CollectionDataDto.  # noqa: E501
         :type: float
         """
-        if wind_speed is None:
-            raise ValueError("Invalid value for `wind_speed`, must not be `None`")  # noqa: E501
-
         self._wind_speed = wind_speed
 
     def to_dict(self):

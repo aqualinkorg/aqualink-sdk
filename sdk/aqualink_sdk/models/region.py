@@ -153,9 +153,6 @@ class Region(object):
         :param parent: The parent of this Region.  # noqa: E501
         :type: AllOfRegionParent
         """
-        if parent is None:
-            raise ValueError("Invalid value for `parent`, must not be `None`")  # noqa: E501
-
         self._parent = parent
 
     @property
