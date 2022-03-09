@@ -28,14 +28,16 @@ class InlineResponse200(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'sonde': 'InlineResponse200Sonde',
-        'spotter': 'InlineResponse200Sonde',
-        'noaa': 'InlineResponse200Sonde',
-        'hobo': 'InlineResponse200Sonde',
-        'gfs': 'InlineResponse200Sonde'
+        'metlog': 'InlineResponse200Metlog',
+        'sonde': 'InlineResponse200Metlog',
+        'spotter': 'InlineResponse200Metlog',
+        'noaa': 'InlineResponse200Metlog',
+        'hobo': 'InlineResponse200Metlog',
+        'gfs': 'InlineResponse200Metlog'
     }
 
     attribute_map = {
+        'metlog': 'metlog',
         'sonde': 'sonde',
         'spotter': 'spotter',
         'noaa': 'noaa',
@@ -43,14 +45,17 @@ class InlineResponse200(object):
         'gfs': 'gfs'
     }
 
-    def __init__(self, sonde=None, spotter=None, noaa=None, hobo=None, gfs=None):  # noqa: E501
+    def __init__(self, metlog=None, sonde=None, spotter=None, noaa=None, hobo=None, gfs=None):  # noqa: E501
         """InlineResponse200 - a model defined in Swagger"""  # noqa: E501
+        self._metlog = None
         self._sonde = None
         self._spotter = None
         self._noaa = None
         self._hobo = None
         self._gfs = None
         self.discriminator = None
+        if metlog is not None:
+            self.metlog = metlog
         if sonde is not None:
             self.sonde = sonde
         if spotter is not None:
@@ -63,12 +68,33 @@ class InlineResponse200(object):
             self.gfs = gfs
 
     @property
+    def metlog(self):
+        """Gets the metlog of this InlineResponse200.  # noqa: E501
+
+
+        :return: The metlog of this InlineResponse200.  # noqa: E501
+        :rtype: InlineResponse200Metlog
+        """
+        return self._metlog
+
+    @metlog.setter
+    def metlog(self, metlog):
+        """Sets the metlog of this InlineResponse200.
+
+
+        :param metlog: The metlog of this InlineResponse200.  # noqa: E501
+        :type: InlineResponse200Metlog
+        """
+
+        self._metlog = metlog
+
+    @property
     def sonde(self):
         """Gets the sonde of this InlineResponse200.  # noqa: E501
 
 
         :return: The sonde of this InlineResponse200.  # noqa: E501
-        :rtype: InlineResponse200Sonde
+        :rtype: InlineResponse200Metlog
         """
         return self._sonde
 
@@ -78,7 +104,7 @@ class InlineResponse200(object):
 
 
         :param sonde: The sonde of this InlineResponse200.  # noqa: E501
-        :type: InlineResponse200Sonde
+        :type: InlineResponse200Metlog
         """
 
         self._sonde = sonde
@@ -89,7 +115,7 @@ class InlineResponse200(object):
 
 
         :return: The spotter of this InlineResponse200.  # noqa: E501
-        :rtype: InlineResponse200Sonde
+        :rtype: InlineResponse200Metlog
         """
         return self._spotter
 
@@ -99,7 +125,7 @@ class InlineResponse200(object):
 
 
         :param spotter: The spotter of this InlineResponse200.  # noqa: E501
-        :type: InlineResponse200Sonde
+        :type: InlineResponse200Metlog
         """
 
         self._spotter = spotter
@@ -110,7 +136,7 @@ class InlineResponse200(object):
 
 
         :return: The noaa of this InlineResponse200.  # noqa: E501
-        :rtype: InlineResponse200Sonde
+        :rtype: InlineResponse200Metlog
         """
         return self._noaa
 
@@ -120,7 +146,7 @@ class InlineResponse200(object):
 
 
         :param noaa: The noaa of this InlineResponse200.  # noqa: E501
-        :type: InlineResponse200Sonde
+        :type: InlineResponse200Metlog
         """
 
         self._noaa = noaa
@@ -131,7 +157,7 @@ class InlineResponse200(object):
 
 
         :return: The hobo of this InlineResponse200.  # noqa: E501
-        :rtype: InlineResponse200Sonde
+        :rtype: InlineResponse200Metlog
         """
         return self._hobo
 
@@ -141,7 +167,7 @@ class InlineResponse200(object):
 
 
         :param hobo: The hobo of this InlineResponse200.  # noqa: E501
-        :type: InlineResponse200Sonde
+        :type: InlineResponse200Metlog
         """
 
         self._hobo = hobo
@@ -152,7 +178,7 @@ class InlineResponse200(object):
 
 
         :return: The gfs of this InlineResponse200.  # noqa: E501
-        :rtype: InlineResponse200Sonde
+        :rtype: InlineResponse200Metlog
         """
         return self._gfs
 
@@ -162,7 +188,7 @@ class InlineResponse200(object):
 
 
         :param gfs: The gfs of this InlineResponse200.  # noqa: E501
-        :type: InlineResponse200Sonde
+        :type: InlineResponse200Metlog
         """
 
         self._gfs = gfs

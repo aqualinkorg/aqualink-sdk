@@ -227,7 +227,7 @@ class LatestData(object):
         """
         if source is None:
             raise ValueError("Invalid value for `source`, must not be `None`")  # noqa: E501
-        allowed_values = ["gfs", "hobo", "noaa", "spotter", "sonde"]  # noqa: E501
+        allowed_values = ["gfs", "hobo", "noaa", "spotter", "sonde", "metlog"]  # noqa: E501
         if source not in allowed_values:
             raise ValueError(
                 "Invalid value for `source` ({0}), must be one of {1}"  # noqa: E501
@@ -256,7 +256,7 @@ class LatestData(object):
         """
         if metric is None:
             raise ValueError("Invalid value for `metric`, must not be `None`")  # noqa: E501
-        allowed_values = ["temp_alert", "temp_weekly_alert", "dhw", "satellite_temperature", "top_temperature", "bottom_temperature", "sst_anomaly", "significant_wave_height", "wave_mean_period", "wave_peak_period", "wave_mean_direction", "wind_speed", "wind_direction", "cholorophyll_rfu", "cholorophyll_concentration", "conductivity", "water_depth", "odo_saturation", "odo_concentration", "salinity", "specific_conductance", "tds", "turbidity", "total_suspended_solids", "sonde_wiper_position", "ph", "ph_mv", "sonde_battery_voltage", "sonde_cable_power_voltage"]  # noqa: E501
+        allowed_values = ["temp_alert", "temp_weekly_alert", "dhw", "satellite_temperature", "air_temperature", "top_temperature", "bottom_temperature", "sst_anomaly", "significant_wave_height", "wave_mean_period", "wave_peak_period", "wave_mean_direction", "wind_speed", "wind_direction", "cholorophyll_rfu", "cholorophyll_concentration", "conductivity", "water_depth", "odo_saturation", "odo_concentration", "salinity", "specific_conductance", "tds", "turbidity", "total_suspended_solids", "sonde_wiper_position", "ph", "ph_mv", "sonde_battery_voltage", "sonde_cable_power_voltage", "pressure", "precipitation", "rh", "wind_gust_speed"]  # noqa: E501
         if metric not in allowed_values:
             raise ValueError(
                 "Invalid value for `metric` ({0}), must be one of {1}"  # noqa: E501

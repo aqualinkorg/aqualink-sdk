@@ -188,6 +188,9 @@ class Site(object):
         :param sensor_id: The sensor_id of this Site.  # noqa: E501
         :type: str
         """
+        if sensor_id is None:
+            raise ValueError("Invalid value for `sensor_id`, must not be `None`")  # noqa: E501
+
         self._sensor_id = sensor_id
 
     @property
@@ -231,6 +234,9 @@ class Site(object):
         :param depth: The depth of this Site.  # noqa: E501
         :type: float
         """
+        if depth is None:
+            raise ValueError("Invalid value for `depth`, must not be `None`")  # noqa: E501
+
         self._depth = depth
 
     @property
@@ -251,6 +257,9 @@ class Site(object):
         :param max_monthly_mean: The max_monthly_mean of this Site.  # noqa: E501
         :type: float
         """
+        if max_monthly_mean is None:
+            raise ValueError("Invalid value for `max_monthly_mean`, must not be `None`")  # noqa: E501
+
         self._max_monthly_mean = max_monthly_mean
 
     @property
@@ -323,6 +332,9 @@ class Site(object):
         :param video_stream: The video_stream of this Site.  # noqa: E501
         :type: str
         """
+        if video_stream is None:
+            raise ValueError("Invalid value for `video_stream`, must not be `None`")  # noqa: E501
+
         self._video_stream = video_stream
 
     @property
@@ -412,6 +424,9 @@ class Site(object):
         :param region: The region of this Site.  # noqa: E501
         :type: AllOfSiteRegion
         """
+        if region is None:
+            raise ValueError("Invalid value for `region`, must not be `None`")  # noqa: E501
+
         self._region = region
 
     @property
@@ -432,6 +447,9 @@ class Site(object):
         :param stream: The stream of this Site.  # noqa: E501
         :type: AllOfSiteStream
         """
+        if stream is None:
+            raise ValueError("Invalid value for `stream`, must not be `None`")  # noqa: E501
+
         self._stream = stream
 
     @property
@@ -475,6 +493,9 @@ class Site(object):
         :param surveys: The surveys of this Site.  # noqa: E501
         :type: list[Survey]
         """
+        if surveys is None:
+            raise ValueError("Invalid value for `surveys`, must not be `None`")  # noqa: E501
+
         self._surveys = surveys
 
     @property
@@ -516,6 +537,9 @@ class Site(object):
         :param historical_monthly_mean: The historical_monthly_mean of this Site.  # noqa: E501
         :type: list[HistoricalMonthlyMean]
         """
+        if historical_monthly_mean is None:
+            raise ValueError("Invalid value for `historical_monthly_mean`, must not be `None`")  # noqa: E501
+
         self._historical_monthly_mean = historical_monthly_mean
 
     @property

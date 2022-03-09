@@ -171,6 +171,9 @@ class User(object):
         :param organization: The organization of this User.  # noqa: E501
         :type: str
         """
+        if organization is None:
+            raise ValueError("Invalid value for `organization`, must not be `None`")  # noqa: E501
+
         self._organization = organization
 
     @property
@@ -191,6 +194,9 @@ class User(object):
         :param location: The location of this User.  # noqa: E501
         :type: RegionPolygon
         """
+        if location is None:
+            raise ValueError("Invalid value for `location`, must not be `None`")  # noqa: E501
+
         self._location = location
 
     @property
@@ -211,6 +217,9 @@ class User(object):
         :param country: The country of this User.  # noqa: E501
         :type: str
         """
+        if country is None:
+            raise ValueError("Invalid value for `country`, must not be `None`")  # noqa: E501
+
         self._country = country
 
     @property
@@ -231,6 +240,9 @@ class User(object):
         :param description: The description of this User.  # noqa: E501
         :type: str
         """
+        if description is None:
+            raise ValueError("Invalid value for `description`, must not be `None`")  # noqa: E501
+
         self._description = description
 
     @property
@@ -251,6 +263,9 @@ class User(object):
         :param image_url: The image_url of this User.  # noqa: E501
         :type: str
         """
+        if image_url is None:
+            raise ValueError("Invalid value for `image_url`, must not be `None`")  # noqa: E501
+
         self._image_url = image_url
 
     @property
@@ -300,6 +315,9 @@ class User(object):
         :param administered_sites: The administered_sites of this User.  # noqa: E501
         :type: list[Site]
         """
+        if administered_sites is None:
+            raise ValueError("Invalid value for `administered_sites`, must not be `None`")  # noqa: E501
+
         self._administered_sites = administered_sites
 
     @property
