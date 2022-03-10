@@ -102,10 +102,10 @@ class User(ModelNormal):
             'description': (str, none_type,),  # noqa: E501
             'image_url': (str, none_type,),  # noqa: E501
             'admin_level': (str,),  # noqa: E501
-            'administered_sites': ([Site],),  # noqa: E501
             'created_at': (datetime,),  # noqa: E501
             'updated_at': (datetime,),  # noqa: E501
             'full_name': (str, none_type,),  # noqa: E501
+            'administered_sites': ([Site],),  # noqa: E501
         }
 
     @cached_property
@@ -122,10 +122,10 @@ class User(ModelNormal):
         'description': 'description',  # noqa: E501
         'image_url': 'imageUrl',  # noqa: E501
         'admin_level': 'adminLevel',  # noqa: E501
-        'administered_sites': 'administeredSites',  # noqa: E501
         'created_at': 'createdAt',  # noqa: E501
         'updated_at': 'updatedAt',  # noqa: E501
         'full_name': 'fullName',  # noqa: E501
+        'administered_sites': 'administeredSites',  # noqa: E501
     }
 
     read_only_vars = {
@@ -135,7 +135,7 @@ class User(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, id, email, organization, location, country, description, image_url, admin_level, administered_sites, created_at, updated_at, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, email, organization, location, country, description, image_url, admin_level, created_at, updated_at, *args, **kwargs):  # noqa: E501
         """User - a model defined in OpenAPI
 
         Args:
@@ -147,7 +147,6 @@ class User(ModelNormal):
             description (str, none_type):
             image_url (str, none_type):
             admin_level (str):
-            administered_sites ([Site]):
             created_at (datetime):
             updated_at (datetime):
 
@@ -183,6 +182,7 @@ class User(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             full_name (str, none_type): [optional]  # noqa: E501
+            administered_sites ([Site]): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -218,7 +218,6 @@ class User(ModelNormal):
         self.description = description
         self.image_url = image_url
         self.admin_level = admin_level
-        self.administered_sites = administered_sites
         self.created_at = created_at
         self.updated_at = updated_at
         for var_name, var_value in kwargs.items():
@@ -241,7 +240,7 @@ class User(ModelNormal):
     ])
 
     @convert_js_args_to_python_args
-    def __init__(self, id, email, organization, location, country, description, image_url, admin_level, administered_sites, created_at, updated_at, *args, **kwargs):  # noqa: E501
+    def __init__(self, id, email, organization, location, country, description, image_url, admin_level, created_at, updated_at, *args, **kwargs):  # noqa: E501
         """User - a model defined in OpenAPI
 
         Args:
@@ -253,7 +252,6 @@ class User(ModelNormal):
             description (str, none_type):
             image_url (str, none_type):
             admin_level (str):
-            administered_sites ([Site]):
             created_at (datetime):
             updated_at (datetime):
 
@@ -289,6 +287,7 @@ class User(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             full_name (str, none_type): [optional]  # noqa: E501
+            administered_sites ([Site]): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -322,7 +321,6 @@ class User(ModelNormal):
         self.description = description
         self.image_url = image_url
         self.admin_level = admin_level
-        self.administered_sites = administered_sites
         self.created_at = created_at
         self.updated_at = updated_at
         for var_name, var_value in kwargs.items():

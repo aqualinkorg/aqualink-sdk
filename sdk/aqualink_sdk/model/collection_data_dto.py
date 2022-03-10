@@ -124,23 +124,8 @@ class CollectionDataDto(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, bottom_temperature, top_temperature, satellite_temperature, dhw, temp_alert, temp_weekly_alert, sst_anomaly, significant_wave_height, wave_mean_direction, wave_mean_period, wave_peak_period, wind_direction, wind_speed, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, *args, **kwargs):  # noqa: E501
         """CollectionDataDto - a model defined in OpenAPI
-
-        Args:
-            bottom_temperature (float):
-            top_temperature (float):
-            satellite_temperature (float):
-            dhw (float):
-            temp_alert (float):
-            temp_weekly_alert (float):
-            sst_anomaly (float):
-            significant_wave_height (float):
-            wave_mean_direction (float):
-            wave_mean_period (float):
-            wave_peak_period (float):
-            wind_direction (float):
-            wind_speed (float):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -173,6 +158,19 @@ class CollectionDataDto(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
+            bottom_temperature (float): [optional]  # noqa: E501
+            top_temperature (float): [optional]  # noqa: E501
+            satellite_temperature (float): [optional]  # noqa: E501
+            dhw (float): [optional]  # noqa: E501
+            temp_alert (float): [optional]  # noqa: E501
+            temp_weekly_alert (float): [optional]  # noqa: E501
+            sst_anomaly (float): [optional]  # noqa: E501
+            significant_wave_height (float): [optional]  # noqa: E501
+            wave_mean_direction (float): [optional]  # noqa: E501
+            wave_mean_period (float): [optional]  # noqa: E501
+            wave_peak_period (float): [optional]  # noqa: E501
+            wind_direction (float): [optional]  # noqa: E501
+            wind_speed (float): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -200,19 +198,6 @@ class CollectionDataDto(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
-        self.bottom_temperature = bottom_temperature
-        self.top_temperature = top_temperature
-        self.satellite_temperature = satellite_temperature
-        self.dhw = dhw
-        self.temp_alert = temp_alert
-        self.temp_weekly_alert = temp_weekly_alert
-        self.sst_anomaly = sst_anomaly
-        self.significant_wave_height = significant_wave_height
-        self.wave_mean_direction = wave_mean_direction
-        self.wave_mean_period = wave_mean_period
-        self.wave_peak_period = wave_peak_period
-        self.wind_direction = wind_direction
-        self.wind_speed = wind_speed
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \
@@ -233,23 +218,8 @@ class CollectionDataDto(ModelNormal):
     ])
 
     @convert_js_args_to_python_args
-    def __init__(self, bottom_temperature, top_temperature, satellite_temperature, dhw, temp_alert, temp_weekly_alert, sst_anomaly, significant_wave_height, wave_mean_direction, wave_mean_period, wave_peak_period, wind_direction, wind_speed, *args, **kwargs):  # noqa: E501
+    def __init__(self, *args, **kwargs):  # noqa: E501
         """CollectionDataDto - a model defined in OpenAPI
-
-        Args:
-            bottom_temperature (float):
-            top_temperature (float):
-            satellite_temperature (float):
-            dhw (float):
-            temp_alert (float):
-            temp_weekly_alert (float):
-            sst_anomaly (float):
-            significant_wave_height (float):
-            wave_mean_direction (float):
-            wave_mean_period (float):
-            wave_peak_period (float):
-            wind_direction (float):
-            wind_speed (float):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -282,6 +252,19 @@ class CollectionDataDto(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
+            bottom_temperature (float): [optional]  # noqa: E501
+            top_temperature (float): [optional]  # noqa: E501
+            satellite_temperature (float): [optional]  # noqa: E501
+            dhw (float): [optional]  # noqa: E501
+            temp_alert (float): [optional]  # noqa: E501
+            temp_weekly_alert (float): [optional]  # noqa: E501
+            sst_anomaly (float): [optional]  # noqa: E501
+            significant_wave_height (float): [optional]  # noqa: E501
+            wave_mean_direction (float): [optional]  # noqa: E501
+            wave_mean_period (float): [optional]  # noqa: E501
+            wave_peak_period (float): [optional]  # noqa: E501
+            wind_direction (float): [optional]  # noqa: E501
+            wind_speed (float): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -307,19 +290,6 @@ class CollectionDataDto(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
-        self.bottom_temperature = bottom_temperature
-        self.top_temperature = top_temperature
-        self.satellite_temperature = satellite_temperature
-        self.dhw = dhw
-        self.temp_alert = temp_alert
-        self.temp_weekly_alert = temp_weekly_alert
-        self.sst_anomaly = sst_anomaly
-        self.significant_wave_height = significant_wave_height
-        self.wave_mean_direction = wave_mean_direction
-        self.wave_mean_period = wave_mean_period
-        self.wave_peak_period = wave_peak_period
-        self.wind_direction = wind_direction
-        self.wind_speed = wind_speed
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \
