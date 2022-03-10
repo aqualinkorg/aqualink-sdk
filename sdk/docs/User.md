@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **id** | **float** |  | 
 **email** | **str** |  | 
 **organization** | **str, none_type** |  | 
-**location** | [**RegionPolygon**](RegionPolygon.md) |  | 
+**location** | [**UserLocation**](UserLocation.md) |  | 
 **country** | **str, none_type** |  | 
 **description** | **str, none_type** |  | 
 **image_url** | **str, none_type** |  | 

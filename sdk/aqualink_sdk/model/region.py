@@ -31,9 +31,9 @@ from aqualink_sdk.exceptions import ApiAttributeError
 
 def lazy_import():
     from aqualink_sdk.model.region import Region
-    from aqualink_sdk.model.region_polygon import RegionPolygon
+    from aqualink_sdk.model.user_location import UserLocation
     globals()['Region'] = Region
-    globals()['RegionPolygon'] = RegionPolygon
+    globals()['UserLocation'] = UserLocation
 
 
 class Region(ModelNormal):
@@ -91,7 +91,7 @@ class Region(ModelNormal):
         return {
             'id': (float,),  # noqa: E501
             'name': (str,),  # noqa: E501
-            'polygon': (RegionPolygon,),  # noqa: E501
+            'polygon': (UserLocation,),  # noqa: E501
             'parent': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'created_at': (datetime,),  # noqa: E501
             'updated_at': (datetime,),  # noqa: E501
@@ -126,7 +126,7 @@ class Region(ModelNormal):
         Args:
             id (float):
             name (str):
-            polygon (RegionPolygon):
+            polygon (UserLocation):
             parent (bool, date, datetime, dict, float, int, list, str, none_type):
             created_at (datetime):
             updated_at (datetime):
@@ -222,7 +222,7 @@ class Region(ModelNormal):
         Args:
             id (float):
             name (str):
-            polygon (RegionPolygon):
+            polygon (UserLocation):
             parent (bool, date, datetime, dict, float, int, list, str, none_type):
             created_at (datetime):
             updated_at (datetime):

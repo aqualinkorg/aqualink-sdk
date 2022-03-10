@@ -192,7 +192,6 @@ Class | Method | HTTP request | Description
  - [InlineResponse404](docs/InlineResponse404.md)
  - [LatestData](docs/LatestData.md)
  - [Region](docs/Region.md)
- - [RegionPolygon](docs/RegionPolygon.md)
  - [SetAdminLevelDto](docs/SetAdminLevelDto.md)
  - [Site](docs/Site.md)
  - [SiteApplication](docs/SiteApplication.md)
@@ -216,6 +215,7 @@ Class | Method | HTTP request | Description
  - [UpdateSiteSurveyPointDto](docs/UpdateSiteSurveyPointDto.md)
  - [UpdateSiteWithApplicationDto](docs/UpdateSiteWithApplicationDto.md)
  - [User](docs/User.md)
+ - [UserLocation](docs/UserLocation.md)
  - [VideoStream](docs/VideoStream.md)
 
 

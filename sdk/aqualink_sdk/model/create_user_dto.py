@@ -30,8 +30,8 @@ from aqualink_sdk.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from aqualink_sdk.model.region_polygon import RegionPolygon
-    globals()['RegionPolygon'] = RegionPolygon
+    from aqualink_sdk.model.user_location import UserLocation
+    globals()['UserLocation'] = UserLocation
 
 
 class CreateUserDto(ModelNormal):
@@ -90,7 +90,7 @@ class CreateUserDto(ModelNormal):
             'email': (str,),  # noqa: E501
             'full_name': (str, none_type,),  # noqa: E501
             'organization': (str, none_type,),  # noqa: E501
-            'location': (RegionPolygon,),  # noqa: E501
+            'location': (UserLocation,),  # noqa: E501
             'country': (str, none_type,),  # noqa: E501
             'description': (str, none_type,),  # noqa: E501
             'image_url': (str, none_type,),  # noqa: E501
@@ -157,7 +157,7 @@ class CreateUserDto(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             full_name (str, none_type): [optional]  # noqa: E501
             organization (str, none_type): [optional]  # noqa: E501
-            location (RegionPolygon): [optional]  # noqa: E501
+            location (UserLocation): [optional]  # noqa: E501
             country (str, none_type): [optional]  # noqa: E501
             description (str, none_type): [optional]  # noqa: E501
             image_url (str, none_type): [optional]  # noqa: E501
@@ -248,7 +248,7 @@ class CreateUserDto(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             full_name (str, none_type): [optional]  # noqa: E501
             organization (str, none_type): [optional]  # noqa: E501
-            location (RegionPolygon): [optional]  # noqa: E501
+            location (UserLocation): [optional]  # noqa: E501
             country (str, none_type): [optional]  # noqa: E501
             description (str, none_type): [optional]  # noqa: E501
             image_url (str, none_type): [optional]  # noqa: E501

@@ -42,7 +42,6 @@ from aqualink_sdk.model.inline_response401 import InlineResponse401
 from aqualink_sdk.model.inline_response404 import InlineResponse404
 from aqualink_sdk.model.latest_data import LatestData
 from aqualink_sdk.model.region import Region
-from aqualink_sdk.model.region_polygon import RegionPolygon
 from aqualink_sdk.model.set_admin_level_dto import SetAdminLevelDto
 from aqualink_sdk.model.site import Site
 from aqualink_sdk.model.site_application import SiteApplication
@@ -66,4 +65,5 @@ from aqualink_sdk.model.update_site_dto import UpdateSiteDto
 from aqualink_sdk.model.update_site_survey_point_dto import UpdateSiteSurveyPointDto
 from aqualink_sdk.model.update_site_with_application_dto import UpdateSiteWithApplicationDto
 from aqualink_sdk.model.user import User
+from aqualink_sdk.model.user_location import UserLocation
 from aqualink_sdk.model.video_stream import VideoStream

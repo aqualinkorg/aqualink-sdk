@@ -33,20 +33,20 @@ def lazy_import():
     from aqualink_sdk.model.collection_data_dto import CollectionDataDto
     from aqualink_sdk.model.historical_monthly_mean import HistoricalMonthlyMean
     from aqualink_sdk.model.region import Region
-    from aqualink_sdk.model.region_polygon import RegionPolygon
     from aqualink_sdk.model.site_application import SiteApplication
     from aqualink_sdk.model.sofar_live_data_dto import SofarLiveDataDto
     from aqualink_sdk.model.survey import Survey
     from aqualink_sdk.model.user import User
+    from aqualink_sdk.model.user_location import UserLocation
     from aqualink_sdk.model.video_stream import VideoStream
     globals()['CollectionDataDto'] = CollectionDataDto
     globals()['HistoricalMonthlyMean'] = HistoricalMonthlyMean
     globals()['Region'] = Region
-    globals()['RegionPolygon'] = RegionPolygon
     globals()['SiteApplication'] = SiteApplication
     globals()['SofarLiveDataDto'] = SofarLiveDataDto
     globals()['Survey'] = Survey
     globals()['User'] = User
+    globals()['UserLocation'] = UserLocation
     globals()['VideoStream'] = VideoStream
 
 
@@ -115,7 +115,7 @@ class Site(ModelNormal):
             'id': (float,),  # noqa: E501
             'name': (str, none_type,),  # noqa: E501
             'sensor_id': (str, none_type,),  # noqa: E501
-            'polygon': (RegionPolygon,),  # noqa: E501
+            'polygon': (UserLocation,),  # noqa: E501
             'depth': (float, none_type,),  # noqa: E501
             'max_monthly_mean': (float, none_type,),  # noqa: E501
             'timezone': (str, none_type,),  # noqa: E501
@@ -127,9 +127,9 @@ class Site(ModelNormal):
             'region': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'stream': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'admins': ([User],),  # noqa: E501
+            'has_hobo': (bool,),  # noqa: E501
             'surveys': ([Survey],),  # noqa: E501
             'historical_monthly_mean': ([HistoricalMonthlyMean],),  # noqa: E501
-            'has_hobo': (bool,),  # noqa: E501
             'site_application': (SiteApplication,),  # noqa: E501
             'live_data': ([SofarLiveDataDto],),  # noqa: E501
             'collection_data': (CollectionDataDto,),  # noqa: E501
@@ -156,9 +156,9 @@ class Site(ModelNormal):
         'region': 'region',  # noqa: E501
         'stream': 'stream',  # noqa: E501
         'admins': 'admins',  # noqa: E501
+        'has_hobo': 'hasHobo',  # noqa: E501
         'surveys': 'surveys',  # noqa: E501
         'historical_monthly_mean': 'historicalMonthlyMean',  # noqa: E501
-        'has_hobo': 'hasHobo',  # noqa: E501
         'site_application': 'siteApplication',  # noqa: E501
         'live_data': 'liveData',  # noqa: E501
         'collection_data': 'collectionData',  # noqa: E501
@@ -171,14 +171,14 @@ class Site(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, id, name, sensor_id, polygon, depth, max_monthly_mean, timezone, status, video_stream, display, created_at, updated_at, region, stream, admins, surveys, historical_monthly_mean, has_hobo, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, name, sensor_id, polygon, depth, max_monthly_mean, timezone, status, video_stream, display, created_at, updated_at, region, stream, admins, has_hobo, *args, **kwargs):  # noqa: E501
         """Site - a model defined in OpenAPI
 
         Args:
             id (float):
             name (str, none_type):
             sensor_id (str, none_type):
-            polygon (RegionPolygon):
+            polygon (UserLocation):
             depth (float, none_type):
             max_monthly_mean (float, none_type):
             timezone (str, none_type):
@@ -190,8 +190,6 @@ class Site(ModelNormal):
             region (bool, date, datetime, dict, float, int, list, str, none_type):
             stream (bool, date, datetime, dict, float, int, list, str, none_type):
             admins ([User]):
-            surveys ([Survey]):
-            historical_monthly_mean ([HistoricalMonthlyMean]):
             has_hobo (bool):
 
         Keyword Args:
@@ -225,6 +223,8 @@ class Site(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
+            surveys ([Survey]): [optional]  # noqa: E501
+            historical_monthly_mean ([HistoricalMonthlyMean]): [optional]  # noqa: E501
             site_application (SiteApplication): [optional]  # noqa: E501
             live_data ([SofarLiveDataDto]): [optional]  # noqa: E501
             collection_data (CollectionDataDto): [optional]  # noqa: E501
@@ -270,8 +270,6 @@ class Site(ModelNormal):
         self.region = region
         self.stream = stream
         self.admins = admins
-        self.surveys = surveys
-        self.historical_monthly_mean = historical_monthly_mean
         self.has_hobo = has_hobo
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
@@ -293,14 +291,14 @@ class Site(ModelNormal):
     ])
 
     @convert_js_args_to_python_args
-    def __init__(self, id, name, sensor_id, polygon, depth, max_monthly_mean, timezone, status, video_stream, display, created_at, updated_at, region, stream, admins, surveys, historical_monthly_mean, has_hobo, *args, **kwargs):  # noqa: E501
+    def __init__(self, id, name, sensor_id, polygon, depth, max_monthly_mean, timezone, status, video_stream, display, created_at, updated_at, region, stream, admins, has_hobo, *args, **kwargs):  # noqa: E501
         """Site - a model defined in OpenAPI
 
         Args:
             id (float):
             name (str, none_type):
             sensor_id (str, none_type):
-            polygon (RegionPolygon):
+            polygon (UserLocation):
             depth (float, none_type):
             max_monthly_mean (float, none_type):
             timezone (str, none_type):
@@ -312,8 +310,6 @@ class Site(ModelNormal):
             region (bool, date, datetime, dict, float, int, list, str, none_type):
             stream (bool, date, datetime, dict, float, int, list, str, none_type):
             admins ([User]):
-            surveys ([Survey]):
-            historical_monthly_mean ([HistoricalMonthlyMean]):
             has_hobo (bool):
 
         Keyword Args:
@@ -347,6 +343,8 @@ class Site(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
+            surveys ([Survey]): [optional]  # noqa: E501
+            historical_monthly_mean ([HistoricalMonthlyMean]): [optional]  # noqa: E501
             site_application (SiteApplication): [optional]  # noqa: E501
             live_data ([SofarLiveDataDto]): [optional]  # noqa: E501
             collection_data (CollectionDataDto): [optional]  # noqa: E501
@@ -390,8 +388,6 @@ class Site(ModelNormal):
         self.region = region
         self.stream = stream
         self.admins = admins
-        self.surveys = surveys
-        self.historical_monthly_mean = historical_monthly_mean
         self.has_hobo = has_hobo
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \

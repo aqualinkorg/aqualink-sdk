@@ -41,7 +41,7 @@ with aqualink_sdk.ApiClient() as api_client:
         full_name="User full name",
         email="fullname@example.com",
         organization="Ovio",
-        location=RegionPolygon(
+        location=UserLocation(
             type="Point",
             coordinates=[15.24012,-10.05412],
         ),

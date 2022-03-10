@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **email** | **str** |  | 
 **full_name** | **str, none_type** |  | [optional] 
 **organization** | **str, none_type** |  | [optional] 
-**location** | [**RegionPolygon**](RegionPolygon.md) |  | [optional] 
+**location** | [**UserLocation**](UserLocation.md) |  | [optional] 
 **country** | **str, none_type** |  | [optional] 
 **description** | **str, none_type** |  | [optional] 
 **image_url** | **str, none_type** |  | [optional] 

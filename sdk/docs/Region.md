@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **float** |  | 
 **name** | **str** |  | 
-**polygon** | [**RegionPolygon**](RegionPolygon.md) |  | 
+**polygon** | [**UserLocation**](UserLocation.md) |  | 
 **parent** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | 
 **created_at** | **datetime** |  | 
 **updated_at** | **datetime** |  | 

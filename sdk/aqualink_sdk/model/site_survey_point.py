@@ -30,10 +30,10 @@ from aqualink_sdk.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from aqualink_sdk.model.region_polygon import RegionPolygon
     from aqualink_sdk.model.site import Site
-    globals()['RegionPolygon'] = RegionPolygon
+    from aqualink_sdk.model.user_location import UserLocation
     globals()['Site'] = Site
+    globals()['UserLocation'] = UserLocation
 
 
 class SiteSurveyPoint(ModelNormal):
@@ -94,7 +94,7 @@ class SiteSurveyPoint(ModelNormal):
             'image_url': (str, none_type,),  # noqa: E501
             'name': (str,),  # noqa: E501
             'site_id': (float,),  # noqa: E501
-            'polygon': (RegionPolygon,),  # noqa: E501
+            'polygon': (UserLocation,),  # noqa: E501
             'site': (Site,),  # noqa: E501
             'created_at': (datetime,),  # noqa: E501
             'updated_at': (datetime,),  # noqa: E501
@@ -133,7 +133,7 @@ class SiteSurveyPoint(ModelNormal):
             image_url (str, none_type):
             name (str):
             site_id (float):
-            polygon (RegionPolygon):
+            polygon (UserLocation):
             site (Site):
             created_at (datetime):
             updated_at (datetime):
@@ -234,7 +234,7 @@ class SiteSurveyPoint(ModelNormal):
             image_url (str, none_type):
             name (str):
             site_id (float):
-            polygon (RegionPolygon):
+            polygon (UserLocation):
             site (Site):
             created_at (datetime):
             updated_at (datetime):

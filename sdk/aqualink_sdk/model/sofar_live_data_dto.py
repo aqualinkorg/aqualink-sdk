@@ -93,21 +93,21 @@ class SofarLiveDataDto(ModelNormal):
         """
         lazy_import()
         return {
-            'site': (SofarLiveDataDtoSite,),  # noqa: E501
             'spotter_position': (SofarLiveDataDtoSpotterPosition,),  # noqa: E501
-            'latest_data': ([LatestData],),  # noqa: E501
+            'site': (SofarLiveDataDtoSite,),  # noqa: E501
             'daily_alert_level': (float,),  # noqa: E501
             'weekly_alert_level': (float,),  # noqa: E501
-            'bottom_temperature': (TimeSeriesValueDto,),  # noqa: E501
-            'top_temperature': (TimeSeriesValueDto,),  # noqa: E501
-            'satellite_temperature': (TimeSeriesValueDto,),  # noqa: E501
-            'degree_heating_days': (TimeSeriesValueDto,),  # noqa: E501
-            'wave_height': (TimeSeriesValueDto,),  # noqa: E501
-            'wave_mean_direction': (TimeSeriesValueDto,),  # noqa: E501
-            'wave_mean_period': (TimeSeriesValueDto,),  # noqa: E501
-            'wind_speed': (TimeSeriesValueDto,),  # noqa: E501
-            'wind_direction': (TimeSeriesValueDto,),  # noqa: E501
+            'bottom_temperature': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'top_temperature': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'satellite_temperature': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'degree_heating_days': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'wave_height': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'wave_mean_direction': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'wave_mean_period': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'wind_speed': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'wind_direction': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'sst_anomaly': (float,),  # noqa: E501
+            'latest_data': ([LatestData],),  # noqa: E501
         }
 
     @cached_property
@@ -116,9 +116,8 @@ class SofarLiveDataDto(ModelNormal):
 
 
     attribute_map = {
-        'site': 'site',  # noqa: E501
         'spotter_position': 'spotterPosition',  # noqa: E501
-        'latest_data': 'latestData',  # noqa: E501
+        'site': 'site',  # noqa: E501
         'daily_alert_level': 'dailyAlertLevel',  # noqa: E501
         'weekly_alert_level': 'weeklyAlertLevel',  # noqa: E501
         'bottom_temperature': 'bottomTemperature',  # noqa: E501
@@ -131,6 +130,7 @@ class SofarLiveDataDto(ModelNormal):
         'wind_speed': 'windSpeed',  # noqa: E501
         'wind_direction': 'windDirection',  # noqa: E501
         'sst_anomaly': 'sstAnomaly',  # noqa: E501
+        'latest_data': 'latestData',  # noqa: E501
     }
 
     read_only_vars = {
@@ -140,12 +140,12 @@ class SofarLiveDataDto(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, site, spotter_position, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, spotter_position, site, *args, **kwargs):  # noqa: E501
         """SofarLiveDataDto - a model defined in OpenAPI
 
         Args:
-            site (SofarLiveDataDtoSite):
             spotter_position (SofarLiveDataDtoSpotterPosition):
+            site (SofarLiveDataDtoSite):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -178,19 +178,19 @@ class SofarLiveDataDto(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            latest_data ([LatestData]): [optional]  # noqa: E501
             daily_alert_level (float): [optional]  # noqa: E501
             weekly_alert_level (float): [optional]  # noqa: E501
-            bottom_temperature (TimeSeriesValueDto): [optional]  # noqa: E501
-            top_temperature (TimeSeriesValueDto): [optional]  # noqa: E501
-            satellite_temperature (TimeSeriesValueDto): [optional]  # noqa: E501
-            degree_heating_days (TimeSeriesValueDto): [optional]  # noqa: E501
-            wave_height (TimeSeriesValueDto): [optional]  # noqa: E501
-            wave_mean_direction (TimeSeriesValueDto): [optional]  # noqa: E501
-            wave_mean_period (TimeSeriesValueDto): [optional]  # noqa: E501
-            wind_speed (TimeSeriesValueDto): [optional]  # noqa: E501
-            wind_direction (TimeSeriesValueDto): [optional]  # noqa: E501
+            bottom_temperature (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
+            top_temperature (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
+            satellite_temperature (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
+            degree_heating_days (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
+            wave_height (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
+            wave_mean_direction (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
+            wave_mean_period (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
+            wind_speed (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
+            wind_direction (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
             sst_anomaly (float): [optional]  # noqa: E501
+            latest_data ([LatestData]): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -218,8 +218,8 @@ class SofarLiveDataDto(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
-        self.site = site
         self.spotter_position = spotter_position
+        self.site = site
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \
@@ -240,12 +240,12 @@ class SofarLiveDataDto(ModelNormal):
     ])
 
     @convert_js_args_to_python_args
-    def __init__(self, site, spotter_position, *args, **kwargs):  # noqa: E501
+    def __init__(self, spotter_position, site, *args, **kwargs):  # noqa: E501
         """SofarLiveDataDto - a model defined in OpenAPI
 
         Args:
-            site (SofarLiveDataDtoSite):
             spotter_position (SofarLiveDataDtoSpotterPosition):
+            site (SofarLiveDataDtoSite):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -278,19 +278,19 @@ class SofarLiveDataDto(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            latest_data ([LatestData]): [optional]  # noqa: E501
             daily_alert_level (float): [optional]  # noqa: E501
             weekly_alert_level (float): [optional]  # noqa: E501
-            bottom_temperature (TimeSeriesValueDto): [optional]  # noqa: E501
-            top_temperature (TimeSeriesValueDto): [optional]  # noqa: E501
-            satellite_temperature (TimeSeriesValueDto): [optional]  # noqa: E501
-            degree_heating_days (TimeSeriesValueDto): [optional]  # noqa: E501
-            wave_height (TimeSeriesValueDto): [optional]  # noqa: E501
-            wave_mean_direction (TimeSeriesValueDto): [optional]  # noqa: E501
-            wave_mean_period (TimeSeriesValueDto): [optional]  # noqa: E501
-            wind_speed (TimeSeriesValueDto): [optional]  # noqa: E501
-            wind_direction (TimeSeriesValueDto): [optional]  # noqa: E501
+            bottom_temperature (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
+            top_temperature (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
+            satellite_temperature (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
+            degree_heating_days (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
+            wave_height (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
+            wave_mean_direction (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
+            wave_mean_period (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
+            wind_speed (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
+            wind_direction (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
             sst_anomaly (float): [optional]  # noqa: E501
+            latest_data ([LatestData]): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -316,8 +316,8 @@ class SofarLiveDataDto(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
-        self.site = site
         self.spotter_position = spotter_position
+        self.site = site
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \
