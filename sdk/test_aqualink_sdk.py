@@ -31,7 +31,7 @@ def test_sdk():
             end="2022-01-01",
             hourly=False
         )
-        pprint(data)
+        # pprint(data)
 
         # Get aggregated time series data
         data = ts_api.time_series_controller_find_aggregate_site_data(

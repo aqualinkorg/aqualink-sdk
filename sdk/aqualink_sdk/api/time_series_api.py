@@ -506,48 +506,23 @@ class TimeSeriesApi(object):
                 If the method is called asynchronously, returns the request
                 thread.
         """
-        kwargs['async_req'] = kwargs.get(
-            'async_req', False
-        )
-        kwargs['_return_http_data_only'] = kwargs.get(
-            '_return_http_data_only', True
-        )
-        kwargs['_preload_content'] = kwargs.get(
-            '_preload_content', True
-        )
-        kwargs['_request_timeout'] = kwargs.get(
-            '_request_timeout', None
-        )
-        kwargs['_check_input_type'] = kwargs.get(
-            '_check_input_type', True
-        )
-        kwargs['_check_return_type'] = kwargs.get(
-            '_check_return_type', True
-        )
-        kwargs['_spec_property_naming'] = kwargs.get(
-            '_spec_property_naming', False
-        )
-        kwargs['_content_type'] = kwargs.get(
-            '_content_type')
-        kwargs['_host_index'] = kwargs.get('_host_index')
-        kwargs['site_id'] = \
-            site_id
-        kwargs['metrics'] = \
-            metrics
-        kwargs['start'] = \
-            start
-        kwargs['end'] = \
-            end
-        # aggregate from raw data
         kwargs['hourly'] = False
+        api_response = self.time_series_controller_find_site_data(
+            site_id,
+            metrics,
+            start,
+            end,
+            async_req=False,
+            **kwargs
+        )
 
-        data = self.time_series_controller_find_site_data_endpoint.call_with_http_info(**kwargs)
         if aggregate_frequency and aggregate_mapping:
             # TODO - verify that all the metrics requested in "metrics" have a mapping
             # TODO - strongly type the frquency
             # TODO - Hourly and aggregate are incompatible
-            return aggregate_data(data, aggregate_frequency, aggregate_mapping)
-        return data
+            data = aggregate_data(api_response, aggregate_frequency, aggregate_mapping)
+            api_response.data = data
+        return api_response
 
 
     def time_series_controller_find_site_data_range(
