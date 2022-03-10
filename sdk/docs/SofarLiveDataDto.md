@@ -1,10 +1,12 @@
 # SofarLiveDataDto
 
+
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **site** | [**SofarLiveDataDtoSite**](SofarLiveDataDtoSite.md) |  | 
-**latest_data** | [**list[LatestData]**](LatestData.md) |  | [optional] 
+**spotter_position** | [**SofarLiveDataDtoSpotterPosition**](SofarLiveDataDtoSpotterPosition.md) |  | 
+**latest_data** | [**[LatestData]**](LatestData.md) |  | [optional] 
 **daily_alert_level** | **float** |  | [optional] 
 **weekly_alert_level** | **float** |  | [optional] 
 **bottom_temperature** | [**TimeSeriesValueDto**](TimeSeriesValueDto.md) |  | [optional] 
@@ -17,7 +19,8 @@ Name | Type | Description | Notes
 **wind_speed** | [**TimeSeriesValueDto**](TimeSeriesValueDto.md) |  | [optional] 
 **wind_direction** | [**TimeSeriesValueDto**](TimeSeriesValueDto.md) |  | [optional] 
 **sst_anomaly** | **float** |  | [optional] 
-**spotter_position** | [**SofarLiveDataDtoSpotterPosition**](SofarLiveDataDtoSpotterPosition.md) |  | 
+**any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
 
