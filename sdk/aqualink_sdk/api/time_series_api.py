@@ -521,7 +521,7 @@ class TimeSeriesApi(object):
             # TODO - strongly type the frquency
             # TODO - Hourly and aggregate are incompatible
             data = aggregate_data(api_response, aggregate_frequency, aggregate_mapping)
-            api_response.data = data
+            api_response._data_store = data
         return api_response
 
 
