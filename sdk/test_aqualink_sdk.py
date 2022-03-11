@@ -1,6 +1,5 @@
 """Simple Test for the Aqualink Python SDK"""
 # pip install -i https://test.pypi.org/simple/ aqualink-api
-import time
 import aqualink_sdk
 from aqualink_sdk.api import sites_api, time_series_api
 from aqualink_sdk.model.exclude_spotter_dates_dto import ExcludeSpotterDatesDto
@@ -14,14 +13,14 @@ def test_sdk():
         # List all sites
         site_api = sites_api.SitesApi(api_client)
         site_data = site_api.sites_controller_find()
-        # pprint(site_data)
+        pprint(site_data)
 
         # Get available date ranges
         ts_api = time_series_api.TimeSeriesApi()
         range_data = ts_api.time_series_controller_find_site_data_range(
             site_id=1006,
         )
-        # pprint(range_data)
+        pprint(range_data)
 
         # Get time series data
         data = ts_api.time_series_controller_find_site_data(
@@ -31,7 +30,7 @@ def test_sdk():
             end="2022-01-01",
             hourly=False
         )
-        # pprint(data)
+        pprint(data)
 
         # Get aggregated time series data
         data = ts_api.time_series_controller_find_aggregate_site_data(
