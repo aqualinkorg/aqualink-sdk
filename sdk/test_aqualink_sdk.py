@@ -37,7 +37,7 @@ def test_sdk():
         data = ts_api.time_series_controller_find_aggregate_site_data(
             site_id=1006,
             metrics=["bottom_temperature"],
-            start="2021-01-01",
+            start="2022-01-08",
             end="2022-01-10",
             aggregate_frequency="10min",
             aggregate_mapping={"bottom_temperature": "max"}
