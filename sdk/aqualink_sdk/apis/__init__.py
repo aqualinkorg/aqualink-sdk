@@ -14,6 +14,7 @@
 #   sys.setrecursionlimit(n)
 
 # Import APIs into API package:
+from aqualink_sdk.api.aggregate_api import AggregateApi
 from aqualink_sdk.api.collections_api import CollectionsApi
 from aqualink_sdk.api.data_uploads_api import DataUploadsApi
 from aqualink_sdk.api.google_cloud_storage_api import GoogleCloudStorageApi
