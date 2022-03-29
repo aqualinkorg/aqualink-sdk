@@ -12,13 +12,16 @@ import pandas as pd
 from aqualink_sdk.api import time_series_api
 
 default_mapping = {
-    'min_temperature':'min',
-    'precipitation':'sum',
-    'alert_level':'max',
-    'bottom_temperature':'mean'
+    "min_temperature": "min",
+    "precipitation": "sum",
+    "alert_level": "max",
+    "bottom_temperature": "mean",
 }
 
-def aggregate_data(timeseries_data, aggregate_frequency, aggregate_mapping=default_mapping):
+
+def aggregate_data(
+    timeseries_data, aggregate_frequency, aggregate_mapping=default_mapping
+):
     data = timeseries_data._data_store
     # Data is in the form:
     # {'bottom_temperature': {
@@ -32,28 +35,36 @@ def aggregate_data(timeseries_data, aggregate_frequency, aggregate_mapping=defau
     new_data = {}
     for metric_name, metric_data in data.items():
         for sonde_type_name, sonde_data in metric_data.items():
-            dataframe = pd.DataFrame(sonde_data['data'])
-            dataframe['timestamp_index'] = pd.to_datetime(dataframe['timestamp']) # convert column to datetime object
-            dataframe.set_index('timestamp_index', inplace=True)
+            dataframe = pd.DataFrame(sonde_data["data"])
+            dataframe["timestamp_index"] = pd.to_datetime(
+                dataframe["timestamp"]
+            )  # convert column to datetime object
+            dataframe.set_index("timestamp_index", inplace=True)
 
             temp_aggregate_mapping = {"value": aggregate_mapping[metric_name]}
 
-            aggregate_data = dataframe.groupby(pd.Grouper(freq=aggregate_frequency)).agg(temp_aggregate_mapping)
+            aggregate_data = dataframe.groupby(
+                pd.Grouper(freq=aggregate_frequency)
+            ).agg(temp_aggregate_mapping)
 
             # Convert timestamp back to string
             aggregate_data["timestamp"] = aggregate_data.index.map(
-                lambda ts: ts.isoformat(timespec='milliseconds').replace('+00:00', 'Z')
+                lambda ts: ts.isoformat(timespec="milliseconds").replace("+00:00", "Z")
             )
 
             aggregate_data.dropna(inplace=True)
 
-            new_metric_data = {sonde_type_name: {"data": aggregate_data.to_dict('records')}}
+            new_metric_data = {
+                sonde_type_name: {"data": aggregate_data.to_dict("records")}
+            }
             new_data[metric_name] = new_metric_data
 
     return new_data
 
 
-def aggregate_data_for_csv(timeseries_data, aggregate_frequency, aggregate_mapping=default_mapping):
+def aggregate_data_for_csv(
+    timeseries_data, aggregate_frequency, aggregate_mapping=default_mapping
+):
     data = timeseries_data._data_store
     # Data is in the form:
     # {'bottom_temperature': {
@@ -68,26 +79,36 @@ def aggregate_data_for_csv(timeseries_data, aggregate_frequency, aggregate_mappi
 
     for metric_name, metric_data in data.items():
         for sonde_type_name, sonde_data in metric_data.items():
-            dataframe = pd.DataFrame(sonde_data['data'])
-            dataframe['timestamp_index'] = pd.to_datetime(dataframe['timestamp']) # convert column to datetime object
-            dataframe.set_index('timestamp_index', inplace=True)
+            dataframe = pd.DataFrame(sonde_data["data"])
+            dataframe["timestamp_index"] = pd.to_datetime(
+                dataframe["timestamp"]
+            )  # convert column to datetime object
+            dataframe.set_index("timestamp_index", inplace=True)
 
             temp_aggregate_mapping = {"value": aggregate_mapping[metric_name]}
 
-            aggregate_data = dataframe.groupby(pd.Grouper(freq=aggregate_frequency)).agg(temp_aggregate_mapping)
+            aggregate_data = dataframe.groupby(
+                pd.Grouper(freq=aggregate_frequency)
+            ).agg(temp_aggregate_mapping)
 
             aggregate_data.dropna(inplace=True)
-            aggregate_data.rename(columns={"value": f'{metric_name}_{sonde_type_name}'}, inplace=True)
+            aggregate_data.rename(
+                columns={"value": f"{metric_name}_{sonde_type_name}"}, inplace=True
+            )
 
-            new_data_drame = new_data_drame.join(aggregate_data, how="outer") if new_data_drame is not None else aggregate_data
+            new_data_drame = (
+                new_data_drame.join(aggregate_data, how="outer")
+                if new_data_drame is not None
+                else aggregate_data
+            )
 
     # Convert timestamp back to string
     new_data_drame["timestamp"] = new_data_drame.index.map(
-        lambda ts: ts.isoformat(timespec='milliseconds').replace('+00:00', 'Z')
+        lambda ts: ts.isoformat(timespec="milliseconds").replace("+00:00", "Z")
     )
 
     # Replace timestamp in first position
-    new_data_drame.insert(0, 'timestamp', new_data_drame.pop('timestamp'))
+    new_data_drame.insert(0, "timestamp", new_data_drame.pop("timestamp"))
 
     return new_data_drame
 
@@ -109,7 +130,7 @@ class AggregateApi(object):
         aggregate_frequency,
         aggregate_mapping,
         csv_output,
-        **kwargs
+        **kwargs,
     ):
         """Returns specified aggregated time series data for a specified site  # noqa: E501
 
@@ -124,14 +145,9 @@ class AggregateApi(object):
         Returns:
             InlineResponse200
         """
-        kwargs['hourly'] = False
+        kwargs["hourly"] = False
         api_response = self.ts_api.time_series_controller_find_site_data(
-            site_id,
-            metrics,
-            start,
-            end,
-            async_req=False,
-            **kwargs
+            site_id, metrics, start, end, async_req=False, **kwargs
         )
 
         # TODO - verify that all the metrics requested in "metrics" have a mapping
@@ -141,8 +157,10 @@ class AggregateApi(object):
         print(api_response)
 
         if csv_output:
-            dataframe = aggregate_data_for_csv(api_response, aggregate_frequency, aggregate_mapping)
-            dataframe.to_csv(csv_output, encoding='utf-8', index=False)
+            dataframe = aggregate_data_for_csv(
+                api_response, aggregate_frequency, aggregate_mapping
+            )
+            dataframe.to_csv(csv_output, encoding="utf-8", index=False)
 
         if aggregate_frequency and aggregate_mapping:
             data = aggregate_data(api_response, aggregate_frequency, aggregate_mapping)

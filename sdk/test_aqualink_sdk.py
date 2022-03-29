@@ -30,7 +30,7 @@ def test_sdk():
             metrics=["bottom_temperature"],
             start="2021-01-02",
             end="2022-01-01",
-            hourly=False
+            hourly=False,
         )
         pprint(data)
 
@@ -42,10 +42,15 @@ def test_sdk():
             start="2022-01-08",
             end="2022-01-10",
             aggregate_frequency="10min",
-            aggregate_mapping={"bottom_temperature": "max", "top_temperature": "max", "satellite_temperature": "max"},
-            csv_output="test_aggregate_data.csv"
+            aggregate_mapping={
+                "bottom_temperature": "max",
+                "top_temperature": "max",
+                "satellite_temperature": "max",
+            },
+            csv_output="test_aggregate_data.csv",
         )
         print(json.dumps(data._data_store, indent=4))
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     test_sdk()
