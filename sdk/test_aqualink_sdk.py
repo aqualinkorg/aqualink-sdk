@@ -35,7 +35,7 @@ def test_sdk():
         pprint(data)
 
         # Get aggregated time series data
-        ag_api = aggregate_api.AggregateApi()
+        ag_api = aggregate_api.AggregateApi(api_client)
         data = ag_api.get_aggregate_site_data(
             site_id=1006,
             metrics=["bottom_temperature", "top_temperature", "satellite_temperature"],
