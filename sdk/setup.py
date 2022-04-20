@@ -37,6 +37,6 @@ setup(
     packages=find_packages(exclude=["test", "tests"]),
     include_package_data=True,
     long_description="""\
-    The Aqualink public API documentation  # noqa: E501
+    The Aqualink public API documentation
     """
 )
