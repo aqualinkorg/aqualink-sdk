@@ -9,6 +9,7 @@
 from pprint import pprint
 import pandas as pd
 
+from aqualink_sdk.api_client import ApiClient
 from aqualink_sdk.api import time_series_api
 
 default_mapping = {
@@ -116,10 +117,10 @@ def aggregate_data_for_csv(
 class AggregateApi(object):
     """AggregateApi Class, built on top of the TimeSeriesApi"""
 
-    def __init__(self, ts_api=None):
-        if ts_api is None:
-            ts_api = time_series_api.TimeSeriesApi()
-        self.ts_api = ts_api
+    def __init__(self, api_client=None):
+        if api_client is None:
+            api_client = ApiClient()
+        self.ts_api = time_series_api.TimeSeriesApi(api_client)
 
     def get_aggregate_site_data(
         self,
