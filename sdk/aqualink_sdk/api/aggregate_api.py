@@ -154,7 +154,8 @@ class AggregateApi(object):
         # TODO - strongly type the frequency
         # TODO - Hourly and aggregate are incompatible
 
-        print(api_response)
+        if not (aggregate_frequency and aggregate_mapping):
+            raise Exception('Missing parameter aggregate_frequency or aggregate_mapping')
 
         if csv_output:
             dataframe = aggregate_data_for_csv(
@@ -162,8 +163,7 @@ class AggregateApi(object):
             )
             dataframe.to_csv(csv_output, encoding="utf-8", index=False)
 
-        if aggregate_frequency and aggregate_mapping:
-            data = aggregate_data(api_response, aggregate_frequency, aggregate_mapping)
-            api_response._data_store = data
+        data = aggregate_data(api_response, aggregate_frequency, aggregate_mapping)
+        api_response._data_store = data
 
         return api_response
