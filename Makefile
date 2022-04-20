@@ -10,6 +10,9 @@ build:
 push_testpypi:
 	cd sdk && python3 -m twine upload --repository testpypi dist/*
 
+push_pypi:
+	cd sdk && python3 -m twine upload dist/*
+
 # Perform sdk test
 test:
 	python3 ./sdk/test_aqualink_sdk.py
