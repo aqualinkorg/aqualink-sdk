@@ -105,6 +105,7 @@ Class | Method | HTTP request | Description
 *CollectionsApi* | [**collections_controller_find_public**](docs/CollectionsApi.md#collections_controller_find_public) | **GET** /collections/public | Fetch all public collections
 *CollectionsApi* | [**collections_controller_get_heat_stress_tracker**](docs/CollectionsApi.md#collections_controller_get_heat_stress_tracker) | **GET** /collections/heat-stress-tracker | Fetch the heat stress tracker
 *CollectionsApi* | [**collections_controller_update**](docs/CollectionsApi.md#collections_controller_update) | **PUT** /collections/{collectionId} | Update specified collection
+*DataUploadsApi* | [**data_uploads_controller_delete_data_uploads**](docs/DataUploadsApi.md#data_uploads_controller_delete_data_uploads) | **POST** /data-uploads/delete-uploads | Delete selected data uploads
 *DataUploadsApi* | [**data_uploads_controller_get_data_uploads**](docs/DataUploadsApi.md#data_uploads_controller_get_data_uploads) | **GET** /data-uploads/sites/{siteId} | Find all data uploads for a site&#39;s survey point
 *GoogleCloudStorageApi* | [**google_cloud_controller_delete_dangling_files**](docs/GoogleCloudStorageApi.md#google_cloud_controller_delete_dangling_files) | **DELETE** /google-cloud/dangling | Deletes all unused files stored
 *GoogleCloudStorageApi* | [**google_cloud_controller_find_dangling_files**](docs/GoogleCloudStorageApi.md#google_cloud_controller_find_dangling_files) | **GET** /google-cloud/dangling | Returns all files stored that are not used
@@ -173,6 +174,7 @@ Class | Method | HTTP request | Description
  - [CreateUserDto](docs/CreateUserDto.md)
  - [DailyData](docs/DailyData.md)
  - [DataUploads](docs/DataUploads.md)
+ - [DataUploadsDeleteDto](docs/DataUploadsDeleteDto.md)
  - [DeploySpotterDto](docs/DeploySpotterDto.md)
  - [EditSurveyDto](docs/EditSurveyDto.md)
  - [EditSurveyMediaDto](docs/EditSurveyMediaDto.md)

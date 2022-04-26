@@ -35,6 +35,7 @@ aqualink_sdk/model/create_survey_media_dto.py
 aqualink_sdk/model/create_user_dto.py
 aqualink_sdk/model/daily_data.py
 aqualink_sdk/model/data_uploads.py
+aqualink_sdk/model/data_uploads_delete_dto.py
 aqualink_sdk/model/deploy_spotter_dto.py
 aqualink_sdk/model/edit_survey_dto.py
 aqualink_sdk/model/edit_survey_media_dto.py
@@ -98,6 +99,7 @@ docs/CreateUserDto.md
 docs/DailyData.md
 docs/DataUploads.md
 docs/DataUploadsApi.md
+docs/DataUploadsDeleteDto.md
 docs/DeploySpotterDto.md
 docs/EditSurveyDto.md
 docs/EditSurveyMediaDto.md

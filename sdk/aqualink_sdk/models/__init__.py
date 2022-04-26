@@ -23,6 +23,7 @@ from aqualink_sdk.model.create_survey_media_dto import CreateSurveyMediaDto
 from aqualink_sdk.model.create_user_dto import CreateUserDto
 from aqualink_sdk.model.daily_data import DailyData
 from aqualink_sdk.model.data_uploads import DataUploads
+from aqualink_sdk.model.data_uploads_delete_dto import DataUploadsDeleteDto
 from aqualink_sdk.model.deploy_spotter_dto import DeploySpotterDto
 from aqualink_sdk.model.edit_survey_dto import EditSurveyDto
 from aqualink_sdk.model.edit_survey_media_dto import EditSurveyMediaDto

@@ -142,6 +142,7 @@ class DataUploads(ModelNormal):
             'min_date': (datetime,),  # noqa: E501
             'max_date': (datetime,),  # noqa: E501
             'metrics': ([str],),  # noqa: E501
+            'file_location': (str,),  # noqa: E501
             'created_at': (datetime,),  # noqa: E501
             'updated_at': (datetime,),  # noqa: E501
         }
@@ -161,6 +162,7 @@ class DataUploads(ModelNormal):
         'min_date': 'minDate',  # noqa: E501
         'max_date': 'maxDate',  # noqa: E501
         'metrics': 'metrics',  # noqa: E501
+        'file_location': 'fileLocation',  # noqa: E501
         'created_at': 'createdAt',  # noqa: E501
         'updated_at': 'updatedAt',  # noqa: E501
     }
@@ -172,7 +174,7 @@ class DataUploads(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, id, site, survey_point, sensor_type, file, signature, min_date, max_date, metrics, created_at, updated_at, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, site, survey_point, sensor_type, file, signature, min_date, max_date, metrics, file_location, created_at, updated_at, *args, **kwargs):  # noqa: E501
         """DataUploads - a model defined in OpenAPI
 
         Args:
@@ -185,6 +187,7 @@ class DataUploads(ModelNormal):
             min_date (datetime):
             max_date (datetime):
             metrics ([str]):
+            file_location (str):
             created_at (datetime):
             updated_at (datetime):
 
@@ -255,6 +258,7 @@ class DataUploads(ModelNormal):
         self.min_date = min_date
         self.max_date = max_date
         self.metrics = metrics
+        self.file_location = file_location
         self.created_at = created_at
         self.updated_at = updated_at
         for var_name, var_value in kwargs.items():
@@ -277,7 +281,7 @@ class DataUploads(ModelNormal):
     ])
 
     @convert_js_args_to_python_args
-    def __init__(self, id, site, survey_point, sensor_type, file, signature, min_date, max_date, metrics, created_at, updated_at, *args, **kwargs):  # noqa: E501
+    def __init__(self, id, site, survey_point, sensor_type, file, signature, min_date, max_date, metrics, file_location, created_at, updated_at, *args, **kwargs):  # noqa: E501
         """DataUploads - a model defined in OpenAPI
 
         Args:
@@ -290,6 +294,7 @@ class DataUploads(ModelNormal):
             min_date (datetime):
             max_date (datetime):
             metrics ([str]):
+            file_location (str):
             created_at (datetime):
             updated_at (datetime):
 
@@ -358,6 +363,7 @@ class DataUploads(ModelNormal):
         self.min_date = min_date
         self.max_date = max_date
         self.metrics = metrics
+        self.file_location = file_location
         self.created_at = created_at
         self.updated_at = updated_at
         for var_name, var_value in kwargs.items():
