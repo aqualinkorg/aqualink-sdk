@@ -166,7 +166,7 @@ class LatestData(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, id, value, site_id, timestamp, site, survey_point, source, metric, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, value, site_id, timestamp, source, metric, *args, **kwargs):  # noqa: E501
         """LatestData - a model defined in OpenAPI
 
         Args:
@@ -241,8 +241,6 @@ class LatestData(ModelNormal):
         self.value = value
         self.site_id = site_id
         self.timestamp = timestamp
-        self.site = site
-        self.survey_point = survey_point
         self.source = source
         self.metric = metric
         for var_name, var_value in kwargs.items():
@@ -265,7 +263,7 @@ class LatestData(ModelNormal):
     ])
 
     @convert_js_args_to_python_args
-    def __init__(self, id, value, site_id, timestamp, site, survey_point, source, metric, *args, **kwargs):  # noqa: E501
+    def __init__(self, id, value, site_id, timestamp, source, metric, *args, **kwargs):  # noqa: E501
         """LatestData - a model defined in OpenAPI
 
         Args:
@@ -338,8 +336,6 @@ class LatestData(ModelNormal):
         self.value = value
         self.site_id = site_id
         self.timestamp = timestamp
-        self.site = site
-        self.survey_point = survey_point
         self.source = source
         self.metric = metric
         for var_name, var_value in kwargs.items():
