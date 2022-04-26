@@ -227,7 +227,10 @@ class SofarLiveDataDto(ModelNormal):
                         self.additional_properties_type is None:
                 # discard variable.
                 continue
-            setattr(self, var_name, var_value)
+            try:
+                setattr(self, var_name, var_value)
+            except Exception as e:
+                pass
         return self
 
     required_properties = set([
