@@ -58,7 +58,6 @@ class TimeSeriesApi(object):
                     'metrics',
                     'start',
                     'end',
-                    'hourly',
                 ],
                 'nullable': [
                 ],
@@ -183,7 +182,6 @@ class TimeSeriesApi(object):
                     'metrics',
                     'start',
                     'end',
-                    'hourly',
                 ],
                 'nullable': [
                 ],
@@ -360,7 +358,6 @@ class TimeSeriesApi(object):
         metrics,
         start,
         end,
-        hourly,
         **kwargs
     ):
         """Returns specified time series data for a specified site  # noqa: E501
@@ -368,7 +365,7 @@ class TimeSeriesApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.time_series_controller_find_site_data(site_id, metrics, start, end, hourly, async_req=True)
+        >>> thread = api.time_series_controller_find_site_data(site_id, metrics, start, end, async_req=True)
         >>> result = thread.get()
 
         Args:
@@ -376,9 +373,9 @@ class TimeSeriesApi(object):
             metrics ([str]):
             start (str):
             end (str):
-            hourly (bool):
 
         Keyword Args:
+            hourly (bool): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -443,8 +440,6 @@ class TimeSeriesApi(object):
             start
         kwargs['end'] = \
             end
-        kwargs['hourly'] = \
-            hourly
         return self.time_series_controller_find_site_data_endpoint.call_with_http_info(**kwargs)
 
     def time_series_controller_find_site_data_range(
@@ -531,7 +526,6 @@ class TimeSeriesApi(object):
         metrics,
         start,
         end,
-        hourly,
         **kwargs
     ):
         """Returns specified time series data for a specified site point of interest  # noqa: E501
@@ -539,7 +533,7 @@ class TimeSeriesApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.time_series_controller_find_survey_point_data(site_id, survey_point_id, metrics, start, end, hourly, async_req=True)
+        >>> thread = api.time_series_controller_find_survey_point_data(site_id, survey_point_id, metrics, start, end, async_req=True)
         >>> result = thread.get()
 
         Args:
@@ -548,9 +542,9 @@ class TimeSeriesApi(object):
             metrics ([str]):
             start (str):
             end (str):
-            hourly (bool):
 
         Keyword Args:
+            hourly (bool): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -617,8 +611,6 @@ class TimeSeriesApi(object):
             start
         kwargs['end'] = \
             end
-        kwargs['hourly'] = \
-            hourly
         return self.time_series_controller_find_survey_point_data_endpoint.call_with_http_info(**kwargs)
 
     def time_series_controller_find_survey_point_data_range(

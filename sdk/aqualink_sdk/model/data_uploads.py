@@ -68,6 +68,7 @@ class DataUploads(ModelNormal):
             'SPOTTER': "spotter",
             'SONDE': "sonde",
             'METLOG': "metlog",
+            'SOFAR_WAVE_MODEL': "sofar_wave_model",
         },
         ('metrics',): {
             'TEMP_ALERT': "temp_alert",

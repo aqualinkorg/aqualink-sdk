@@ -46,10 +46,10 @@ aqualink_sdk/model/inline_object.py
 aqualink_sdk/model/inline_object1.py
 aqualink_sdk/model/inline_response200.py
 aqualink_sdk/model/inline_response2001.py
-aqualink_sdk/model/inline_response2001_metlog.py
-aqualink_sdk/model/inline_response2001_metlog_wind_gust_speed.py
-aqualink_sdk/model/inline_response200_metlog.py
-aqualink_sdk/model/inline_response200_metlog_wind_gust_speed.py
+aqualink_sdk/model/inline_response2001_sofar_wave_model.py
+aqualink_sdk/model/inline_response2001_sofar_wave_model_wind_gust_speed.py
+aqualink_sdk/model/inline_response200_sofar_wave_model.py
+aqualink_sdk/model/inline_response200_sofar_wave_model_wind_gust_speed.py
 aqualink_sdk/model/inline_response400.py
 aqualink_sdk/model/inline_response401.py
 aqualink_sdk/model/inline_response404.py
@@ -59,6 +59,7 @@ aqualink_sdk/model/set_admin_level_dto.py
 aqualink_sdk/model/site.py
 aqualink_sdk/model/site_application.py
 aqualink_sdk/model/site_survey_point.py
+aqualink_sdk/model/sofar_latest_data_dto.py
 aqualink_sdk/model/sofar_live_data_dto.py
 aqualink_sdk/model/sofar_live_data_dto_site.py
 aqualink_sdk/model/sofar_live_data_dto_spotter_position.py
@@ -112,10 +113,10 @@ docs/InlineObject.md
 docs/InlineObject1.md
 docs/InlineResponse200.md
 docs/InlineResponse2001.md
-docs/InlineResponse2001Metlog.md
-docs/InlineResponse2001MetlogWindGustSpeed.md
-docs/InlineResponse200Metlog.md
-docs/InlineResponse200MetlogWindGustSpeed.md
+docs/InlineResponse2001SofarWaveModel.md
+docs/InlineResponse2001SofarWaveModelWindGustSpeed.md
+docs/InlineResponse200SofarWaveModel.md
+docs/InlineResponse200SofarWaveModelWindGustSpeed.md
 docs/InlineResponse400.md
 docs/InlineResponse401.md
 docs/InlineResponse404.md
@@ -130,6 +131,7 @@ docs/SiteApplicationsApi.md
 docs/SitePointsOfInterestApi.md
 docs/SiteSurveyPoint.md
 docs/SitesApi.md
+docs/SofarLatestDataDto.md
 docs/SofarLiveDataDto.md
 docs/SofarLiveDataDtoSite.md
 docs/SofarLiveDataDtoSpotterPosition.md
@@ -160,4 +162,9 @@ setup.cfg
 setup.py
 test-requirements.txt
 test/__init__.py
+test/test_inline_response2001_sofar_wave_model.py
+test/test_inline_response2001_sofar_wave_model_wind_gust_speed.py
+test/test_inline_response200_sofar_wave_model.py
+test/test_inline_response200_sofar_wave_model_wind_gust_speed.py
+test/test_sofar_latest_data_dto.py
 tox.ini

@@ -130,11 +130,12 @@ Class | Method | HTTP request | Description
 *SitesApi* | [**sites_controller_delete**](docs/SitesApi.md#sites_controller_delete) | **DELETE** /sites/{siteId} | Deletes specified site
 *SitesApi* | [**sites_controller_deploy_spotter**](docs/SitesApi.md#sites_controller_deploy_spotter) | **POST** /sites/{siteId}/deploy | Deploys site&#39;s spotter
 *SitesApi* | [**sites_controller_find**](docs/SitesApi.md#sites_controller_find) | **GET** /sites | Returns sites filtered by provided filters
-*SitesApi* | [**sites_controller_find_daily_data**](docs/SitesApi.md#sites_controller_find_daily_data) | **GET** /sites/{id}/daily_data | Returns daily data of the specified site
+*SitesApi* | [**sites_controller_find_daily_data**](docs/SitesApi.md#sites_controller_find_daily_data) | **GET** /sites/{id}/daily_data | Returns daily data for the specified site
 *SitesApi* | [**sites_controller_find_exclusion_dates**](docs/SitesApi.md#sites_controller_find_exclusion_dates) | **GET** /sites/{siteId}/exclusion_dates | Returns exclusion dates of specified site&#39;s spotter
-*SitesApi* | [**sites_controller_find_live_data**](docs/SitesApi.md#sites_controller_find_live_data) | **GET** /sites/{id}/live_data | Returns live data of the specified site
+*SitesApi* | [**sites_controller_find_latest_data**](docs/SitesApi.md#sites_controller_find_latest_data) | **GET** /sites/{id}/latest_data | Returns latest data for the specified site
+*SitesApi* | [**sites_controller_find_live_data**](docs/SitesApi.md#sites_controller_find_live_data) | **GET** /sites/{id}/live_data | Returns live data for the specified site
 *SitesApi* | [**sites_controller_find_one**](docs/SitesApi.md#sites_controller_find_one) | **GET** /sites/{id} | Returns specified site
-*SitesApi* | [**sites_controller_get_spotter_data**](docs/SitesApi.md#sites_controller_get_spotter_data) | **GET** /sites/{id}/spotter_data | Returns spotter data of the specified site
+*SitesApi* | [**sites_controller_get_spotter_data**](docs/SitesApi.md#sites_controller_get_spotter_data) | **GET** /sites/{id}/spotter_data | Returns spotter data for the specified site
 *SitesApi* | [**sites_controller_update**](docs/SitesApi.md#sites_controller_update) | **PUT** /sites/{siteId} | Updates specified site
 *SurveysApi* | [**surveys_controller_create**](docs/SurveysApi.md#surveys_controller_create) | **POST** /sites/{siteId}/surveys | Creates a new survey
 *SurveysApi* | [**surveys_controller_create_media**](docs/SurveysApi.md#surveys_controller_create_media) | **POST** /sites/{siteId}/surveys/{id}/media | Creates a new survey media
@@ -185,10 +186,10 @@ Class | Method | HTTP request | Description
  - [InlineObject1](docs/InlineObject1.md)
  - [InlineResponse200](docs/InlineResponse200.md)
  - [InlineResponse2001](docs/InlineResponse2001.md)
- - [InlineResponse2001Metlog](docs/InlineResponse2001Metlog.md)
- - [InlineResponse2001MetlogWindGustSpeed](docs/InlineResponse2001MetlogWindGustSpeed.md)
- - [InlineResponse200Metlog](docs/InlineResponse200Metlog.md)
- - [InlineResponse200MetlogWindGustSpeed](docs/InlineResponse200MetlogWindGustSpeed.md)
+ - [InlineResponse2001SofarWaveModel](docs/InlineResponse2001SofarWaveModel.md)
+ - [InlineResponse2001SofarWaveModelWindGustSpeed](docs/InlineResponse2001SofarWaveModelWindGustSpeed.md)
+ - [InlineResponse200SofarWaveModel](docs/InlineResponse200SofarWaveModel.md)
+ - [InlineResponse200SofarWaveModelWindGustSpeed](docs/InlineResponse200SofarWaveModelWindGustSpeed.md)
  - [InlineResponse400](docs/InlineResponse400.md)
  - [InlineResponse401](docs/InlineResponse401.md)
  - [InlineResponse404](docs/InlineResponse404.md)
@@ -198,6 +199,7 @@ Class | Method | HTTP request | Description
  - [Site](docs/Site.md)
  - [SiteApplication](docs/SiteApplication.md)
  - [SiteSurveyPoint](docs/SiteSurveyPoint.md)
+ - [SofarLatestDataDto](docs/SofarLatestDataDto.md)
  - [SofarLiveDataDto](docs/SofarLiveDataDto.md)
  - [SofarLiveDataDtoSite](docs/SofarLiveDataDtoSite.md)
  - [SofarLiveDataDtoSpotterPosition](docs/SofarLiveDataDtoSpotterPosition.md)

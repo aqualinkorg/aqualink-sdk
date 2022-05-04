@@ -30,8 +30,8 @@ from aqualink_sdk.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from aqualink_sdk.model.inline_response2001_metlog import InlineResponse2001Metlog
-    globals()['InlineResponse2001Metlog'] = InlineResponse2001Metlog
+    from aqualink_sdk.model.inline_response2001_sofar_wave_model import InlineResponse2001SofarWaveModel
+    globals()['InlineResponse2001SofarWaveModel'] = InlineResponse2001SofarWaveModel
 
 
 class InlineResponse2001(ModelNormal):
@@ -87,12 +87,13 @@ class InlineResponse2001(ModelNormal):
         """
         lazy_import()
         return {
-            'metlog': (InlineResponse2001Metlog,),  # noqa: E501
-            'sonde': (InlineResponse2001Metlog,),  # noqa: E501
-            'spotter': (InlineResponse2001Metlog,),  # noqa: E501
-            'noaa': (InlineResponse2001Metlog,),  # noqa: E501
-            'hobo': (InlineResponse2001Metlog,),  # noqa: E501
-            'gfs': (InlineResponse2001Metlog,),  # noqa: E501
+            'sofar_wave_model': (InlineResponse2001SofarWaveModel,),  # noqa: E501
+            'metlog': (InlineResponse2001SofarWaveModel,),  # noqa: E501
+            'sonde': (InlineResponse2001SofarWaveModel,),  # noqa: E501
+            'spotter': (InlineResponse2001SofarWaveModel,),  # noqa: E501
+            'noaa': (InlineResponse2001SofarWaveModel,),  # noqa: E501
+            'hobo': (InlineResponse2001SofarWaveModel,),  # noqa: E501
+            'gfs': (InlineResponse2001SofarWaveModel,),  # noqa: E501
         }
 
     @cached_property
@@ -101,6 +102,7 @@ class InlineResponse2001(ModelNormal):
 
 
     attribute_map = {
+        'sofar_wave_model': 'sofar_wave_model',  # noqa: E501
         'metlog': 'metlog',  # noqa: E501
         'sonde': 'sonde',  # noqa: E501
         'spotter': 'spotter',  # noqa: E501
@@ -150,12 +152,13 @@ class InlineResponse2001(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            metlog (InlineResponse2001Metlog): [optional]  # noqa: E501
-            sonde (InlineResponse2001Metlog): [optional]  # noqa: E501
-            spotter (InlineResponse2001Metlog): [optional]  # noqa: E501
-            noaa (InlineResponse2001Metlog): [optional]  # noqa: E501
-            hobo (InlineResponse2001Metlog): [optional]  # noqa: E501
-            gfs (InlineResponse2001Metlog): [optional]  # noqa: E501
+            sofar_wave_model (InlineResponse2001SofarWaveModel): [optional]  # noqa: E501
+            metlog (InlineResponse2001SofarWaveModel): [optional]  # noqa: E501
+            sonde (InlineResponse2001SofarWaveModel): [optional]  # noqa: E501
+            spotter (InlineResponse2001SofarWaveModel): [optional]  # noqa: E501
+            noaa (InlineResponse2001SofarWaveModel): [optional]  # noqa: E501
+            hobo (InlineResponse2001SofarWaveModel): [optional]  # noqa: E501
+            gfs (InlineResponse2001SofarWaveModel): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -237,12 +240,13 @@ class InlineResponse2001(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            metlog (InlineResponse2001Metlog): [optional]  # noqa: E501
-            sonde (InlineResponse2001Metlog): [optional]  # noqa: E501
-            spotter (InlineResponse2001Metlog): [optional]  # noqa: E501
-            noaa (InlineResponse2001Metlog): [optional]  # noqa: E501
-            hobo (InlineResponse2001Metlog): [optional]  # noqa: E501
-            gfs (InlineResponse2001Metlog): [optional]  # noqa: E501
+            sofar_wave_model (InlineResponse2001SofarWaveModel): [optional]  # noqa: E501
+            metlog (InlineResponse2001SofarWaveModel): [optional]  # noqa: E501
+            sonde (InlineResponse2001SofarWaveModel): [optional]  # noqa: E501
+            spotter (InlineResponse2001SofarWaveModel): [optional]  # noqa: E501
+            noaa (InlineResponse2001SofarWaveModel): [optional]  # noqa: E501
+            hobo (InlineResponse2001SofarWaveModel): [optional]  # noqa: E501
+            gfs (InlineResponse2001SofarWaveModel): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -9,11 +9,12 @@ Method | HTTP request | Description
 [**sites_controller_delete**](SitesApi.md#sites_controller_delete) | **DELETE** /sites/{siteId} | Deletes specified site
 [**sites_controller_deploy_spotter**](SitesApi.md#sites_controller_deploy_spotter) | **POST** /sites/{siteId}/deploy | Deploys site&#39;s spotter
 [**sites_controller_find**](SitesApi.md#sites_controller_find) | **GET** /sites | Returns sites filtered by provided filters
-[**sites_controller_find_daily_data**](SitesApi.md#sites_controller_find_daily_data) | **GET** /sites/{id}/daily_data | Returns daily data of the specified site
+[**sites_controller_find_daily_data**](SitesApi.md#sites_controller_find_daily_data) | **GET** /sites/{id}/daily_data | Returns daily data for the specified site
 [**sites_controller_find_exclusion_dates**](SitesApi.md#sites_controller_find_exclusion_dates) | **GET** /sites/{siteId}/exclusion_dates | Returns exclusion dates of specified site&#39;s spotter
-[**sites_controller_find_live_data**](SitesApi.md#sites_controller_find_live_data) | **GET** /sites/{id}/live_data | Returns live data of the specified site
+[**sites_controller_find_latest_data**](SitesApi.md#sites_controller_find_latest_data) | **GET** /sites/{id}/latest_data | Returns latest data for the specified site
+[**sites_controller_find_live_data**](SitesApi.md#sites_controller_find_live_data) | **GET** /sites/{id}/live_data | Returns live data for the specified site
 [**sites_controller_find_one**](SitesApi.md#sites_controller_find_one) | **GET** /sites/{id} | Returns specified site
-[**sites_controller_get_spotter_data**](SitesApi.md#sites_controller_get_spotter_data) | **GET** /sites/{id}/spotter_data | Returns spotter data of the specified site
+[**sites_controller_get_spotter_data**](SitesApi.md#sites_controller_get_spotter_data) | **GET** /sites/{id}/spotter_data | Returns spotter data for the specified site
 [**sites_controller_update**](SitesApi.md#sites_controller_update) | **PUT** /sites/{siteId} | Updates specified site
 
 
@@ -423,7 +424,7 @@ No authorization required
 # **sites_controller_find_daily_data**
 > [DailyData] sites_controller_find_daily_data(id, start, end)
 
-Returns daily data of the specified site
+Returns daily data for the specified site
 
 ### Example
 
@@ -453,7 +454,7 @@ with aqualink_sdk.ApiClient() as api_client:
 
     # example passing only required values which don't have defaults set
     try:
-        # Returns daily data of the specified site
+        # Returns daily data for the specified site
         api_response = api_instance.sites_controller_find_daily_data(id, start, end)
         pprint(api_response)
     except aqualink_sdk.ApiException as e:
@@ -568,10 +569,77 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **sites_controller_find_latest_data**
+> SofarLatestDataDto sites_controller_find_latest_data(id)
+
+Returns latest data for the specified site
+
+### Example
+
+
+```python
+import time
+import aqualink_sdk
+from aqualink_sdk.api import sites_api
+from aqualink_sdk.model.sofar_latest_data_dto import SofarLatestDataDto
+from aqualink_sdk.model.inline_response404 import InlineResponse404
+from pprint import pprint
+# Defining the host is optional and defaults to https://ocean-systems.uc.r.appspot.com/api
+# See configuration.py for a list of all supported configuration parameters.
+configuration = aqualink_sdk.Configuration(
+    host = "https://ocean-systems.uc.r.appspot.com/api"
+)
+
+
+# Enter a context with an instance of the API client
+with aqualink_sdk.ApiClient() as api_client:
+    # Create an instance of the API class
+    api_instance = sites_api.SitesApi(api_client)
+    id = 1 # float | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Returns latest data for the specified site
+        api_response = api_instance.sites_controller_find_latest_data(id)
+        pprint(api_response)
+    except aqualink_sdk.ApiException as e:
+        print("Exception when calling SitesApi->sites_controller_find_latest_data: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **float**|  |
+
+### Return type
+
+[**SofarLatestDataDto**](SofarLatestDataDto.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+**404** | No site was found with the specified id |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **sites_controller_find_live_data**
 > SofarLiveDataDto sites_controller_find_live_data(id)
 
-Returns live data of the specified site
+Returns live data for the specified site
 
 ### Example
 
@@ -598,7 +666,7 @@ with aqualink_sdk.ApiClient() as api_client:
 
     # example passing only required values which don't have defaults set
     try:
-        # Returns live data of the specified site
+        # Returns live data for the specified site
         api_response = api_instance.sites_controller_find_live_data(id)
         pprint(api_response)
     except aqualink_sdk.ApiException as e:
@@ -705,7 +773,7 @@ No authorization required
 # **sites_controller_get_spotter_data**
 > SpotterDataDto sites_controller_get_spotter_data(id, start_date, end_date)
 
-Returns spotter data of the specified site
+Returns spotter data for the specified site
 
 ### Example
 
@@ -734,7 +802,7 @@ with aqualink_sdk.ApiClient() as api_client:
 
     # example passing only required values which don't have defaults set
     try:
-        # Returns spotter data of the specified site
+        # Returns spotter data for the specified site
         api_response = api_instance.sites_controller_get_spotter_data(id, start_date, end_date)
         pprint(api_response)
     except aqualink_sdk.ApiException as e:
