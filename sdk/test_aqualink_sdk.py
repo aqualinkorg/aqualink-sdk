@@ -34,7 +34,6 @@ def test_sdk():
             metrics=["bottom_temperature"],
             start="2021-01-02",
             end="2022-01-01",
-            hourly=False,
         )
         pprint(data)
 
