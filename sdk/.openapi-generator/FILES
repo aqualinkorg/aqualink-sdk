@@ -162,9 +162,4 @@ setup.cfg
 setup.py
 test-requirements.txt
 test/__init__.py
-test/test_inline_response2001_sofar_wave_model.py
-test/test_inline_response2001_sofar_wave_model_wind_gust_speed.py
-test/test_inline_response200_sofar_wave_model.py
-test/test_inline_response200_sofar_wave_model_wind_gust_speed.py
-test/test_sofar_latest_data_dto.py
 tox.ini

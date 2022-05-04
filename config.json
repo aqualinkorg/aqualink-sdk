@@ -1,4 +1,7 @@
 {
     "packageName": "aqualink_sdk",
-    "projectName": "aqualink-api"
+    "projectName": "aqualink-api",
+    "pythonAttrNoneIfUnset": true,
+    "packageUrl": "https://pypi.org/project/aqualink-api/",
+    "packageVersion": "1.0.7"
 }
