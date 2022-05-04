@@ -24,6 +24,9 @@ REQUIRES = [
   "python-dateutil",
 ]
 
+with open("README.md", 'r') as f:
+    long_description = f.read()
+
 setup(
     name=NAME,
     version=VERSION,
@@ -36,7 +39,6 @@ setup(
     install_requires=REQUIRES,
     packages=find_packages(exclude=["test", "tests"]),
     include_package_data=True,
-    long_description="""\
-    The Aqualink public API documentation  # noqa: E501
-    """
+    long_description=long_description,
+    long_description_content_type="text/markdown",
 )
