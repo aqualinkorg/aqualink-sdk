@@ -76,7 +76,7 @@ def aggregate_data_for_csv(
     #             {'timestamp': '2022-01-08T00:24:00.000Z', 'value': 25.28}]}}
     # }
 
-    new_data_drame = None
+    new_data_frame = None
 
     for metric_name, metric_data in data.items():
         for sonde_type_name, sonde_data in metric_data.items():
@@ -97,21 +97,21 @@ def aggregate_data_for_csv(
                 columns={"value": f"{metric_name}_{sonde_type_name}"}, inplace=True
             )
 
-            new_data_drame = (
-                new_data_drame.join(aggregate_data, how="outer")
-                if new_data_drame is not None
+            new_data_frame = (
+                new_data_frame.join(aggregate_data, how="outer")
+                if new_data_frame is not None
                 else aggregate_data
             )
 
     # Convert timestamp back to string
-    new_data_drame["timestamp"] = new_data_drame.index.map(
+    new_data_frame["timestamp"] = new_data_frame.index.map(
         lambda ts: ts.isoformat(timespec="milliseconds").replace("+00:00", "Z")
     )
 
     # Replace timestamp in first position
-    new_data_drame.insert(0, "timestamp", new_data_drame.pop("timestamp"))
+    new_data_frame.insert(0, "timestamp", new_data_frame.pop("timestamp"))
 
-    return new_data_drame
+    return new_data_frame
 
 
 class AggregateApi(object):
