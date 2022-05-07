@@ -64,7 +64,7 @@ def aggregate_data(
 
 
 def aggregate_data_for_csv(
-    timeseries_data, aggregate_frequency, aggregate_mapping=default_mapping
+    timeseries_data, aggregate_frequency, aggregate_mapping=default_mapping, fill=False
 ):
     data = timeseries_data._data_store
     # Data is in the form:
@@ -76,7 +76,7 @@ def aggregate_data_for_csv(
     #             {'timestamp': '2022-01-08T00:24:00.000Z', 'value': 25.28}]}}
     # }
 
-    new_data_frame = None
+    new_data_frame = pd.DataFrame()
 
     for metric_name, metric_data in data.items():
         for sonde_type_name, sonde_data in metric_data.items():
@@ -99,14 +99,17 @@ def aggregate_data_for_csv(
 
             new_data_frame = (
                 new_data_frame.join(aggregate_data, how="outer")
-                if new_data_frame is not None
-                else aggregate_data
             )
 
     # Convert timestamp back to string
     new_data_frame["timestamp"] = new_data_frame.index.map(
         lambda ts: ts.isoformat(timespec="milliseconds").replace("+00:00", "Z")
     )
+
+    # fill empty values through a forward-fill and backward-fill 
+    if fill:
+        new_data_frame.fillna(method='ffill', inplace=True)
+        new_data_frame.fillna(method='bfill', inplace=True)
 
     # Replace timestamp in first position
     new_data_frame.insert(0, "timestamp", new_data_frame.pop("timestamp"))
@@ -131,6 +134,7 @@ class AggregateApi(object):
         aggregate_frequency,
         aggregate_mapping,
         csv_output,
+        fill=False,
         **kwargs,
     ):
         """Returns specified aggregated time series data for a specified site  # noqa: E501
@@ -160,7 +164,7 @@ class AggregateApi(object):
 
         if csv_output:
             dataframe = aggregate_data_for_csv(
-                api_response, aggregate_frequency, aggregate_mapping
+                api_response, aggregate_frequency, aggregate_mapping, fill
             )
             dataframe.to_csv(csv_output, encoding="utf-8", index=False)
 

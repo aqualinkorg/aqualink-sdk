@@ -51,6 +51,7 @@ def test_sdk():
                 "satellite_temperature": "max",
             },
             csv_output="test_aggregate_data.csv",
+            fill=True,
         )
         print(json.dumps(data._data_store, indent=4))
 
