@@ -167,6 +167,9 @@ class AggregateApi(object):
                 api_response, aggregate_frequency, aggregate_mapping, fill
             )
             dataframe.to_csv(csv_output, encoding="utf-8", index=False)
+        
+        if fill and not csv_output:
+            raise Exception('The fill option is only available for CSV outputs.')
 
         data = aggregate_data(api_response, aggregate_frequency, aggregate_mapping)
         api_response._data_store = data
