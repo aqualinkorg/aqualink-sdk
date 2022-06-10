@@ -23,6 +23,7 @@ from aqualink_sdk.model.create_survey_media_dto import CreateSurveyMediaDto
 from aqualink_sdk.model.create_user_dto import CreateUserDto
 from aqualink_sdk.model.daily_data import DailyData
 from aqualink_sdk.model.data_uploads import DataUploads
+from aqualink_sdk.model.data_uploads_delete_dto import DataUploadsDeleteDto
 from aqualink_sdk.model.deploy_spotter_dto import DeploySpotterDto
 from aqualink_sdk.model.edit_survey_dto import EditSurveyDto
 from aqualink_sdk.model.edit_survey_media_dto import EditSurveyMediaDto
@@ -33,10 +34,10 @@ from aqualink_sdk.model.inline_object import InlineObject
 from aqualink_sdk.model.inline_object1 import InlineObject1
 from aqualink_sdk.model.inline_response200 import InlineResponse200
 from aqualink_sdk.model.inline_response2001 import InlineResponse2001
-from aqualink_sdk.model.inline_response2001_metlog import InlineResponse2001Metlog
-from aqualink_sdk.model.inline_response2001_metlog_wind_gust_speed import InlineResponse2001MetlogWindGustSpeed
-from aqualink_sdk.model.inline_response200_metlog import InlineResponse200Metlog
-from aqualink_sdk.model.inline_response200_metlog_wind_gust_speed import InlineResponse200MetlogWindGustSpeed
+from aqualink_sdk.model.inline_response2001_sofar_wave_model import InlineResponse2001SofarWaveModel
+from aqualink_sdk.model.inline_response2001_sofar_wave_model_wind_gust_speed import InlineResponse2001SofarWaveModelWindGustSpeed
+from aqualink_sdk.model.inline_response200_sofar_wave_model import InlineResponse200SofarWaveModel
+from aqualink_sdk.model.inline_response200_sofar_wave_model_wind_gust_speed import InlineResponse200SofarWaveModelWindGustSpeed
 from aqualink_sdk.model.inline_response400 import InlineResponse400
 from aqualink_sdk.model.inline_response401 import InlineResponse401
 from aqualink_sdk.model.inline_response404 import InlineResponse404
@@ -46,6 +47,7 @@ from aqualink_sdk.model.set_admin_level_dto import SetAdminLevelDto
 from aqualink_sdk.model.site import Site
 from aqualink_sdk.model.site_application import SiteApplication
 from aqualink_sdk.model.site_survey_point import SiteSurveyPoint
+from aqualink_sdk.model.sofar_latest_data_dto import SofarLatestDataDto
 from aqualink_sdk.model.sofar_live_data_dto import SofarLiveDataDto
 from aqualink_sdk.model.sofar_live_data_dto_site import SofarLiveDataDtoSite
 from aqualink_sdk.model.sofar_live_data_dto_spotter_position import SofarLiveDataDtoSpotterPosition

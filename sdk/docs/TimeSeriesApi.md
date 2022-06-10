@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **time_series_controller_find_site_data**
-> InlineResponse200 time_series_controller_find_site_data(site_id, metrics, start, end, hourly)
+> InlineResponse200 time_series_controller_find_site_data(site_id, metrics, start, end)
 
 Returns specified time series data for a specified site
 
@@ -40,12 +40,21 @@ with aqualink_sdk.ApiClient() as api_client:
     metrics = ["bottom_temperature","top_temperature"] # [str] | 
     start = "2021-05-18T10:20:28.017Z" # str | 
     end = "2021-05-18T10:20:28.017Z" # str | 
-    hourly = False # bool | 
+    hourly = False # bool |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
         # Returns specified time series data for a specified site
-        api_response = api_instance.time_series_controller_find_site_data(site_id, metrics, start, end, hourly)
+        api_response = api_instance.time_series_controller_find_site_data(site_id, metrics, start, end)
+        pprint(api_response)
+    except aqualink_sdk.ApiException as e:
+        print("Exception when calling TimeSeriesApi->time_series_controller_find_site_data: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Returns specified time series data for a specified site
+        api_response = api_instance.time_series_controller_find_site_data(site_id, metrics, start, end, hourly=hourly)
         pprint(api_response)
     except aqualink_sdk.ApiException as e:
         print("Exception when calling TimeSeriesApi->time_series_controller_find_site_data: %s\n" % e)
@@ -60,7 +69,7 @@ Name | Type | Description  | Notes
  **metrics** | **[str]**|  |
  **start** | **str**|  |
  **end** | **str**|  |
- **hourly** | **bool**|  |
+ **hourly** | **bool**|  | [optional]
 
 ### Return type
 
@@ -150,7 +159,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **time_series_controller_find_survey_point_data**
-> InlineResponse200 time_series_controller_find_survey_point_data(site_id, survey_point_id, metrics, start, end, hourly)
+> InlineResponse200 time_series_controller_find_survey_point_data(site_id, survey_point_id, metrics, start, end)
 
 Returns specified time series data for a specified site point of interest
 
@@ -179,12 +188,21 @@ with aqualink_sdk.ApiClient() as api_client:
     metrics = ["bottom_temperature","top_temperature"] # [str] | 
     start = "2021-05-18T10:20:28.017Z" # str | 
     end = "2021-05-18T10:20:28.017Z" # str | 
-    hourly = False # bool | 
+    hourly = False # bool |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
         # Returns specified time series data for a specified site point of interest
-        api_response = api_instance.time_series_controller_find_survey_point_data(site_id, survey_point_id, metrics, start, end, hourly)
+        api_response = api_instance.time_series_controller_find_survey_point_data(site_id, survey_point_id, metrics, start, end)
+        pprint(api_response)
+    except aqualink_sdk.ApiException as e:
+        print("Exception when calling TimeSeriesApi->time_series_controller_find_survey_point_data: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Returns specified time series data for a specified site point of interest
+        api_response = api_instance.time_series_controller_find_survey_point_data(site_id, survey_point_id, metrics, start, end, hourly=hourly)
         pprint(api_response)
     except aqualink_sdk.ApiException as e:
         print("Exception when calling TimeSeriesApi->time_series_controller_find_survey_point_data: %s\n" % e)
@@ -200,7 +218,7 @@ Name | Type | Description  | Notes
  **metrics** | **[str]**|  |
  **start** | **str**|  |
  **end** | **str**|  |
- **hourly** | **bool**|  |
+ **hourly** | **bool**|  | [optional]
 
 ### Return type
 
