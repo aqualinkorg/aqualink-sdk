@@ -17,9 +17,11 @@ def test_sdk():
         site_data = site_api.sites_controller_find()
         pprint(site_data)
 
-        # get live data
-        live_data = site_api.sites_controller_find_live_data(id=1045)
-        pprint(live_data)
+        # get site + latest data
+        site = site_api.sites_controller_find_one(id=1045)
+        pprint(site)
+        latest_data = site_api.sites_controller_find_latest_data(id=1045)
+        pprint(latest_data)
 
         # Get available date ranges
         ts_api = time_series_api.TimeSeriesApi()

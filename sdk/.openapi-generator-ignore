@@ -21,3 +21,7 @@
 #docs/*.md
 # Then explicitly reverse the ignore rule for a single file:
 #!docs/README.md
+
+# Custom (not generated from OpenAPI)
+aqualink_sdk/api/aggregate_api.py
+test_aqualink_sdk.py

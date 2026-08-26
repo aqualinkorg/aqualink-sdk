@@ -72,10 +72,10 @@ class TestSitesApi(unittest.TestCase):
         """
         pass
 
-    def test_sites_controller_find_live_data(self):
-        """Test case for sites_controller_find_live_data
+    def test_sites_controller_find_latest_data(self):
+        """Test case for sites_controller_find_latest_data
 
-        Returns live data of the specified site  # noqa: E501
+        Returns latest data for the specified site  # noqa: E501
         """
         pass
 

@@ -21,8 +21,8 @@ from aqualink_sdk.model_utils import (  # noqa: F401
     none_type,
     validate_and_convert_types
 )
-from aqualink_sdk.model.data_uploads import DataUploads
 from aqualink_sdk.model.data_uploads_delete_dto import DataUploadsDeleteDto
+from aqualink_sdk.model.data_uploads_sites import DataUploadsSites
 
 
 class DataUploadsApi(object):
@@ -40,7 +40,7 @@ class DataUploadsApi(object):
             settings={
                 'response_type': None,
                 'auth': [],
-                'endpoint_path': '/data-uploads/delete-uploads',
+                'endpoint_path': '/data-uploads/sites/{siteId}/delete-uploads',
                 'operation_id': 'data_uploads_controller_delete_data_uploads',
                 'http_method': 'POST',
                 'servers': None,
@@ -86,7 +86,7 @@ class DataUploadsApi(object):
         )
         self.data_uploads_controller_get_data_uploads_endpoint = _Endpoint(
             settings={
-                'response_type': ([DataUploads],),
+                'response_type': ([DataUploadsSites],),
                 'auth': [],
                 'endpoint_path': '/data-uploads/sites/{siteId}',
                 'operation_id': 'data_uploads_controller_get_data_uploads',
@@ -256,7 +256,7 @@ class DataUploadsApi(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            [DataUploads]
+            [DataUploadsSites]
                 If the method is called asynchronously, returns the request
                 thread.
         """

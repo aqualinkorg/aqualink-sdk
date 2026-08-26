@@ -87,7 +87,7 @@ class SurveyMediaSensorDataHobo(ModelNormal):
         """
         lazy_import()
         return {
-            'bottom_temperature': (TimeSeriesPoint,),  # noqa: E501
+            'bottom_temperature': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -96,7 +96,7 @@ class SurveyMediaSensorDataHobo(ModelNormal):
 
 
     attribute_map = {
-        'bottom_temperature': 'bottom_temperature',  # noqa: E501
+        'bottom_temperature': 'bottomTemperature',  # noqa: E501
     }
 
     read_only_vars = {
@@ -140,7 +140,7 @@ class SurveyMediaSensorDataHobo(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            bottom_temperature (TimeSeriesPoint): [optional]  # noqa: E501
+            bottom_temperature (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -222,7 +222,7 @@ class SurveyMediaSensorDataHobo(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            bottom_temperature (TimeSeriesPoint): [optional]  # noqa: E501
+            bottom_temperature (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

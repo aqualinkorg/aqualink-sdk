@@ -1,6 +1,6 @@
 # aqualink_sdk.SiteApplicationsApi
 
-All URIs are relative to *https://ocean-systems.uc.r.appspot.com/api*
+All URIs are relative to *https://production-dot-ocean-systems.uc.r.appspot.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **site_applications_controller_find_one_from_site**
-> SiteApplication site_applications_controller_find_one_from_site(site_id)
+> site_applications_controller_find_one_from_site(site_id)
 
 Returns site application of specified site
 
@@ -21,13 +21,12 @@ Returns site application of specified site
 import time
 import aqualink_sdk
 from aqualink_sdk.api import site_applications_api
-from aqualink_sdk.model.site_application import SiteApplication
 from aqualink_sdk.model.inline_response404 import InlineResponse404
 from pprint import pprint
-# Defining the host is optional and defaults to https://ocean-systems.uc.r.appspot.com/api
+# Defining the host is optional and defaults to https://production-dot-ocean-systems.uc.r.appspot.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = aqualink_sdk.Configuration(
-    host = "https://ocean-systems.uc.r.appspot.com/api"
+    host = "https://production-dot-ocean-systems.uc.r.appspot.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -49,8 +48,7 @@ with aqualink_sdk.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         # Returns site application of specified site
-        api_response = api_instance.site_applications_controller_find_one_from_site(site_id)
-        pprint(api_response)
+        api_instance.site_applications_controller_find_one_from_site(site_id)
     except aqualink_sdk.ApiException as e:
         print("Exception when calling SiteApplicationsApi->site_applications_controller_find_one_from_site: %s\n" % e)
 ```
@@ -64,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SiteApplication**](SiteApplication.md)
+void (empty response body)
 
 ### Authorization
 
@@ -80,7 +78,6 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** |  |  -  |
 **404** | No site application for specified site was found |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -101,10 +98,10 @@ from aqualink_sdk.api import site_applications_api
 from aqualink_sdk.model.inline_object import InlineObject
 from aqualink_sdk.model.site_application import SiteApplication
 from pprint import pprint
-# Defining the host is optional and defaults to https://ocean-systems.uc.r.appspot.com/api
+# Defining the host is optional and defaults to https://production-dot-ocean-systems.uc.r.appspot.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = aqualink_sdk.Configuration(
-    host = "https://ocean-systems.uc.r.appspot.com/api"
+    host = "https://production-dot-ocean-systems.uc.r.appspot.com/api"
 )
 
 # The client must configure the authentication and authorization parameters

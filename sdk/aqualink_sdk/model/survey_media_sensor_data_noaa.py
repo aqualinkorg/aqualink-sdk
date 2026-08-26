@@ -87,7 +87,7 @@ class SurveyMediaSensorDataNoaa(ModelNormal):
         """
         lazy_import()
         return {
-            'satellite_temperature': (TimeSeriesPoint,),  # noqa: E501
+            'satellite_temperature': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -96,7 +96,7 @@ class SurveyMediaSensorDataNoaa(ModelNormal):
 
 
     attribute_map = {
-        'satellite_temperature': 'satellite_temperature',  # noqa: E501
+        'satellite_temperature': 'satelliteTemperature',  # noqa: E501
     }
 
     read_only_vars = {
@@ -140,7 +140,7 @@ class SurveyMediaSensorDataNoaa(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            satellite_temperature (TimeSeriesPoint): [optional]  # noqa: E501
+            satellite_temperature (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -222,7 +222,7 @@ class SurveyMediaSensorDataNoaa(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            satellite_temperature (TimeSeriesPoint): [optional]  # noqa: E501
+            satellite_temperature (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

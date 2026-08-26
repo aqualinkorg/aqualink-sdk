@@ -99,6 +99,7 @@ class CreateSurveyMediaDto(ModelNormal):
             'observations': (str,),  # noqa: E501
             'survey_point_id': (float,),  # noqa: E501
             'comments': (str,),  # noqa: E501
+            'thumbnail_url': (str,),  # noqa: E501
         }
 
     @cached_property
@@ -115,6 +116,7 @@ class CreateSurveyMediaDto(ModelNormal):
         'observations': 'observations',  # noqa: E501
         'survey_point_id': 'surveyPointId',  # noqa: E501
         'comments': 'comments',  # noqa: E501
+        'thumbnail_url': 'thumbnailUrl',  # noqa: E501
     }
 
     read_only_vars = {
@@ -168,6 +170,7 @@ class CreateSurveyMediaDto(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             comments (str): [optional]  # noqa: E501
+            thumbnail_url (str): [optional]  # noqa: E501
         """
 
         quality = kwargs.get('quality', 1)
@@ -270,6 +273,7 @@ class CreateSurveyMediaDto(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             comments (str): [optional]  # noqa: E501
+            thumbnail_url (str): [optional]  # noqa: E501
         """
 
         quality = kwargs.get('quality', 1)

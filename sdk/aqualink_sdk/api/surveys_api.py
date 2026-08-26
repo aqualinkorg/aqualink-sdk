@@ -43,7 +43,7 @@ class SurveysApi(object):
         self.api_client = api_client
         self.surveys_controller_create_endpoint = _Endpoint(
             settings={
-                'response_type': (Survey,),
+                'response_type': None,
                 'auth': [
                     'bearer'
                 ],
@@ -101,7 +101,7 @@ class SurveysApi(object):
         )
         self.surveys_controller_create_media_endpoint = _Endpoint(
             settings={
-                'response_type': (SurveyMedia,),
+                'response_type': None,
                 'auth': [
                     'bearer'
                 ],
@@ -383,7 +383,7 @@ class SurveysApi(object):
         )
         self.surveys_controller_find_one_endpoint = _Endpoint(
             settings={
-                'response_type': (Survey,),
+                'response_type': None,
                 'auth': [],
                 'endpoint_path': '/sites/{siteId}/surveys/{id}',
                 'operation_id': 'surveys_controller_find_one',
@@ -438,7 +438,7 @@ class SurveysApi(object):
         )
         self.surveys_controller_update_endpoint = _Endpoint(
             settings={
-                'response_type': (Survey,),
+                'response_type': None,
                 'auth': [
                     'bearer'
                 ],
@@ -502,7 +502,7 @@ class SurveysApi(object):
         )
         self.surveys_controller_update_media_endpoint = _Endpoint(
             settings={
-                'response_type': (SurveyMedia,),
+                'response_type': None,
                 'auth': [
                     'bearer'
                 ],
@@ -670,7 +670,7 @@ class SurveysApi(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            Survey
+            None
                 If the method is called asynchronously, returns the request
                 thread.
         """
@@ -753,7 +753,7 @@ class SurveysApi(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            SurveyMedia
+            None
                 If the method is called asynchronously, returns the request
                 thread.
         """
@@ -1156,7 +1156,7 @@ class SurveysApi(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            Survey
+            None
                 If the method is called asynchronously, returns the request
                 thread.
         """
@@ -1239,7 +1239,7 @@ class SurveysApi(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            Survey
+            None
                 If the method is called asynchronously, returns the request
                 thread.
         """
@@ -1324,7 +1324,7 @@ class SurveysApi(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            SurveyMedia
+            None
                 If the method is called asynchronously, returns the request
                 thread.
         """

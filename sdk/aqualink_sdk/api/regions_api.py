@@ -195,7 +195,7 @@ class RegionsApi(object):
         )
         self.regions_controller_find_one_endpoint = _Endpoint(
             settings={
-                'response_type': (Region,),
+                'response_type': None,
                 'auth': [],
                 'endpoint_path': '/regions/{id}',
                 'operation_id': 'regions_controller_find_one',
@@ -244,7 +244,7 @@ class RegionsApi(object):
         )
         self.regions_controller_update_endpoint = _Endpoint(
             settings={
-                'response_type': (Region,),
+                'response_type': None,
                 'auth': [
                     'bearer'
                 ],
@@ -574,7 +574,7 @@ class RegionsApi(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            Region
+            None
                 If the method is called asynchronously, returns the request
                 thread.
         """
@@ -653,7 +653,7 @@ class RegionsApi(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            Region
+            None
                 If the method is called asynchronously, returns the request
                 thread.
         """

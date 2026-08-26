@@ -1,6 +1,6 @@
 # aqualink_sdk.CollectionsApi
 
-All URIs are relative to *https://ocean-systems.uc.r.appspot.com/api*
+All URIs are relative to *https://production-dot-ocean-systems.uc.r.appspot.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -30,10 +30,10 @@ from aqualink_sdk.api import collections_api
 from aqualink_sdk.model.collection import Collection
 from aqualink_sdk.model.create_collection_dto import CreateCollectionDto
 from pprint import pprint
-# Defining the host is optional and defaults to https://ocean-systems.uc.r.appspot.com/api
+# Defining the host is optional and defaults to https://production-dot-ocean-systems.uc.r.appspot.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = aqualink_sdk.Configuration(
-    host = "https://ocean-systems.uc.r.appspot.com/api"
+    host = "https://production-dot-ocean-systems.uc.r.appspot.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -110,10 +110,10 @@ import aqualink_sdk
 from aqualink_sdk.api import collections_api
 from aqualink_sdk.model.inline_response404 import InlineResponse404
 from pprint import pprint
-# Defining the host is optional and defaults to https://ocean-systems.uc.r.appspot.com/api
+# Defining the host is optional and defaults to https://production-dot-ocean-systems.uc.r.appspot.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = aqualink_sdk.Configuration(
-    host = "https://ocean-systems.uc.r.appspot.com/api"
+    host = "https://production-dot-ocean-systems.uc.r.appspot.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -165,7 +165,6 @@ void (empty response body)
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** |  |  -  |
 **404** | No collection was found with the specified id |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -185,10 +184,10 @@ import aqualink_sdk
 from aqualink_sdk.api import collections_api
 from aqualink_sdk.model.collection import Collection
 from pprint import pprint
-# Defining the host is optional and defaults to https://ocean-systems.uc.r.appspot.com/api
+# Defining the host is optional and defaults to https://production-dot-ocean-systems.uc.r.appspot.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = aqualink_sdk.Configuration(
-    host = "https://ocean-systems.uc.r.appspot.com/api"
+    host = "https://production-dot-ocean-systems.uc.r.appspot.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -249,7 +248,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **collections_controller_find_one**
-> Collection collections_controller_find_one(collection_id)
+> collections_controller_find_one(collection_id)
 
 Fetch detailed data from specified private collection
 
@@ -262,13 +261,12 @@ import time
 import aqualink_sdk
 from aqualink_sdk.api import collections_api
 from aqualink_sdk.model.inline_response401 import InlineResponse401
-from aqualink_sdk.model.collection import Collection
 from aqualink_sdk.model.inline_response404 import InlineResponse404
 from pprint import pprint
-# Defining the host is optional and defaults to https://ocean-systems.uc.r.appspot.com/api
+# Defining the host is optional and defaults to https://production-dot-ocean-systems.uc.r.appspot.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = aqualink_sdk.Configuration(
-    host = "https://ocean-systems.uc.r.appspot.com/api"
+    host = "https://production-dot-ocean-systems.uc.r.appspot.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -290,8 +288,7 @@ with aqualink_sdk.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         # Fetch detailed data from specified private collection
-        api_response = api_instance.collections_controller_find_one(collection_id)
-        pprint(api_response)
+        api_instance.collections_controller_find_one(collection_id)
     except aqualink_sdk.ApiException as e:
         print("Exception when calling CollectionsApi->collections_controller_find_one: %s\n" % e)
 ```
@@ -305,7 +302,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Collection**](Collection.md)
+void (empty response body)
 
 ### Authorization
 
@@ -321,14 +318,13 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** |  |  -  |
 **401** | Collection selected is not public |  -  |
 **404** | No collection was found with the specified id |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **collections_controller_find_one_public**
-> Collection collections_controller_find_one_public(collection_id)
+> collections_controller_find_one_public(collection_id)
 
 Fetch detailed data from specified public collection
 
@@ -339,13 +335,12 @@ Fetch detailed data from specified public collection
 import time
 import aqualink_sdk
 from aqualink_sdk.api import collections_api
-from aqualink_sdk.model.collection import Collection
 from aqualink_sdk.model.inline_response404 import InlineResponse404
 from pprint import pprint
-# Defining the host is optional and defaults to https://ocean-systems.uc.r.appspot.com/api
+# Defining the host is optional and defaults to https://production-dot-ocean-systems.uc.r.appspot.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = aqualink_sdk.Configuration(
-    host = "https://ocean-systems.uc.r.appspot.com/api"
+    host = "https://production-dot-ocean-systems.uc.r.appspot.com/api"
 )
 
 
@@ -358,8 +353,7 @@ with aqualink_sdk.ApiClient() as api_client:
     # example passing only required values which don't have defaults set
     try:
         # Fetch detailed data from specified public collection
-        api_response = api_instance.collections_controller_find_one_public(collection_id)
-        pprint(api_response)
+        api_instance.collections_controller_find_one_public(collection_id)
     except aqualink_sdk.ApiException as e:
         print("Exception when calling CollectionsApi->collections_controller_find_one_public: %s\n" % e)
 ```
@@ -373,7 +367,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Collection**](Collection.md)
+void (empty response body)
 
 ### Authorization
 
@@ -389,7 +383,6 @@ No authorization required
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** |  |  -  |
 **404** | No collection was found with the specified id |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -408,10 +401,10 @@ import aqualink_sdk
 from aqualink_sdk.api import collections_api
 from aqualink_sdk.model.collection import Collection
 from pprint import pprint
-# Defining the host is optional and defaults to https://ocean-systems.uc.r.appspot.com/api
+# Defining the host is optional and defaults to https://production-dot-ocean-systems.uc.r.appspot.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = aqualink_sdk.Configuration(
-    host = "https://ocean-systems.uc.r.appspot.com/api"
+    host = "https://production-dot-ocean-systems.uc.r.appspot.com/api"
 )
 
 
@@ -475,10 +468,10 @@ import time
 import aqualink_sdk
 from aqualink_sdk.api import collections_api
 from pprint import pprint
-# Defining the host is optional and defaults to https://ocean-systems.uc.r.appspot.com/api
+# Defining the host is optional and defaults to https://production-dot-ocean-systems.uc.r.appspot.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = aqualink_sdk.Configuration(
-    host = "https://ocean-systems.uc.r.appspot.com/api"
+    host = "https://production-dot-ocean-systems.uc.r.appspot.com/api"
 )
 
 
@@ -523,7 +516,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **collections_controller_update**
-> Collection collections_controller_update(collection_id, update_collection_dto)
+> collections_controller_update(collection_id, update_collection_dto)
 
 Update specified collection
 
@@ -535,14 +528,13 @@ Update specified collection
 import time
 import aqualink_sdk
 from aqualink_sdk.api import collections_api
-from aqualink_sdk.model.collection import Collection
 from aqualink_sdk.model.inline_response404 import InlineResponse404
 from aqualink_sdk.model.update_collection_dto import UpdateCollectionDto
 from pprint import pprint
-# Defining the host is optional and defaults to https://ocean-systems.uc.r.appspot.com/api
+# Defining the host is optional and defaults to https://production-dot-ocean-systems.uc.r.appspot.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = aqualink_sdk.Configuration(
-    host = "https://ocean-systems.uc.r.appspot.com/api"
+    host = "https://production-dot-ocean-systems.uc.r.appspot.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -571,8 +563,7 @@ with aqualink_sdk.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         # Update specified collection
-        api_response = api_instance.collections_controller_update(collection_id, update_collection_dto)
-        pprint(api_response)
+        api_instance.collections_controller_update(collection_id, update_collection_dto)
     except aqualink_sdk.ApiException as e:
         print("Exception when calling CollectionsApi->collections_controller_update: %s\n" % e)
 ```
@@ -587,7 +578,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Collection**](Collection.md)
+void (empty response body)
 
 ### Authorization
 
@@ -603,7 +594,6 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** |  |  -  |
 **404** | No collection was found with the specified id |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

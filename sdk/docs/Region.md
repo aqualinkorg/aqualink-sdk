@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **id** | **float** |  | 
 **name** | **str** |  | 
 **polygon** | [**UserLocation**](UserLocation.md) |  | 
-**parent** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | 
+**parent** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type** |  | 
 **created_at** | **datetime** |  | 
 **updated_at** | **datetime** |  | 
 **parent_id** | **float** |  | [optional] 
