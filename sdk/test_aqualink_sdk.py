@@ -5,9 +5,6 @@ from pprint import pprint
 
 import aqualink_sdk
 from aqualink_sdk.api import aggregate_api, sites_api, time_series_api
-from aqualink_sdk.model.exclude_spotter_dates_dto import ExcludeSpotterDatesDto
-from aqualink_sdk.model.inline_response404 import InlineResponse404
-from aqualink_sdk.model.inline_response400 import InlineResponse400
 
 
 def test_sdk():
