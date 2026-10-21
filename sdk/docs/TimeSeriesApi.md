@@ -1,14 +1,17 @@
 # aqualink_sdk.TimeSeriesApi
 
-All URIs are relative to *https://ocean-systems.uc.r.appspot.com/api*
+All URIs are relative to *https://production-dot-ocean-systems.uc.r.appspot.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**time_series_controller_find_site_data**](TimeSeriesApi.md#time_series_controller_find_site_data) | **GET** /time-series/sites/{siteId} | Returns specified time series data for a specified site
+[**time_series_controller_find_site_data_csv**](TimeSeriesApi.md#time_series_controller_find_site_data_csv) | **GET** /time-series/sites/{siteId}/csv | Returns specified time series data for a specified site as csv
 [**time_series_controller_find_site_data_range**](TimeSeriesApi.md#time_series_controller_find_site_data_range) | **GET** /time-series/sites/{siteId}/range | Returns the range of the available time series data for a specified site
 [**time_series_controller_find_survey_point_data**](TimeSeriesApi.md#time_series_controller_find_survey_point_data) | **GET** /time-series/sites/{siteId}/site-survey-points/{surveyPointId} | Returns specified time series data for a specified site point of interest
 [**time_series_controller_find_survey_point_data_range**](TimeSeriesApi.md#time_series_controller_find_survey_point_data_range) | **GET** /time-series/sites/{siteId}/site-survey-points/{surveyPointId}/range | Returns the range of the available time series data for a specified site point of interest
-[**time_series_controller_upload_time_series_data**](TimeSeriesApi.md#time_series_controller_upload_time_series_data) | **POST** /time-series/sites/{siteId}/site-survey-points/{surveyPointId}/upload | Upload time series data
+[**time_series_controller_get_sample_upload_files**](TimeSeriesApi.md#time_series_controller_get_sample_upload_files) | **GET** /time-series/sample-upload-files/{source} | Get sample upload files
+[**time_series_controller_upload_site_time_series_data**](TimeSeriesApi.md#time_series_controller_upload_site_time_series_data) | **POST** /time-series/sites/{siteId}/site-survey-points/{surveyPointId}/upload | Upload time series data
+[**time_series_controller_upload_time_series_data**](TimeSeriesApi.md#time_series_controller_upload_time_series_data) | **POST** /time-series/upload | Upload time series data
 
 
 # **time_series_controller_find_site_data**
@@ -25,10 +28,10 @@ import aqualink_sdk
 from aqualink_sdk.api import time_series_api
 from aqualink_sdk.model.inline_response200 import InlineResponse200
 from pprint import pprint
-# Defining the host is optional and defaults to https://ocean-systems.uc.r.appspot.com/api
+# Defining the host is optional and defaults to https://production-dot-ocean-systems.uc.r.appspot.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = aqualink_sdk.Configuration(
-    host = "https://ocean-systems.uc.r.appspot.com/api"
+    host = "https://production-dot-ocean-systems.uc.r.appspot.com/api"
 )
 
 
@@ -37,7 +40,9 @@ with aqualink_sdk.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = time_series_api.TimeSeriesApi(api_client)
     site_id = 1 # float | 
-    metrics = ["bottom_temperature","top_temperature"] # [str] | 
+    metrics = [
+        "metrics_example",
+    ] # [str] | 
     start = "2021-05-18T10:20:28.017Z" # str | 
     end = "2021-05-18T10:20:28.017Z" # str | 
     hourly = False # bool |  (optional)
@@ -93,6 +98,87 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **time_series_controller_find_site_data_csv**
+> time_series_controller_find_site_data_csv(site_id, metrics, start, end)
+
+Returns specified time series data for a specified site as csv
+
+### Example
+
+
+```python
+import time
+import aqualink_sdk
+from aqualink_sdk.api import time_series_api
+from pprint import pprint
+# Defining the host is optional and defaults to https://production-dot-ocean-systems.uc.r.appspot.com/api
+# See configuration.py for a list of all supported configuration parameters.
+configuration = aqualink_sdk.Configuration(
+    host = "https://production-dot-ocean-systems.uc.r.appspot.com/api"
+)
+
+
+# Enter a context with an instance of the API client
+with aqualink_sdk.ApiClient() as api_client:
+    # Create an instance of the API class
+    api_instance = time_series_api.TimeSeriesApi(api_client)
+    site_id = 1 # float | 
+    metrics = [
+        "metrics_example",
+    ] # [str] | 
+    start = "2021-05-18T10:20:28.017Z" # str | 
+    end = "2021-05-18T10:20:28.017Z" # str | 
+    hourly = False # bool |  (optional)
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Returns specified time series data for a specified site as csv
+        api_instance.time_series_controller_find_site_data_csv(site_id, metrics, start, end)
+    except aqualink_sdk.ApiException as e:
+        print("Exception when calling TimeSeriesApi->time_series_controller_find_site_data_csv: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Returns specified time series data for a specified site as csv
+        api_instance.time_series_controller_find_site_data_csv(site_id, metrics, start, end, hourly=hourly)
+    except aqualink_sdk.ApiException as e:
+        print("Exception when calling TimeSeriesApi->time_series_controller_find_site_data_csv: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **site_id** | **float**|  |
+ **metrics** | **[str]**|  |
+ **start** | **str**|  |
+ **end** | **str**|  |
+ **hourly** | **bool**|  | [optional]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **time_series_controller_find_site_data_range**
 > InlineResponse2001 time_series_controller_find_site_data_range(site_id)
 
@@ -107,10 +193,10 @@ import aqualink_sdk
 from aqualink_sdk.api import time_series_api
 from aqualink_sdk.model.inline_response2001 import InlineResponse2001
 from pprint import pprint
-# Defining the host is optional and defaults to https://ocean-systems.uc.r.appspot.com/api
+# Defining the host is optional and defaults to https://production-dot-ocean-systems.uc.r.appspot.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = aqualink_sdk.Configuration(
-    host = "https://ocean-systems.uc.r.appspot.com/api"
+    host = "https://production-dot-ocean-systems.uc.r.appspot.com/api"
 )
 
 
@@ -172,10 +258,10 @@ import aqualink_sdk
 from aqualink_sdk.api import time_series_api
 from aqualink_sdk.model.inline_response200 import InlineResponse200
 from pprint import pprint
-# Defining the host is optional and defaults to https://ocean-systems.uc.r.appspot.com/api
+# Defining the host is optional and defaults to https://production-dot-ocean-systems.uc.r.appspot.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = aqualink_sdk.Configuration(
-    host = "https://ocean-systems.uc.r.appspot.com/api"
+    host = "https://production-dot-ocean-systems.uc.r.appspot.com/api"
 )
 
 
@@ -185,7 +271,9 @@ with aqualink_sdk.ApiClient() as api_client:
     api_instance = time_series_api.TimeSeriesApi(api_client)
     site_id = 1 # float | 
     survey_point_id = 1 # float | 
-    metrics = ["bottom_temperature","top_temperature"] # [str] | 
+    metrics = [
+        "metrics_example",
+    ] # [str] | 
     start = "2021-05-18T10:20:28.017Z" # str | 
     end = "2021-05-18T10:20:28.017Z" # str | 
     hourly = False # bool |  (optional)
@@ -256,10 +344,10 @@ import aqualink_sdk
 from aqualink_sdk.api import time_series_api
 from aqualink_sdk.model.inline_response2001 import InlineResponse2001
 from pprint import pprint
-# Defining the host is optional and defaults to https://ocean-systems.uc.r.appspot.com/api
+# Defining the host is optional and defaults to https://production-dot-ocean-systems.uc.r.appspot.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = aqualink_sdk.Configuration(
-    host = "https://ocean-systems.uc.r.appspot.com/api"
+    host = "https://production-dot-ocean-systems.uc.r.appspot.com/api"
 )
 
 
@@ -309,10 +397,10 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **time_series_controller_upload_time_series_data**
-> time_series_controller_upload_time_series_data(site_id, survey_point_id, fail_on_warning)
+# **time_series_controller_get_sample_upload_files**
+> time_series_controller_get_sample_upload_files(source)
 
-Upload time series data
+Get sample upload files
 
 ### Example
 
@@ -322,10 +410,10 @@ import time
 import aqualink_sdk
 from aqualink_sdk.api import time_series_api
 from pprint import pprint
-# Defining the host is optional and defaults to https://ocean-systems.uc.r.appspot.com/api
+# Defining the host is optional and defaults to https://production-dot-ocean-systems.uc.r.appspot.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = aqualink_sdk.Configuration(
-    host = "https://ocean-systems.uc.r.appspot.com/api"
+    host = "https://production-dot-ocean-systems.uc.r.appspot.com/api"
 )
 
 
@@ -333,16 +421,14 @@ configuration = aqualink_sdk.Configuration(
 with aqualink_sdk.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = time_series_api.TimeSeriesApi(api_client)
-    site_id = 1 # float | 
-    survey_point_id = 1 # float | 
-    fail_on_warning = True # bool | 
+    source = "1" # str | 
 
     # example passing only required values which don't have defaults set
     try:
-        # Upload time series data
-        api_instance.time_series_controller_upload_time_series_data(site_id, survey_point_id, fail_on_warning)
+        # Get sample upload files
+        api_instance.time_series_controller_get_sample_upload_files(source)
     except aqualink_sdk.ApiException as e:
-        print("Exception when calling TimeSeriesApi->time_series_controller_upload_time_series_data: %s\n" % e)
+        print("Exception when calling TimeSeriesApi->time_series_controller_get_sample_upload_files: %s\n" % e)
 ```
 
 
@@ -350,9 +436,7 @@ with aqualink_sdk.ApiClient() as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **site_id** | **float**|  |
- **survey_point_id** | **float**|  |
- **fail_on_warning** | **bool**|  |
+ **source** | **str**|  |
 
 ### Return type
 
@@ -366,6 +450,145 @@ No authorization required
 
  - **Content-Type**: Not defined
  - **Accept**: Not defined
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **time_series_controller_upload_site_time_series_data**
+> [{str: (bool, date, datetime, dict, float, int, list, str, none_type)}] time_series_controller_upload_site_time_series_data(site_id, survey_point_id, fail_on_warning, site_timezone)
+
+Upload time series data
+
+### Example
+
+
+```python
+import time
+import aqualink_sdk
+from aqualink_sdk.api import time_series_api
+from pprint import pprint
+# Defining the host is optional and defaults to https://production-dot-ocean-systems.uc.r.appspot.com/api
+# See configuration.py for a list of all supported configuration parameters.
+configuration = aqualink_sdk.Configuration(
+    host = "https://production-dot-ocean-systems.uc.r.appspot.com/api"
+)
+
+
+# Enter a context with an instance of the API client
+with aqualink_sdk.ApiClient() as api_client:
+    # Create an instance of the API class
+    api_instance = time_series_api.TimeSeriesApi(api_client)
+    site_id = 1 # float | 
+    survey_point_id = 1 # float | 
+    fail_on_warning = True # bool | 
+    site_timezone = True # bool | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Upload time series data
+        api_response = api_instance.time_series_controller_upload_site_time_series_data(site_id, survey_point_id, fail_on_warning, site_timezone)
+        pprint(api_response)
+    except aqualink_sdk.ApiException as e:
+        print("Exception when calling TimeSeriesApi->time_series_controller_upload_site_time_series_data: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **site_id** | **float**|  |
+ **survey_point_id** | **float**|  |
+ **fail_on_warning** | **bool**|  |
+ **site_timezone** | **bool**|  |
+
+### Return type
+
+**[{str: (bool, date, datetime, dict, float, int, list, str, none_type)}]**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** |  |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **time_series_controller_upload_time_series_data**
+> [{str: (bool, date, datetime, dict, float, int, list, str, none_type)}] time_series_controller_upload_time_series_data(upload_time_series_data_dto)
+
+Upload time series data
+
+### Example
+
+
+```python
+import time
+import aqualink_sdk
+from aqualink_sdk.api import time_series_api
+from aqualink_sdk.model.upload_time_series_data_dto import UploadTimeSeriesDataDto
+from pprint import pprint
+# Defining the host is optional and defaults to https://production-dot-ocean-systems.uc.r.appspot.com/api
+# See configuration.py for a list of all supported configuration parameters.
+configuration = aqualink_sdk.Configuration(
+    host = "https://production-dot-ocean-systems.uc.r.appspot.com/api"
+)
+
+
+# Enter a context with an instance of the API client
+with aqualink_sdk.ApiClient() as api_client:
+    # Create an instance of the API class
+    api_instance = time_series_api.TimeSeriesApi(api_client)
+    upload_time_series_data_dto = UploadTimeSeriesDataDto(
+        sensor="sonde",
+        fail_on_warning=True,
+        site_timezone=True,
+    ) # UploadTimeSeriesDataDto | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Upload time series data
+        api_response = api_instance.time_series_controller_upload_time_series_data(upload_time_series_data_dto)
+        pprint(api_response)
+    except aqualink_sdk.ApiException as e:
+        print("Exception when calling TimeSeriesApi->time_series_controller_upload_time_series_data: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **upload_time_series_data_dto** | [**UploadTimeSeriesDataDto**](UploadTimeSeriesDataDto.md)|  |
+
+### Return type
+
+**[{str: (bool, date, datetime, dict, float, int, list, str, none_type)}]**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 ### HTTP response details

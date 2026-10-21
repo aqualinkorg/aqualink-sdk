@@ -30,8 +30,8 @@ from aqualink_sdk.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from aqualink_sdk.model.inline_response200_sofar_wave_model import InlineResponse200SofarWaveModel
-    globals()['InlineResponse200SofarWaveModel'] = InlineResponse200SofarWaveModel
+    from aqualink_sdk.model.inline_response200_open_meteo import InlineResponse200OpenMeteo
+    globals()['InlineResponse200OpenMeteo'] = InlineResponse200OpenMeteo
 
 
 class InlineResponse200(ModelNormal):
@@ -87,13 +87,18 @@ class InlineResponse200(ModelNormal):
         """
         lazy_import()
         return {
-            'sofar_wave_model': (InlineResponse200SofarWaveModel,),  # noqa: E501
-            'metlog': (InlineResponse200SofarWaveModel,),  # noqa: E501
-            'sonde': (InlineResponse200SofarWaveModel,),  # noqa: E501
-            'spotter': (InlineResponse200SofarWaveModel,),  # noqa: E501
-            'noaa': (InlineResponse200SofarWaveModel,),  # noqa: E501
-            'hobo': (InlineResponse200SofarWaveModel,),  # noqa: E501
-            'gfs': (InlineResponse200SofarWaveModel,),  # noqa: E501
+            'open_meteo': (InlineResponse200OpenMeteo,),  # noqa: E501
+            'seaphox': (InlineResponse200OpenMeteo,),  # noqa: E501
+            'sheet_data': (InlineResponse200OpenMeteo,),  # noqa: E501
+            'hwo': (InlineResponse200OpenMeteo,),  # noqa: E501
+            'hui': (InlineResponse200OpenMeteo,),  # noqa: E501
+            'sofar_model': (InlineResponse200OpenMeteo,),  # noqa: E501
+            'metlog': (InlineResponse200OpenMeteo,),  # noqa: E501
+            'sonde': (InlineResponse200OpenMeteo,),  # noqa: E501
+            'spotter': (InlineResponse200OpenMeteo,),  # noqa: E501
+            'noaa': (InlineResponse200OpenMeteo,),  # noqa: E501
+            'hobo': (InlineResponse200OpenMeteo,),  # noqa: E501
+            'gfs': (InlineResponse200OpenMeteo,),  # noqa: E501
         }
 
     @cached_property
@@ -102,7 +107,12 @@ class InlineResponse200(ModelNormal):
 
 
     attribute_map = {
-        'sofar_wave_model': 'sofar_wave_model',  # noqa: E501
+        'open_meteo': 'open_meteo',  # noqa: E501
+        'seaphox': 'seaphox',  # noqa: E501
+        'sheet_data': 'sheet_data',  # noqa: E501
+        'hwo': 'hwo',  # noqa: E501
+        'hui': 'hui',  # noqa: E501
+        'sofar_model': 'sofar_model',  # noqa: E501
         'metlog': 'metlog',  # noqa: E501
         'sonde': 'sonde',  # noqa: E501
         'spotter': 'spotter',  # noqa: E501
@@ -152,13 +162,18 @@ class InlineResponse200(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            sofar_wave_model (InlineResponse200SofarWaveModel): [optional]  # noqa: E501
-            metlog (InlineResponse200SofarWaveModel): [optional]  # noqa: E501
-            sonde (InlineResponse200SofarWaveModel): [optional]  # noqa: E501
-            spotter (InlineResponse200SofarWaveModel): [optional]  # noqa: E501
-            noaa (InlineResponse200SofarWaveModel): [optional]  # noqa: E501
-            hobo (InlineResponse200SofarWaveModel): [optional]  # noqa: E501
-            gfs (InlineResponse200SofarWaveModel): [optional]  # noqa: E501
+            open_meteo (InlineResponse200OpenMeteo): [optional]  # noqa: E501
+            seaphox (InlineResponse200OpenMeteo): [optional]  # noqa: E501
+            sheet_data (InlineResponse200OpenMeteo): [optional]  # noqa: E501
+            hwo (InlineResponse200OpenMeteo): [optional]  # noqa: E501
+            hui (InlineResponse200OpenMeteo): [optional]  # noqa: E501
+            sofar_model (InlineResponse200OpenMeteo): [optional]  # noqa: E501
+            metlog (InlineResponse200OpenMeteo): [optional]  # noqa: E501
+            sonde (InlineResponse200OpenMeteo): [optional]  # noqa: E501
+            spotter (InlineResponse200OpenMeteo): [optional]  # noqa: E501
+            noaa (InlineResponse200OpenMeteo): [optional]  # noqa: E501
+            hobo (InlineResponse200OpenMeteo): [optional]  # noqa: E501
+            gfs (InlineResponse200OpenMeteo): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -240,13 +255,18 @@ class InlineResponse200(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            sofar_wave_model (InlineResponse200SofarWaveModel): [optional]  # noqa: E501
-            metlog (InlineResponse200SofarWaveModel): [optional]  # noqa: E501
-            sonde (InlineResponse200SofarWaveModel): [optional]  # noqa: E501
-            spotter (InlineResponse200SofarWaveModel): [optional]  # noqa: E501
-            noaa (InlineResponse200SofarWaveModel): [optional]  # noqa: E501
-            hobo (InlineResponse200SofarWaveModel): [optional]  # noqa: E501
-            gfs (InlineResponse200SofarWaveModel): [optional]  # noqa: E501
+            open_meteo (InlineResponse200OpenMeteo): [optional]  # noqa: E501
+            seaphox (InlineResponse200OpenMeteo): [optional]  # noqa: E501
+            sheet_data (InlineResponse200OpenMeteo): [optional]  # noqa: E501
+            hwo (InlineResponse200OpenMeteo): [optional]  # noqa: E501
+            hui (InlineResponse200OpenMeteo): [optional]  # noqa: E501
+            sofar_model (InlineResponse200OpenMeteo): [optional]  # noqa: E501
+            metlog (InlineResponse200OpenMeteo): [optional]  # noqa: E501
+            sonde (InlineResponse200OpenMeteo): [optional]  # noqa: E501
+            spotter (InlineResponse200OpenMeteo): [optional]  # noqa: E501
+            noaa (InlineResponse200OpenMeteo): [optional]  # noqa: E501
+            hobo (InlineResponse200OpenMeteo): [optional]  # noqa: E501
+            gfs (InlineResponse200OpenMeteo): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

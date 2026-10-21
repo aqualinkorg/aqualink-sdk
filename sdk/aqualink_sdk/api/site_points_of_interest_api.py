@@ -195,7 +195,7 @@ class SitePointsOfInterestApi(object):
         )
         self.site_survey_points_controller_find_one_endpoint = _Endpoint(
             settings={
-                'response_type': (SiteSurveyPoint,),
+                'response_type': None,
                 'auth': [],
                 'endpoint_path': '/site-survey-points/{id}',
                 'operation_id': 'site_survey_points_controller_find_one',
@@ -244,7 +244,7 @@ class SitePointsOfInterestApi(object):
         )
         self.site_survey_points_controller_update_endpoint = _Endpoint(
             settings={
-                'response_type': (SiteSurveyPoint,),
+                'response_type': None,
                 'auth': [
                     'bearer'
                 ],
@@ -574,7 +574,7 @@ class SitePointsOfInterestApi(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            SiteSurveyPoint
+            None
                 If the method is called asynchronously, returns the request
                 thread.
         """
@@ -653,7 +653,7 @@ class SitePointsOfInterestApi(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            SiteSurveyPoint
+            None
                 If the method is called asynchronously, returns the request
                 thread.
         """

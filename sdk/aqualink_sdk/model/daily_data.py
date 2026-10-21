@@ -88,22 +88,8 @@ class DailyData(ModelNormal):
         lazy_import()
         return {
             'id': (float,),  # noqa: E501
-            'min_bottom_temperature': (float, none_type,),  # noqa: E501
-            'max_bottom_temperature': (float, none_type,),  # noqa: E501
-            'avg_bottom_temperature': (float, none_type,),  # noqa: E501
             'degree_heating_days': (float, none_type,),  # noqa: E501
-            'top_temperature': (float, none_type,),  # noqa: E501
             'satellite_temperature': (float, none_type,),  # noqa: E501
-            'min_wave_height': (float, none_type,),  # noqa: E501
-            'max_wave_height': (float, none_type,),  # noqa: E501
-            'avg_wave_height': (float, none_type,),  # noqa: E501
-            'wave_mean_direction': (float, none_type,),  # noqa: E501
-            'wave_peak_period': (float, none_type,),  # noqa: E501
-            'wave_mean_period': (float, none_type,),  # noqa: E501
-            'min_wind_speed': (float, none_type,),  # noqa: E501
-            'max_wind_speed': (float, none_type,),  # noqa: E501
-            'avg_wind_speed': (float, none_type,),  # noqa: E501
-            'wind_direction': (float, none_type,),  # noqa: E501
             'daily_alert_level': (float, none_type,),  # noqa: E501
             'weekly_alert_level': (float, none_type,),  # noqa: E501
             'date': (datetime,),  # noqa: E501
@@ -119,22 +105,8 @@ class DailyData(ModelNormal):
 
     attribute_map = {
         'id': 'id',  # noqa: E501
-        'min_bottom_temperature': 'minBottomTemperature',  # noqa: E501
-        'max_bottom_temperature': 'maxBottomTemperature',  # noqa: E501
-        'avg_bottom_temperature': 'avgBottomTemperature',  # noqa: E501
         'degree_heating_days': 'degreeHeatingDays',  # noqa: E501
-        'top_temperature': 'topTemperature',  # noqa: E501
         'satellite_temperature': 'satelliteTemperature',  # noqa: E501
-        'min_wave_height': 'minWaveHeight',  # noqa: E501
-        'max_wave_height': 'maxWaveHeight',  # noqa: E501
-        'avg_wave_height': 'avgWaveHeight',  # noqa: E501
-        'wave_mean_direction': 'waveMeanDirection',  # noqa: E501
-        'wave_peak_period': 'wavePeakPeriod',  # noqa: E501
-        'wave_mean_period': 'waveMeanPeriod',  # noqa: E501
-        'min_wind_speed': 'minWindSpeed',  # noqa: E501
-        'max_wind_speed': 'maxWindSpeed',  # noqa: E501
-        'avg_wind_speed': 'avgWindSpeed',  # noqa: E501
-        'wind_direction': 'windDirection',  # noqa: E501
         'daily_alert_level': 'dailyAlertLevel',  # noqa: E501
         'weekly_alert_level': 'weeklyAlertLevel',  # noqa: E501
         'date': 'date',  # noqa: E501
@@ -150,27 +122,13 @@ class DailyData(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, id, min_bottom_temperature, max_bottom_temperature, avg_bottom_temperature, degree_heating_days, top_temperature, satellite_temperature, min_wave_height, max_wave_height, avg_wave_height, wave_mean_direction, wave_peak_period, wave_mean_period, min_wind_speed, max_wind_speed, avg_wind_speed, wind_direction, daily_alert_level, weekly_alert_level, date, site, created_at, updated_at, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, degree_heating_days, satellite_temperature, daily_alert_level, weekly_alert_level, date, site, created_at, updated_at, *args, **kwargs):  # noqa: E501
         """DailyData - a model defined in OpenAPI
 
         Args:
             id (float):
-            min_bottom_temperature (float, none_type):
-            max_bottom_temperature (float, none_type):
-            avg_bottom_temperature (float, none_type):
             degree_heating_days (float, none_type):
-            top_temperature (float, none_type):
             satellite_temperature (float, none_type):
-            min_wave_height (float, none_type):
-            max_wave_height (float, none_type):
-            avg_wave_height (float, none_type):
-            wave_mean_direction (float, none_type):
-            wave_peak_period (float, none_type):
-            wave_mean_period (float, none_type):
-            min_wind_speed (float, none_type):
-            max_wind_speed (float, none_type):
-            avg_wind_speed (float, none_type):
-            wind_direction (float, none_type):
             daily_alert_level (float, none_type):
             weekly_alert_level (float, none_type):
             date (datetime):
@@ -237,22 +195,8 @@ class DailyData(ModelNormal):
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
         self.id = id
-        self.min_bottom_temperature = min_bottom_temperature
-        self.max_bottom_temperature = max_bottom_temperature
-        self.avg_bottom_temperature = avg_bottom_temperature
         self.degree_heating_days = degree_heating_days
-        self.top_temperature = top_temperature
         self.satellite_temperature = satellite_temperature
-        self.min_wave_height = min_wave_height
-        self.max_wave_height = max_wave_height
-        self.avg_wave_height = avg_wave_height
-        self.wave_mean_direction = wave_mean_direction
-        self.wave_peak_period = wave_peak_period
-        self.wave_mean_period = wave_mean_period
-        self.min_wind_speed = min_wind_speed
-        self.max_wind_speed = max_wind_speed
-        self.avg_wind_speed = avg_wind_speed
-        self.wind_direction = wind_direction
         self.daily_alert_level = daily_alert_level
         self.weekly_alert_level = weekly_alert_level
         self.date = date
@@ -279,27 +223,13 @@ class DailyData(ModelNormal):
     ])
 
     @convert_js_args_to_python_args
-    def __init__(self, id, min_bottom_temperature, max_bottom_temperature, avg_bottom_temperature, degree_heating_days, top_temperature, satellite_temperature, min_wave_height, max_wave_height, avg_wave_height, wave_mean_direction, wave_peak_period, wave_mean_period, min_wind_speed, max_wind_speed, avg_wind_speed, wind_direction, daily_alert_level, weekly_alert_level, date, site, created_at, updated_at, *args, **kwargs):  # noqa: E501
+    def __init__(self, id, degree_heating_days, satellite_temperature, daily_alert_level, weekly_alert_level, date, site, created_at, updated_at, *args, **kwargs):  # noqa: E501
         """DailyData - a model defined in OpenAPI
 
         Args:
             id (float):
-            min_bottom_temperature (float, none_type):
-            max_bottom_temperature (float, none_type):
-            avg_bottom_temperature (float, none_type):
             degree_heating_days (float, none_type):
-            top_temperature (float, none_type):
             satellite_temperature (float, none_type):
-            min_wave_height (float, none_type):
-            max_wave_height (float, none_type):
-            avg_wave_height (float, none_type):
-            wave_mean_direction (float, none_type):
-            wave_peak_period (float, none_type):
-            wave_mean_period (float, none_type):
-            min_wind_speed (float, none_type):
-            max_wind_speed (float, none_type):
-            avg_wind_speed (float, none_type):
-            wind_direction (float, none_type):
             daily_alert_level (float, none_type):
             weekly_alert_level (float, none_type):
             date (datetime):
@@ -364,22 +294,8 @@ class DailyData(ModelNormal):
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
         self.id = id
-        self.min_bottom_temperature = min_bottom_temperature
-        self.max_bottom_temperature = max_bottom_temperature
-        self.avg_bottom_temperature = avg_bottom_temperature
         self.degree_heating_days = degree_heating_days
-        self.top_temperature = top_temperature
         self.satellite_temperature = satellite_temperature
-        self.min_wave_height = min_wave_height
-        self.max_wave_height = max_wave_height
-        self.avg_wave_height = avg_wave_height
-        self.wave_mean_direction = wave_mean_direction
-        self.wave_peak_period = wave_peak_period
-        self.wave_mean_period = wave_mean_period
-        self.min_wind_speed = min_wind_speed
-        self.max_wind_speed = max_wind_speed
-        self.avg_wind_speed = avg_wind_speed
-        self.wind_direction = wind_direction
         self.daily_alert_level = daily_alert_level
         self.weekly_alert_level = weekly_alert_level
         self.date = date

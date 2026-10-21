@@ -5,9 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **float** |  | 
-**site** | [**Site**](Site.md) |  | 
-**survey_point** | [**SiteSurveyPoint**](SiteSurveyPoint.md) |  | 
-**sensor_type** | **str** |  | 
+**sensor_types** | **[str]** |  | 
 **file** | **str** |  | 
 **signature** | **str** |  | 
 **min_date** | **datetime** |  | 

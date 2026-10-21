@@ -1,6 +1,6 @@
 # aqualink_sdk.SitesApi
 
-All URIs are relative to *https://ocean-systems.uc.r.appspot.com/api*
+All URIs are relative to *https://production-dot-ocean-systems.uc.r.appspot.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -12,8 +12,9 @@ Method | HTTP request | Description
 [**sites_controller_find_daily_data**](SitesApi.md#sites_controller_find_daily_data) | **GET** /sites/{id}/daily_data | Returns daily data for the specified site
 [**sites_controller_find_exclusion_dates**](SitesApi.md#sites_controller_find_exclusion_dates) | **GET** /sites/{siteId}/exclusion_dates | Returns exclusion dates of specified site&#39;s spotter
 [**sites_controller_find_latest_data**](SitesApi.md#sites_controller_find_latest_data) | **GET** /sites/{id}/latest_data | Returns latest data for the specified site
-[**sites_controller_find_live_data**](SitesApi.md#sites_controller_find_live_data) | **GET** /sites/{id}/live_data | Returns live data for the specified site
 [**sites_controller_find_one**](SitesApi.md#sites_controller_find_one) | **GET** /sites/{id} | Returns specified site
+[**sites_controller_find_spotter_position**](SitesApi.md#sites_controller_find_spotter_position) | **GET** /sites/{id}/spotter_position | Returns spotter position for the specified site
+[**sites_controller_get_contact_information**](SitesApi.md#sites_controller_get_contact_information) | **GET** /sites/{siteId}/contact_info | Returns sites contact information notes
 [**sites_controller_get_spotter_data**](SitesApi.md#sites_controller_get_spotter_data) | **GET** /sites/{id}/spotter_data | Returns spotter data for the specified site
 [**sites_controller_update**](SitesApi.md#sites_controller_update) | **PUT** /sites/{siteId} | Updates specified site
 
@@ -35,10 +36,10 @@ from aqualink_sdk.model.exclude_spotter_dates_dto import ExcludeSpotterDatesDto
 from aqualink_sdk.model.inline_response404 import InlineResponse404
 from aqualink_sdk.model.inline_response400 import InlineResponse400
 from pprint import pprint
-# Defining the host is optional and defaults to https://ocean-systems.uc.r.appspot.com/api
+# Defining the host is optional and defaults to https://production-dot-ocean-systems.uc.r.appspot.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = aqualink_sdk.Configuration(
-    host = "https://ocean-systems.uc.r.appspot.com/api"
+    host = "https://production-dot-ocean-systems.uc.r.appspot.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -95,7 +96,6 @@ void (empty response body)
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**201** |  |  -  |
 **400** | Site has no spotter or start date is larger than end date |  -  |
 **404** | No site was found with the specified id |  -  |
 
@@ -117,10 +117,10 @@ from aqualink_sdk.api import sites_api
 from aqualink_sdk.model.site_application import SiteApplication
 from aqualink_sdk.model.inline_object1 import InlineObject1
 from pprint import pprint
-# Defining the host is optional and defaults to https://ocean-systems.uc.r.appspot.com/api
+# Defining the host is optional and defaults to https://production-dot-ocean-systems.uc.r.appspot.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = aqualink_sdk.Configuration(
-    host = "https://ocean-systems.uc.r.appspot.com/api"
+    host = "https://production-dot-ocean-systems.uc.r.appspot.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -205,10 +205,10 @@ import aqualink_sdk
 from aqualink_sdk.api import sites_api
 from aqualink_sdk.model.inline_response404 import InlineResponse404
 from pprint import pprint
-# Defining the host is optional and defaults to https://ocean-systems.uc.r.appspot.com/api
+# Defining the host is optional and defaults to https://production-dot-ocean-systems.uc.r.appspot.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = aqualink_sdk.Configuration(
-    host = "https://ocean-systems.uc.r.appspot.com/api"
+    host = "https://production-dot-ocean-systems.uc.r.appspot.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -260,7 +260,6 @@ void (empty response body)
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** |  |  -  |
 **404** | No site was found with the specified id |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -282,10 +281,10 @@ from aqualink_sdk.model.deploy_spotter_dto import DeploySpotterDto
 from aqualink_sdk.model.inline_response404 import InlineResponse404
 from aqualink_sdk.model.inline_response400 import InlineResponse400
 from pprint import pprint
-# Defining the host is optional and defaults to https://ocean-systems.uc.r.appspot.com/api
+# Defining the host is optional and defaults to https://production-dot-ocean-systems.uc.r.appspot.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = aqualink_sdk.Configuration(
-    host = "https://ocean-systems.uc.r.appspot.com/api"
+    host = "https://production-dot-ocean-systems.uc.r.appspot.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -341,7 +340,6 @@ void (empty response body)
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**201** |  |  -  |
 **400** | Site has no spotter or spotter is already deployed |  -  |
 **404** | No site was found with the specified id |  -  |
 
@@ -361,10 +359,10 @@ import aqualink_sdk
 from aqualink_sdk.api import sites_api
 from aqualink_sdk.model.site import Site
 from pprint import pprint
-# Defining the host is optional and defaults to https://ocean-systems.uc.r.appspot.com/api
+# Defining the host is optional and defaults to https://production-dot-ocean-systems.uc.r.appspot.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = aqualink_sdk.Configuration(
-    host = "https://ocean-systems.uc.r.appspot.com/api"
+    host = "https://production-dot-ocean-systems.uc.r.appspot.com/api"
 )
 
 
@@ -422,7 +420,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **sites_controller_find_daily_data**
-> [DailyData] sites_controller_find_daily_data(id, start, end)
+> sites_controller_find_daily_data(id, start, end)
 
 Returns daily data for the specified site
 
@@ -434,13 +432,12 @@ import time
 import aqualink_sdk
 from aqualink_sdk.api import sites_api
 from aqualink_sdk.model.inline_response404 import InlineResponse404
-from aqualink_sdk.model.daily_data import DailyData
 from aqualink_sdk.model.inline_response400 import InlineResponse400
 from pprint import pprint
-# Defining the host is optional and defaults to https://ocean-systems.uc.r.appspot.com/api
+# Defining the host is optional and defaults to https://production-dot-ocean-systems.uc.r.appspot.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = aqualink_sdk.Configuration(
-    host = "https://ocean-systems.uc.r.appspot.com/api"
+    host = "https://production-dot-ocean-systems.uc.r.appspot.com/api"
 )
 
 
@@ -455,8 +452,7 @@ with aqualink_sdk.ApiClient() as api_client:
     # example passing only required values which don't have defaults set
     try:
         # Returns daily data for the specified site
-        api_response = api_instance.sites_controller_find_daily_data(id, start, end)
-        pprint(api_response)
+        api_instance.sites_controller_find_daily_data(id, start, end)
     except aqualink_sdk.ApiException as e:
         print("Exception when calling SitesApi->sites_controller_find_daily_data: %s\n" % e)
 ```
@@ -472,7 +468,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[DailyData]**](DailyData.md)
+void (empty response body)
 
 ### Authorization
 
@@ -488,7 +484,6 @@ No authorization required
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** |  |  -  |
 **400** | Start or end is not a valid date |  -  |
 **404** | No site was found with the specified id |  -  |
 
@@ -509,10 +504,10 @@ import aqualink_sdk
 from aqualink_sdk.api import sites_api
 from aqualink_sdk.model.exclusion_dates import ExclusionDates
 from pprint import pprint
-# Defining the host is optional and defaults to https://ocean-systems.uc.r.appspot.com/api
+# Defining the host is optional and defaults to https://production-dot-ocean-systems.uc.r.appspot.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = aqualink_sdk.Configuration(
-    host = "https://ocean-systems.uc.r.appspot.com/api"
+    host = "https://production-dot-ocean-systems.uc.r.appspot.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -570,7 +565,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **sites_controller_find_latest_data**
-> SofarLatestDataDto sites_controller_find_latest_data(id)
+> sites_controller_find_latest_data(id)
 
 Returns latest data for the specified site
 
@@ -581,13 +576,12 @@ Returns latest data for the specified site
 import time
 import aqualink_sdk
 from aqualink_sdk.api import sites_api
-from aqualink_sdk.model.sofar_latest_data_dto import SofarLatestDataDto
 from aqualink_sdk.model.inline_response404 import InlineResponse404
 from pprint import pprint
-# Defining the host is optional and defaults to https://ocean-systems.uc.r.appspot.com/api
+# Defining the host is optional and defaults to https://production-dot-ocean-systems.uc.r.appspot.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = aqualink_sdk.Configuration(
-    host = "https://ocean-systems.uc.r.appspot.com/api"
+    host = "https://production-dot-ocean-systems.uc.r.appspot.com/api"
 )
 
 
@@ -600,8 +594,7 @@ with aqualink_sdk.ApiClient() as api_client:
     # example passing only required values which don't have defaults set
     try:
         # Returns latest data for the specified site
-        api_response = api_instance.sites_controller_find_latest_data(id)
-        pprint(api_response)
+        api_instance.sites_controller_find_latest_data(id)
     except aqualink_sdk.ApiException as e:
         print("Exception when calling SitesApi->sites_controller_find_latest_data: %s\n" % e)
 ```
@@ -615,7 +608,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SofarLatestDataDto**](SofarLatestDataDto.md)
+void (empty response body)
 
 ### Authorization
 
@@ -631,80 +624,12 @@ No authorization required
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** |  |  -  |
-**404** | No site was found with the specified id |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **sites_controller_find_live_data**
-> SofarLiveDataDto sites_controller_find_live_data(id)
-
-Returns live data for the specified site
-
-### Example
-
-
-```python
-import time
-import aqualink_sdk
-from aqualink_sdk.api import sites_api
-from aqualink_sdk.model.sofar_live_data_dto import SofarLiveDataDto
-from aqualink_sdk.model.inline_response404 import InlineResponse404
-from pprint import pprint
-# Defining the host is optional and defaults to https://ocean-systems.uc.r.appspot.com/api
-# See configuration.py for a list of all supported configuration parameters.
-configuration = aqualink_sdk.Configuration(
-    host = "https://ocean-systems.uc.r.appspot.com/api"
-)
-
-
-# Enter a context with an instance of the API client
-with aqualink_sdk.ApiClient() as api_client:
-    # Create an instance of the API class
-    api_instance = sites_api.SitesApi(api_client)
-    id = 1 # float | 
-
-    # example passing only required values which don't have defaults set
-    try:
-        # Returns live data for the specified site
-        api_response = api_instance.sites_controller_find_live_data(id)
-        pprint(api_response)
-    except aqualink_sdk.ApiException as e:
-        print("Exception when calling SitesApi->sites_controller_find_live_data: %s\n" % e)
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **float**|  |
-
-### Return type
-
-[**SofarLiveDataDto**](SofarLiveDataDto.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** |  |  -  |
 **404** | No site was found with the specified id |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **sites_controller_find_one**
-> Site sites_controller_find_one(id)
+> sites_controller_find_one(id)
 
 Returns specified site
 
@@ -715,13 +640,12 @@ Returns specified site
 import time
 import aqualink_sdk
 from aqualink_sdk.api import sites_api
-from aqualink_sdk.model.site import Site
 from aqualink_sdk.model.inline_response404 import InlineResponse404
 from pprint import pprint
-# Defining the host is optional and defaults to https://ocean-systems.uc.r.appspot.com/api
+# Defining the host is optional and defaults to https://production-dot-ocean-systems.uc.r.appspot.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = aqualink_sdk.Configuration(
-    host = "https://ocean-systems.uc.r.appspot.com/api"
+    host = "https://production-dot-ocean-systems.uc.r.appspot.com/api"
 )
 
 
@@ -734,8 +658,7 @@ with aqualink_sdk.ApiClient() as api_client:
     # example passing only required values which don't have defaults set
     try:
         # Returns specified site
-        api_response = api_instance.sites_controller_find_one(id)
-        pprint(api_response)
+        api_instance.sites_controller_find_one(id)
     except aqualink_sdk.ApiException as e:
         print("Exception when calling SitesApi->sites_controller_find_one: %s\n" % e)
 ```
@@ -749,7 +672,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Site**](Site.md)
+void (empty response body)
 
 ### Authorization
 
@@ -765,13 +688,149 @@ No authorization required
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** |  |  -  |
 **404** | No site was found with the specified id |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **sites_controller_find_spotter_position**
+> sites_controller_find_spotter_position(id)
+
+Returns spotter position for the specified site
+
+### Example
+
+
+```python
+import time
+import aqualink_sdk
+from aqualink_sdk.api import sites_api
+from aqualink_sdk.model.inline_response404 import InlineResponse404
+from pprint import pprint
+# Defining the host is optional and defaults to https://production-dot-ocean-systems.uc.r.appspot.com/api
+# See configuration.py for a list of all supported configuration parameters.
+configuration = aqualink_sdk.Configuration(
+    host = "https://production-dot-ocean-systems.uc.r.appspot.com/api"
+)
+
+
+# Enter a context with an instance of the API client
+with aqualink_sdk.ApiClient() as api_client:
+    # Create an instance of the API class
+    api_instance = sites_api.SitesApi(api_client)
+    id = 1 # float | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Returns spotter position for the specified site
+        api_instance.sites_controller_find_spotter_position(id)
+    except aqualink_sdk.ApiException as e:
+        print("Exception when calling SitesApi->sites_controller_find_spotter_position: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **float**|  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**404** | No site was found with the specified id |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **sites_controller_get_contact_information**
+> sites_controller_get_contact_information(site_id)
+
+Returns sites contact information notes
+
+### Example
+
+* Bearer (JWT) Authentication (bearer):
+
+```python
+import time
+import aqualink_sdk
+from aqualink_sdk.api import sites_api
+from pprint import pprint
+# Defining the host is optional and defaults to https://production-dot-ocean-systems.uc.r.appspot.com/api
+# See configuration.py for a list of all supported configuration parameters.
+configuration = aqualink_sdk.Configuration(
+    host = "https://production-dot-ocean-systems.uc.r.appspot.com/api"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure Bearer authorization (JWT): bearer
+configuration = aqualink_sdk.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
+
+# Enter a context with an instance of the API client
+with aqualink_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = sites_api.SitesApi(api_client)
+    site_id = 1 # float | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Returns sites contact information notes
+        api_instance.sites_controller_get_contact_information(site_id)
+    except aqualink_sdk.ApiException as e:
+        print("Exception when calling SitesApi->sites_controller_get_contact_information: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **site_id** | **float**|  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[bearer](../README.md#bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **sites_controller_get_spotter_data**
-> SpotterDataDto sites_controller_get_spotter_data(id, start_date, end_date)
+> sites_controller_get_spotter_data(id, start_date, end_date)
 
 Returns spotter data for the specified site
 
@@ -782,13 +841,12 @@ Returns spotter data for the specified site
 import time
 import aqualink_sdk
 from aqualink_sdk.api import sites_api
-from aqualink_sdk.model.spotter_data_dto import SpotterDataDto
 from aqualink_sdk.model.inline_response404 import InlineResponse404
 from pprint import pprint
-# Defining the host is optional and defaults to https://ocean-systems.uc.r.appspot.com/api
+# Defining the host is optional and defaults to https://production-dot-ocean-systems.uc.r.appspot.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = aqualink_sdk.Configuration(
-    host = "https://ocean-systems.uc.r.appspot.com/api"
+    host = "https://production-dot-ocean-systems.uc.r.appspot.com/api"
 )
 
 
@@ -803,8 +861,7 @@ with aqualink_sdk.ApiClient() as api_client:
     # example passing only required values which don't have defaults set
     try:
         # Returns spotter data for the specified site
-        api_response = api_instance.sites_controller_get_spotter_data(id, start_date, end_date)
-        pprint(api_response)
+        api_instance.sites_controller_get_spotter_data(id, start_date, end_date)
     except aqualink_sdk.ApiException as e:
         print("Exception when calling SitesApi->sites_controller_get_spotter_data: %s\n" % e)
 ```
@@ -820,7 +877,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SpotterDataDto**](SpotterDataDto.md)
+void (empty response body)
 
 ### Authorization
 
@@ -836,13 +893,12 @@ No authorization required
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** |  |  -  |
 **404** | No site was found or found site had no spotter |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **sites_controller_update**
-> Site sites_controller_update(site_id, update_site_dto)
+> sites_controller_update(site_id, update_site_dto)
 
 Updates specified site
 
@@ -854,14 +910,13 @@ Updates specified site
 import time
 import aqualink_sdk
 from aqualink_sdk.api import sites_api
-from aqualink_sdk.model.site import Site
 from aqualink_sdk.model.inline_response404 import InlineResponse404
 from aqualink_sdk.model.update_site_dto import UpdateSiteDto
 from pprint import pprint
-# Defining the host is optional and defaults to https://ocean-systems.uc.r.appspot.com/api
+# Defining the host is optional and defaults to https://production-dot-ocean-systems.uc.r.appspot.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = aqualink_sdk.Configuration(
-    host = "https://ocean-systems.uc.r.appspot.com/api"
+    host = "https://production-dot-ocean-systems.uc.r.appspot.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -884,19 +939,23 @@ with aqualink_sdk.ApiClient(configuration) as api_client:
         depth=81,
         region_id=1,
         admin_ids=[1,2,3],
-        stream_id=1,
+        sensor_id="SPOT-1742",
+        spotter_api_token="jl3Xr1kZeqDqs7KAiktXOyr3PlB5Ip",
+        status="deployed",
+        contact_information="email: john@example.com",
+        iframe="https://something.example.com",
         coordinates=Coordinates(
             latitude=15.5416,
             longitude=-1.456,
         ),
         video_stream="video_stream_example",
+        display=True,
     ) # UpdateSiteDto | 
 
     # example passing only required values which don't have defaults set
     try:
         # Updates specified site
-        api_response = api_instance.sites_controller_update(site_id, update_site_dto)
-        pprint(api_response)
+        api_instance.sites_controller_update(site_id, update_site_dto)
     except aqualink_sdk.ApiException as e:
         print("Exception when calling SitesApi->sites_controller_update: %s\n" % e)
 ```
@@ -911,7 +970,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Site**](Site.md)
+void (empty response body)
 
 ### Authorization
 
@@ -927,7 +986,6 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** |  |  -  |
 **404** | No site was found with the specified id |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

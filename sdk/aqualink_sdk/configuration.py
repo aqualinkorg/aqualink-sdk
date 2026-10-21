@@ -93,7 +93,7 @@ class Configuration(object):
                  ):
         """Constructor
         """
-        self._base_path = "https://ocean-systems.uc.r.appspot.com/api" if host is None else host
+        self._base_path = "https://production-dot-ocean-systems.uc.r.appspot.com/api" if host is None else host
         """Default Base url
         """
         self.server_index = 0 if server_index is None and host is None else server_index
@@ -389,7 +389,7 @@ class Configuration(object):
                "OS: {env}\n"\
                "Python Version: {pyversion}\n"\
                "Version of the API: 1.0.0\n"\
-               "SDK Package Version: 1.0.8".\
+               "SDK Package Version: 1.1.0".\
                format(env=sys.platform, pyversion=sys.version)
 
     def get_host_settings(self):
@@ -399,7 +399,7 @@ class Configuration(object):
         """
         return [
             {
-                'url': "https://ocean-systems.uc.r.appspot.com/api",
+                'url': "https://production-dot-ocean-systems.uc.r.appspot.com/api",
                 'description': "No description provided",
             }
         ]

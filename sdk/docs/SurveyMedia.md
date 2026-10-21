@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **float** |  | 
 **url** | **str** |  | 
+**thumbnail_url** | **str, none_type** |  | 
 **quality** | **float** |  | 
 **metadata** | **str** |  | 
 **comments** | **str, none_type** |  | 
@@ -15,7 +16,7 @@ Name | Type | Description | Notes
 **survey_id** | [**Survey**](Survey.md) |  | 
 **type** | **str** |  | 
 **survey_point_id** | **float** |  | 
-**survey_point** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | 
+**survey_point** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type** |  | 
 **created_at** | **datetime** |  | 
 **updated_at** | **datetime** |  | 
 **sensor_data** | [**SurveyMediaSensorData**](SurveyMediaSensorData.md) |  | [optional] 

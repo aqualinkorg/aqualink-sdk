@@ -129,6 +129,7 @@ class Survey(ModelNormal):
             'latest_daily_data': (DailyData,),  # noqa: E501
             'survey_points': ([SiteSurveyPoint],),  # noqa: E501
             'observations': ([str],),  # noqa: E501
+            'satellite_temperature': (float,),  # noqa: E501
         }
 
     @cached_property
@@ -153,6 +154,7 @@ class Survey(ModelNormal):
         'latest_daily_data': 'latestDailyData',  # noqa: E501
         'survey_points': 'surveyPoints',  # noqa: E501
         'observations': 'observations',  # noqa: E501
+        'satellite_temperature': 'satelliteTemperature',  # noqa: E501
     }
 
     read_only_vars = {
@@ -214,6 +216,7 @@ class Survey(ModelNormal):
             latest_daily_data (DailyData): [optional]  # noqa: E501
             survey_points ([SiteSurveyPoint]): [optional]  # noqa: E501
             observations ([str]): [optional]  # noqa: E501
+            satellite_temperature (float): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -321,6 +324,7 @@ class Survey(ModelNormal):
             latest_daily_data (DailyData): [optional]  # noqa: E501
             survey_points ([SiteSurveyPoint]): [optional]  # noqa: E501
             observations ([str]): [optional]  # noqa: E501
+            satellite_temperature (float): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

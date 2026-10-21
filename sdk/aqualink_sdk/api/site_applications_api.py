@@ -39,7 +39,7 @@ class SiteApplicationsApi(object):
         self.api_client = api_client
         self.site_applications_controller_find_one_from_site_endpoint = _Endpoint(
             settings={
-                'response_type': (SiteApplication,),
+                'response_type': None,
                 'auth': [
                     'bearer'
                 ],
@@ -192,7 +192,7 @@ class SiteApplicationsApi(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            SiteApplication
+            None
                 If the method is called asynchronously, returns the request
                 thread.
         """

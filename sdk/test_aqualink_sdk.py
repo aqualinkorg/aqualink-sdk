@@ -5,9 +5,6 @@ from pprint import pprint
 
 import aqualink_sdk
 from aqualink_sdk.api import aggregate_api, sites_api, time_series_api
-from aqualink_sdk.model.exclude_spotter_dates_dto import ExcludeSpotterDatesDto
-from aqualink_sdk.model.inline_response404 import InlineResponse404
-from aqualink_sdk.model.inline_response400 import InlineResponse400
 
 
 def test_sdk():
@@ -17,9 +14,11 @@ def test_sdk():
         site_data = site_api.sites_controller_find()
         pprint(site_data)
 
-        # get live data
-        live_data = site_api.sites_controller_find_live_data(id=1045)
-        pprint(live_data)
+        # get site + latest data
+        site = site_api.sites_controller_find_one(id=1045)
+        pprint(site)
+        latest_data = site_api.sites_controller_find_latest_data(id=1045)
+        pprint(latest_data)
 
         # Get available date ranges
         ts_api = time_series_api.TimeSeriesApi()

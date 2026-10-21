@@ -32,22 +32,24 @@ from aqualink_sdk.exceptions import ApiAttributeError
 def lazy_import():
     from aqualink_sdk.model.collection_data_dto import CollectionDataDto
     from aqualink_sdk.model.historical_monthly_mean import HistoricalMonthlyMean
+    from aqualink_sdk.model.reef_check_site import ReefCheckSite
+    from aqualink_sdk.model.reef_check_survey import ReefCheckSurvey
     from aqualink_sdk.model.region import Region
     from aqualink_sdk.model.site_application import SiteApplication
-    from aqualink_sdk.model.sofar_live_data_dto import SofarLiveDataDto
+    from aqualink_sdk.model.sketch_fab import SketchFab
     from aqualink_sdk.model.survey import Survey
     from aqualink_sdk.model.user import User
     from aqualink_sdk.model.user_location import UserLocation
-    from aqualink_sdk.model.video_stream import VideoStream
     globals()['CollectionDataDto'] = CollectionDataDto
     globals()['HistoricalMonthlyMean'] = HistoricalMonthlyMean
+    globals()['ReefCheckSite'] = ReefCheckSite
+    globals()['ReefCheckSurvey'] = ReefCheckSurvey
     globals()['Region'] = Region
     globals()['SiteApplication'] = SiteApplication
-    globals()['SofarLiveDataDto'] = SofarLiveDataDto
+    globals()['SketchFab'] = SketchFab
     globals()['Survey'] = Survey
     globals()['User'] = User
     globals()['UserLocation'] = UserLocation
-    globals()['VideoStream'] = VideoStream
 
 
 class Site(ModelNormal):
@@ -83,6 +85,7 @@ class Site(ModelNormal):
             'DEPLOYED': "deployed",
             'MAINTENANCE': "maintenance",
             'LOST': "lost",
+            'END_OF_LIFE': "end_of_life",
         },
     }
 
@@ -116,7 +119,9 @@ class Site(ModelNormal):
             'name': (str, none_type,),  # noqa: E501
             'sensor_id': (str, none_type,),  # noqa: E501
             'polygon': (UserLocation,),  # noqa: E501
+            'nearest_noaa_location': (UserLocation,),  # noqa: E501
             'depth': (float, none_type,),  # noqa: E501
+            'iframe': (str, none_type,),  # noqa: E501
             'max_monthly_mean': (float, none_type,),  # noqa: E501
             'timezone': (str, none_type,),  # noqa: E501
             'status': (str,),  # noqa: E501
@@ -124,15 +129,19 @@ class Site(ModelNormal):
             'display': (bool,),  # noqa: E501
             'created_at': (datetime,),  # noqa: E501
             'updated_at': (datetime,),  # noqa: E501
-            'region': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'stream': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'region': ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type,),  # noqa: E501
             'admins': ([User],),  # noqa: E501
-            'has_hobo': (bool,),  # noqa: E501
+            'reef_check_sites': ([ReefCheckSite],),  # noqa: E501
             'surveys': ([Survey],),  # noqa: E501
+            'reef_check_surveys': ([ReefCheckSurvey],),  # noqa: E501
             'historical_monthly_mean': ([HistoricalMonthlyMean],),  # noqa: E501
+            'has_seaphox': (bool,),  # noqa: E501
+            'sketch_fab': ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type,),  # noqa: E501
             'site_application': (SiteApplication,),  # noqa: E501
-            'live_data': ([SofarLiveDataDto],),  # noqa: E501
+            'has_hobo': (bool,),  # noqa: E501
             'collection_data': (CollectionDataDto,),  # noqa: E501
+            'masked_spotter_api_token': (str,),  # noqa: E501
+            'water_quality_sources': ([str],),  # noqa: E501
         }
 
     @cached_property
@@ -145,7 +154,9 @@ class Site(ModelNormal):
         'name': 'name',  # noqa: E501
         'sensor_id': 'sensorId',  # noqa: E501
         'polygon': 'polygon',  # noqa: E501
+        'nearest_noaa_location': 'nearestNOAALocation',  # noqa: E501
         'depth': 'depth',  # noqa: E501
+        'iframe': 'iframe',  # noqa: E501
         'max_monthly_mean': 'maxMonthlyMean',  # noqa: E501
         'timezone': 'timezone',  # noqa: E501
         'status': 'status',  # noqa: E501
@@ -154,14 +165,18 @@ class Site(ModelNormal):
         'created_at': 'createdAt',  # noqa: E501
         'updated_at': 'updatedAt',  # noqa: E501
         'region': 'region',  # noqa: E501
-        'stream': 'stream',  # noqa: E501
         'admins': 'admins',  # noqa: E501
-        'has_hobo': 'hasHobo',  # noqa: E501
+        'reef_check_sites': 'reefCheckSites',  # noqa: E501
         'surveys': 'surveys',  # noqa: E501
+        'reef_check_surveys': 'reefCheckSurveys',  # noqa: E501
         'historical_monthly_mean': 'historicalMonthlyMean',  # noqa: E501
+        'has_seaphox': 'hasSeaphox',  # noqa: E501
+        'sketch_fab': 'sketchFab',  # noqa: E501
         'site_application': 'siteApplication',  # noqa: E501
-        'live_data': 'liveData',  # noqa: E501
+        'has_hobo': 'hasHobo',  # noqa: E501
         'collection_data': 'collectionData',  # noqa: E501
+        'masked_spotter_api_token': 'maskedSpotterApiToken',  # noqa: E501
+        'water_quality_sources': 'waterQualitySources',  # noqa: E501
     }
 
     read_only_vars = {
@@ -171,7 +186,7 @@ class Site(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, id, name, sensor_id, polygon, depth, max_monthly_mean, timezone, status, video_stream, display, created_at, updated_at, region, stream, admins, has_hobo, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, name, sensor_id, polygon, nearest_noaa_location, depth, iframe, max_monthly_mean, timezone, status, video_stream, display, created_at, updated_at, region, admins, *args, **kwargs):  # noqa: E501
         """Site - a model defined in OpenAPI
 
         Args:
@@ -179,7 +194,9 @@ class Site(ModelNormal):
             name (str, none_type):
             sensor_id (str, none_type):
             polygon (UserLocation):
+            nearest_noaa_location (UserLocation):
             depth (float, none_type):
+            iframe (str, none_type):
             max_monthly_mean (float, none_type):
             timezone (str, none_type):
             status (str):
@@ -187,10 +204,8 @@ class Site(ModelNormal):
             display (bool):
             created_at (datetime):
             updated_at (datetime):
-            region (bool, date, datetime, dict, float, int, list, str, none_type):
-            stream (bool, date, datetime, dict, float, int, list, str, none_type):
+            region ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type):
             admins ([User]):
-            has_hobo (bool):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -223,11 +238,17 @@ class Site(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
+            reef_check_sites ([ReefCheckSite]): [optional]  # noqa: E501
             surveys ([Survey]): [optional]  # noqa: E501
+            reef_check_surveys ([ReefCheckSurvey]): [optional]  # noqa: E501
             historical_monthly_mean ([HistoricalMonthlyMean]): [optional]  # noqa: E501
+            has_seaphox (bool): [optional]  # noqa: E501
+            sketch_fab ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type): [optional]  # noqa: E501
             site_application (SiteApplication): [optional]  # noqa: E501
-            live_data ([SofarLiveDataDto]): [optional]  # noqa: E501
+            has_hobo (bool): [optional]  # noqa: E501
             collection_data (CollectionDataDto): [optional]  # noqa: E501
+            masked_spotter_api_token (str): [optional]  # noqa: E501
+            water_quality_sources ([str]): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -259,7 +280,9 @@ class Site(ModelNormal):
         self.name = name
         self.sensor_id = sensor_id
         self.polygon = polygon
+        self.nearest_noaa_location = nearest_noaa_location
         self.depth = depth
+        self.iframe = iframe
         self.max_monthly_mean = max_monthly_mean
         self.timezone = timezone
         self.status = status
@@ -268,9 +291,7 @@ class Site(ModelNormal):
         self.created_at = created_at
         self.updated_at = updated_at
         self.region = region
-        self.stream = stream
         self.admins = admins
-        self.has_hobo = has_hobo
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \
@@ -291,7 +312,7 @@ class Site(ModelNormal):
     ])
 
     @convert_js_args_to_python_args
-    def __init__(self, id, name, sensor_id, polygon, depth, max_monthly_mean, timezone, status, video_stream, display, created_at, updated_at, region, stream, admins, has_hobo, *args, **kwargs):  # noqa: E501
+    def __init__(self, id, name, sensor_id, polygon, nearest_noaa_location, depth, iframe, max_monthly_mean, timezone, status, video_stream, display, created_at, updated_at, region, admins, *args, **kwargs):  # noqa: E501
         """Site - a model defined in OpenAPI
 
         Args:
@@ -299,7 +320,9 @@ class Site(ModelNormal):
             name (str, none_type):
             sensor_id (str, none_type):
             polygon (UserLocation):
+            nearest_noaa_location (UserLocation):
             depth (float, none_type):
+            iframe (str, none_type):
             max_monthly_mean (float, none_type):
             timezone (str, none_type):
             status (str):
@@ -307,10 +330,8 @@ class Site(ModelNormal):
             display (bool):
             created_at (datetime):
             updated_at (datetime):
-            region (bool, date, datetime, dict, float, int, list, str, none_type):
-            stream (bool, date, datetime, dict, float, int, list, str, none_type):
+            region ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type):
             admins ([User]):
-            has_hobo (bool):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -343,11 +364,17 @@ class Site(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
+            reef_check_sites ([ReefCheckSite]): [optional]  # noqa: E501
             surveys ([Survey]): [optional]  # noqa: E501
+            reef_check_surveys ([ReefCheckSurvey]): [optional]  # noqa: E501
             historical_monthly_mean ([HistoricalMonthlyMean]): [optional]  # noqa: E501
+            has_seaphox (bool): [optional]  # noqa: E501
+            sketch_fab ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type): [optional]  # noqa: E501
             site_application (SiteApplication): [optional]  # noqa: E501
-            live_data ([SofarLiveDataDto]): [optional]  # noqa: E501
+            has_hobo (bool): [optional]  # noqa: E501
             collection_data (CollectionDataDto): [optional]  # noqa: E501
+            masked_spotter_api_token (str): [optional]  # noqa: E501
+            water_quality_sources ([str]): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -377,7 +404,9 @@ class Site(ModelNormal):
         self.name = name
         self.sensor_id = sensor_id
         self.polygon = polygon
+        self.nearest_noaa_location = nearest_noaa_location
         self.depth = depth
+        self.iframe = iframe
         self.max_monthly_mean = max_monthly_mean
         self.timezone = timezone
         self.status = status
@@ -386,9 +415,7 @@ class Site(ModelNormal):
         self.created_at = created_at
         self.updated_at = updated_at
         self.region = region
-        self.stream = stream
         self.admins = admins
-        self.has_hobo = has_hobo
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \

@@ -102,19 +102,19 @@ class CollectionDataDto(ModelNormal):
 
 
     attribute_map = {
-        'bottom_temperature': 'bottom_temperature',  # noqa: E501
-        'top_temperature': 'top_temperature',  # noqa: E501
-        'satellite_temperature': 'satellite_temperature',  # noqa: E501
+        'bottom_temperature': 'bottomTemperature',  # noqa: E501
+        'top_temperature': 'topTemperature',  # noqa: E501
+        'satellite_temperature': 'satelliteTemperature',  # noqa: E501
         'dhw': 'dhw',  # noqa: E501
-        'temp_alert': 'temp_alert',  # noqa: E501
-        'temp_weekly_alert': 'temp_weekly_alert',  # noqa: E501
-        'sst_anomaly': 'sst_anomaly',  # noqa: E501
-        'significant_wave_height': 'significant_wave_height',  # noqa: E501
-        'wave_mean_direction': 'wave_mean_direction',  # noqa: E501
-        'wave_mean_period': 'wave_mean_period',  # noqa: E501
-        'wave_peak_period': 'wave_peak_period',  # noqa: E501
-        'wind_direction': 'wind_direction',  # noqa: E501
-        'wind_speed': 'wind_speed',  # noqa: E501
+        'temp_alert': 'tempAlert',  # noqa: E501
+        'temp_weekly_alert': 'tempWeeklyAlert',  # noqa: E501
+        'sst_anomaly': 'sstAnomaly',  # noqa: E501
+        'significant_wave_height': 'significantWaveHeight',  # noqa: E501
+        'wave_mean_direction': 'waveMeanDirection',  # noqa: E501
+        'wave_mean_period': 'waveMeanPeriod',  # noqa: E501
+        'wave_peak_period': 'wavePeakPeriod',  # noqa: E501
+        'wind_direction': 'windDirection',  # noqa: E501
+        'wind_speed': 'windSpeed',  # noqa: E501
     }
 
     read_only_vars = {

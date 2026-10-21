@@ -107,6 +107,7 @@ class SurveyMedia(ModelNormal):
         return {
             'id': (float,),  # noqa: E501
             'url': (str,),  # noqa: E501
+            'thumbnail_url': (str, none_type,),  # noqa: E501
             'quality': (float,),  # noqa: E501
             'metadata': (str,),  # noqa: E501
             'comments': (str, none_type,),  # noqa: E501
@@ -116,7 +117,7 @@ class SurveyMedia(ModelNormal):
             'survey_id': (Survey,),  # noqa: E501
             'type': (str,),  # noqa: E501
             'survey_point_id': (float,),  # noqa: E501
-            'survey_point': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'survey_point': ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type,),  # noqa: E501
             'created_at': (datetime,),  # noqa: E501
             'updated_at': (datetime,),  # noqa: E501
             'sensor_data': (SurveyMediaSensorData,),  # noqa: E501
@@ -130,6 +131,7 @@ class SurveyMedia(ModelNormal):
     attribute_map = {
         'id': 'id',  # noqa: E501
         'url': 'url',  # noqa: E501
+        'thumbnail_url': 'thumbnailUrl',  # noqa: E501
         'quality': 'quality',  # noqa: E501
         'metadata': 'metadata',  # noqa: E501
         'comments': 'comments',  # noqa: E501
@@ -152,12 +154,13 @@ class SurveyMedia(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, id, url, quality, metadata, comments, featured, hidden, observations, survey_id, type, survey_point_id, survey_point, created_at, updated_at, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, url, thumbnail_url, quality, metadata, comments, featured, hidden, observations, survey_id, type, survey_point_id, survey_point, created_at, updated_at, *args, **kwargs):  # noqa: E501
         """SurveyMedia - a model defined in OpenAPI
 
         Args:
             id (float):
             url (str):
+            thumbnail_url (str, none_type):
             quality (float):
             metadata (str):
             comments (str, none_type):
@@ -167,7 +170,7 @@ class SurveyMedia(ModelNormal):
             survey_id (Survey):
             type (str):
             survey_point_id (float):
-            survey_point (bool, date, datetime, dict, float, int, list, str, none_type):
+            survey_point ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type):
             created_at (datetime):
             updated_at (datetime):
 
@@ -232,6 +235,7 @@ class SurveyMedia(ModelNormal):
 
         self.id = id
         self.url = url
+        self.thumbnail_url = thumbnail_url
         self.quality = quality
         self.metadata = metadata
         self.comments = comments
@@ -264,12 +268,13 @@ class SurveyMedia(ModelNormal):
     ])
 
     @convert_js_args_to_python_args
-    def __init__(self, id, url, quality, metadata, comments, featured, hidden, observations, survey_id, type, survey_point_id, survey_point, created_at, updated_at, *args, **kwargs):  # noqa: E501
+    def __init__(self, id, url, thumbnail_url, quality, metadata, comments, featured, hidden, observations, survey_id, type, survey_point_id, survey_point, created_at, updated_at, *args, **kwargs):  # noqa: E501
         """SurveyMedia - a model defined in OpenAPI
 
         Args:
             id (float):
             url (str):
+            thumbnail_url (str, none_type):
             quality (float):
             metadata (str):
             comments (str, none_type):
@@ -279,7 +284,7 @@ class SurveyMedia(ModelNormal):
             survey_id (Survey):
             type (str):
             survey_point_id (float):
-            survey_point (bool, date, datetime, dict, float, int, list, str, none_type):
+            survey_point ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type):
             created_at (datetime):
             updated_at (datetime):
 
@@ -342,6 +347,7 @@ class SurveyMedia(ModelNormal):
 
         self.id = id
         self.url = url
+        self.thumbnail_url = thumbnail_url
         self.quality = quality
         self.metadata = metadata
         self.comments = comments

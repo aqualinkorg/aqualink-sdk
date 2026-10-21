@@ -198,7 +198,7 @@ class CollectionsApi(object):
         )
         self.collections_controller_find_one_endpoint = _Endpoint(
             settings={
-                'response_type': (Collection,),
+                'response_type': None,
                 'auth': [
                     'bearer'
                 ],
@@ -249,7 +249,7 @@ class CollectionsApi(object):
         )
         self.collections_controller_find_one_public_endpoint = _Endpoint(
             settings={
-                'response_type': (Collection,),
+                'response_type': None,
                 'auth': [],
                 'endpoint_path': '/collections/public/{collectionId}',
                 'operation_id': 'collections_controller_find_one_public',
@@ -392,7 +392,7 @@ class CollectionsApi(object):
         )
         self.collections_controller_update_endpoint = _Endpoint(
             settings={
-                'response_type': (Collection,),
+                'response_type': None,
                 'auth': [
                     'bearer'
                 ],
@@ -722,7 +722,7 @@ class CollectionsApi(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            Collection
+            None
                 If the method is called asynchronously, returns the request
                 thread.
         """
@@ -799,7 +799,7 @@ class CollectionsApi(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            Collection
+            None
                 If the method is called asynchronously, returns the request
                 thread.
         """
@@ -1024,7 +1024,7 @@ class CollectionsApi(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            Collection
+            None
                 If the method is called asynchronously, returns the request
                 thread.
         """

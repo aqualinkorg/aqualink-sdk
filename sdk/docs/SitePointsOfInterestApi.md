@@ -1,6 +1,6 @@
 # aqualink_sdk.SitePointsOfInterestApi
 
-All URIs are relative to *https://ocean-systems.uc.r.appspot.com/api*
+All URIs are relative to *https://production-dot-ocean-systems.uc.r.appspot.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -27,10 +27,10 @@ from aqualink_sdk.api import site_points_of_interest_api
 from aqualink_sdk.model.site_survey_point import SiteSurveyPoint
 from aqualink_sdk.model.create_site_survey_point_dto import CreateSiteSurveyPointDto
 from pprint import pprint
-# Defining the host is optional and defaults to https://ocean-systems.uc.r.appspot.com/api
+# Defining the host is optional and defaults to https://production-dot-ocean-systems.uc.r.appspot.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = aqualink_sdk.Configuration(
-    host = "https://ocean-systems.uc.r.appspot.com/api"
+    host = "https://production-dot-ocean-systems.uc.r.appspot.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -109,10 +109,10 @@ import aqualink_sdk
 from aqualink_sdk.api import site_points_of_interest_api
 from aqualink_sdk.model.inline_response404 import InlineResponse404
 from pprint import pprint
-# Defining the host is optional and defaults to https://ocean-systems.uc.r.appspot.com/api
+# Defining the host is optional and defaults to https://production-dot-ocean-systems.uc.r.appspot.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = aqualink_sdk.Configuration(
-    host = "https://ocean-systems.uc.r.appspot.com/api"
+    host = "https://production-dot-ocean-systems.uc.r.appspot.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -164,7 +164,6 @@ void (empty response body)
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** |  |  -  |
 **404** | No site point of interest was found with the specified id |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -183,10 +182,10 @@ import aqualink_sdk
 from aqualink_sdk.api import site_points_of_interest_api
 from aqualink_sdk.model.site_survey_point import SiteSurveyPoint
 from pprint import pprint
-# Defining the host is optional and defaults to https://ocean-systems.uc.r.appspot.com/api
+# Defining the host is optional and defaults to https://production-dot-ocean-systems.uc.r.appspot.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = aqualink_sdk.Configuration(
-    host = "https://ocean-systems.uc.r.appspot.com/api"
+    host = "https://production-dot-ocean-systems.uc.r.appspot.com/api"
 )
 
 
@@ -238,7 +237,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **site_survey_points_controller_find_one**
-> SiteSurveyPoint site_survey_points_controller_find_one(id)
+> site_survey_points_controller_find_one(id)
 
 Returns specified site point of interest
 
@@ -249,13 +248,12 @@ Returns specified site point of interest
 import time
 import aqualink_sdk
 from aqualink_sdk.api import site_points_of_interest_api
-from aqualink_sdk.model.site_survey_point import SiteSurveyPoint
 from aqualink_sdk.model.inline_response404 import InlineResponse404
 from pprint import pprint
-# Defining the host is optional and defaults to https://ocean-systems.uc.r.appspot.com/api
+# Defining the host is optional and defaults to https://production-dot-ocean-systems.uc.r.appspot.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = aqualink_sdk.Configuration(
-    host = "https://ocean-systems.uc.r.appspot.com/api"
+    host = "https://production-dot-ocean-systems.uc.r.appspot.com/api"
 )
 
 
@@ -268,8 +266,7 @@ with aqualink_sdk.ApiClient() as api_client:
     # example passing only required values which don't have defaults set
     try:
         # Returns specified site point of interest
-        api_response = api_instance.site_survey_points_controller_find_one(id)
-        pprint(api_response)
+        api_instance.site_survey_points_controller_find_one(id)
     except aqualink_sdk.ApiException as e:
         print("Exception when calling SitePointsOfInterestApi->site_survey_points_controller_find_one: %s\n" % e)
 ```
@@ -283,7 +280,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SiteSurveyPoint**](SiteSurveyPoint.md)
+void (empty response body)
 
 ### Authorization
 
@@ -299,13 +296,12 @@ No authorization required
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** |  |  -  |
 **404** | No site point of interest was found with the specified id |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **site_survey_points_controller_update**
-> SiteSurveyPoint site_survey_points_controller_update(id, update_site_survey_point_dto)
+> site_survey_points_controller_update(id, update_site_survey_point_dto)
 
 Updates specified site point of interest
 
@@ -317,14 +313,13 @@ Updates specified site point of interest
 import time
 import aqualink_sdk
 from aqualink_sdk.api import site_points_of_interest_api
-from aqualink_sdk.model.site_survey_point import SiteSurveyPoint
 from aqualink_sdk.model.update_site_survey_point_dto import UpdateSiteSurveyPointDto
 from aqualink_sdk.model.inline_response404 import InlineResponse404
 from pprint import pprint
-# Defining the host is optional and defaults to https://ocean-systems.uc.r.appspot.com/api
+# Defining the host is optional and defaults to https://production-dot-ocean-systems.uc.r.appspot.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = aqualink_sdk.Configuration(
-    host = "https://ocean-systems.uc.r.appspot.com/api"
+    host = "https://production-dot-ocean-systems.uc.r.appspot.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -354,8 +349,7 @@ with aqualink_sdk.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         # Updates specified site point of interest
-        api_response = api_instance.site_survey_points_controller_update(id, update_site_survey_point_dto)
-        pprint(api_response)
+        api_instance.site_survey_points_controller_update(id, update_site_survey_point_dto)
     except aqualink_sdk.ApiException as e:
         print("Exception when calling SitePointsOfInterestApi->site_survey_points_controller_update: %s\n" % e)
 ```
@@ -370,7 +364,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SiteSurveyPoint**](SiteSurveyPoint.md)
+void (empty response body)
 
 ### Authorization
 
@@ -386,7 +380,6 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** |  |  -  |
 **404** | No site point of interest was found with the specified id |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

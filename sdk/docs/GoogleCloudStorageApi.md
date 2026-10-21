@@ -1,6 +1,6 @@
 # aqualink_sdk.GoogleCloudStorageApi
 
-All URIs are relative to *https://ocean-systems.uc.r.appspot.com/api*
+All URIs are relative to *https://production-dot-ocean-systems.uc.r.appspot.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -22,10 +22,10 @@ import time
 import aqualink_sdk
 from aqualink_sdk.api import google_cloud_storage_api
 from pprint import pprint
-# Defining the host is optional and defaults to https://ocean-systems.uc.r.appspot.com/api
+# Defining the host is optional and defaults to https://production-dot-ocean-systems.uc.r.appspot.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = aqualink_sdk.Configuration(
-    host = "https://ocean-systems.uc.r.appspot.com/api"
+    host = "https://production-dot-ocean-systems.uc.r.appspot.com/api"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -91,10 +91,10 @@ import time
 import aqualink_sdk
 from aqualink_sdk.api import google_cloud_storage_api
 from pprint import pprint
-# Defining the host is optional and defaults to https://ocean-systems.uc.r.appspot.com/api
+# Defining the host is optional and defaults to https://production-dot-ocean-systems.uc.r.appspot.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = aqualink_sdk.Configuration(
-    host = "https://ocean-systems.uc.r.appspot.com/api"
+    host = "https://production-dot-ocean-systems.uc.r.appspot.com/api"
 )
 
 # The client must configure the authentication and authorization parameters

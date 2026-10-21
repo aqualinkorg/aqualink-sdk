@@ -59,11 +59,34 @@ class UpdateSiteDto(ModelNormal):
     """
 
     allowed_values = {
+        ('status',): {
+            'IN_REVIEW': "in_review",
+            'REJECTED': "rejected",
+            'APPROVED': "approved",
+            'SHIPPED': "shipped",
+            'DEPLOYED': "deployed",
+            'MAINTENANCE': "maintenance",
+            'LOST': "lost",
+            'END_OF_LIFE': "end_of_life",
+        },
     }
 
     validations = {
         ('name',): {
             'max_length': 100,
+        },
+        ('sensor_id',): {
+            'max_length': 100,
+        },
+        ('spotter_api_token',): {
+            'max_length': 100,
+        },
+        ('contact_information',): {
+            'max_length': 100,
+        },
+        ('iframe',): {
+            'max_length': 200,
+            'min_length': 10,
         },
     }
 
@@ -94,9 +117,14 @@ class UpdateSiteDto(ModelNormal):
             'depth': (float,),  # noqa: E501
             'region_id': (float,),  # noqa: E501
             'admin_ids': ([float],),  # noqa: E501
-            'stream_id': (float,),  # noqa: E501
+            'sensor_id': (str,),  # noqa: E501
+            'spotter_api_token': (str, none_type,),  # noqa: E501
+            'status': (str,),  # noqa: E501
+            'contact_information': (str, none_type,),  # noqa: E501
+            'iframe': (str,),  # noqa: E501
             'coordinates': (Coordinates,),  # noqa: E501
-            'video_stream': (str,),  # noqa: E501
+            'video_stream': (str, none_type,),  # noqa: E501
+            'display': (bool,),  # noqa: E501
         }
 
     @cached_property
@@ -109,9 +137,14 @@ class UpdateSiteDto(ModelNormal):
         'depth': 'depth',  # noqa: E501
         'region_id': 'regionId',  # noqa: E501
         'admin_ids': 'adminIds',  # noqa: E501
-        'stream_id': 'streamId',  # noqa: E501
+        'sensor_id': 'sensorId',  # noqa: E501
+        'spotter_api_token': 'spotterApiToken',  # noqa: E501
+        'status': 'status',  # noqa: E501
+        'contact_information': 'contactInformation',  # noqa: E501
+        'iframe': 'iframe',  # noqa: E501
         'coordinates': 'coordinates',  # noqa: E501
         'video_stream': 'videoStream',  # noqa: E501
+        'display': 'display',  # noqa: E501
     }
 
     read_only_vars = {
@@ -159,9 +192,14 @@ class UpdateSiteDto(ModelNormal):
             depth (float): [optional]  # noqa: E501
             region_id (float): [optional]  # noqa: E501
             admin_ids ([float]): [optional]  # noqa: E501
-            stream_id (float): [optional]  # noqa: E501
+            sensor_id (str): [optional]  # noqa: E501
+            spotter_api_token (str, none_type): [optional]  # noqa: E501
+            status (str): [optional]  # noqa: E501
+            contact_information (str, none_type): [optional]  # noqa: E501
+            iframe (str): [optional]  # noqa: E501
             coordinates (Coordinates): [optional]  # noqa: E501
-            video_stream (str): [optional]  # noqa: E501
+            video_stream (str, none_type): [optional]  # noqa: E501
+            display (bool): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -247,9 +285,14 @@ class UpdateSiteDto(ModelNormal):
             depth (float): [optional]  # noqa: E501
             region_id (float): [optional]  # noqa: E501
             admin_ids ([float]): [optional]  # noqa: E501
-            stream_id (float): [optional]  # noqa: E501
+            sensor_id (str): [optional]  # noqa: E501
+            spotter_api_token (str, none_type): [optional]  # noqa: E501
+            status (str): [optional]  # noqa: E501
+            contact_information (str, none_type): [optional]  # noqa: E501
+            iframe (str): [optional]  # noqa: E501
             coordinates (Coordinates): [optional]  # noqa: E501
-            video_stream (str): [optional]  # noqa: E501
+            video_stream (str, none_type): [optional]  # noqa: E501
+            display (bool): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

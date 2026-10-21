@@ -1,10 +1,10 @@
 # aqualink_sdk.DataUploadsApi
 
-All URIs are relative to *https://ocean-systems.uc.r.appspot.com/api*
+All URIs are relative to *https://production-dot-ocean-systems.uc.r.appspot.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**data_uploads_controller_delete_data_uploads**](DataUploadsApi.md#data_uploads_controller_delete_data_uploads) | **POST** /data-uploads/delete-uploads | Delete selected data uploads
+[**data_uploads_controller_delete_data_uploads**](DataUploadsApi.md#data_uploads_controller_delete_data_uploads) | **POST** /data-uploads/sites/{siteId}/delete-uploads | Delete selected data uploads
 [**data_uploads_controller_get_data_uploads**](DataUploadsApi.md#data_uploads_controller_get_data_uploads) | **GET** /data-uploads/sites/{siteId} | Find all data uploads for a site&#39;s survey point
 
 
@@ -22,10 +22,10 @@ import aqualink_sdk
 from aqualink_sdk.api import data_uploads_api
 from aqualink_sdk.model.data_uploads_delete_dto import DataUploadsDeleteDto
 from pprint import pprint
-# Defining the host is optional and defaults to https://ocean-systems.uc.r.appspot.com/api
+# Defining the host is optional and defaults to https://production-dot-ocean-systems.uc.r.appspot.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = aqualink_sdk.Configuration(
-    host = "https://ocean-systems.uc.r.appspot.com/api"
+    host = "https://production-dot-ocean-systems.uc.r.appspot.com/api"
 )
 
 
@@ -75,7 +75,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **data_uploads_controller_get_data_uploads**
-> [DataUploads] data_uploads_controller_get_data_uploads(site_id)
+> [DataUploadsSites] data_uploads_controller_get_data_uploads(site_id)
 
 Find all data uploads for a site's survey point
 
@@ -86,12 +86,12 @@ Find all data uploads for a site's survey point
 import time
 import aqualink_sdk
 from aqualink_sdk.api import data_uploads_api
-from aqualink_sdk.model.data_uploads import DataUploads
+from aqualink_sdk.model.data_uploads_sites import DataUploadsSites
 from pprint import pprint
-# Defining the host is optional and defaults to https://ocean-systems.uc.r.appspot.com/api
+# Defining the host is optional and defaults to https://production-dot-ocean-systems.uc.r.appspot.com/api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = aqualink_sdk.Configuration(
-    host = "https://ocean-systems.uc.r.appspot.com/api"
+    host = "https://production-dot-ocean-systems.uc.r.appspot.com/api"
 )
 
 
@@ -119,7 +119,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[DataUploads]**](DataUploads.md)
+[**[DataUploadsSites]**](DataUploadsSites.md)
 
 ### Authorization
 

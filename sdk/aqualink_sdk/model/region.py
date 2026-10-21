@@ -92,7 +92,7 @@ class Region(ModelNormal):
             'id': (float,),  # noqa: E501
             'name': (str,),  # noqa: E501
             'polygon': (UserLocation,),  # noqa: E501
-            'parent': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'parent': ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type,),  # noqa: E501
             'created_at': (datetime,),  # noqa: E501
             'updated_at': (datetime,),  # noqa: E501
             'parent_id': (float,),  # noqa: E501
@@ -127,7 +127,7 @@ class Region(ModelNormal):
             id (float):
             name (str):
             polygon (UserLocation):
-            parent (bool, date, datetime, dict, float, int, list, str, none_type):
+            parent ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type):
             created_at (datetime):
             updated_at (datetime):
 
@@ -223,7 +223,7 @@ class Region(ModelNormal):
             id (float):
             name (str):
             polygon (UserLocation):
-            parent (bool, date, datetime, dict, float, int, list, str, none_type):
+            parent ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type):
             created_at (datetime):
             updated_at (datetime):
 

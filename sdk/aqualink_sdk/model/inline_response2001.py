@@ -30,8 +30,8 @@ from aqualink_sdk.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from aqualink_sdk.model.inline_response2001_sofar_wave_model import InlineResponse2001SofarWaveModel
-    globals()['InlineResponse2001SofarWaveModel'] = InlineResponse2001SofarWaveModel
+    from aqualink_sdk.model.inline_response2001_open_meteo import InlineResponse2001OpenMeteo
+    globals()['InlineResponse2001OpenMeteo'] = InlineResponse2001OpenMeteo
 
 
 class InlineResponse2001(ModelNormal):
@@ -87,13 +87,18 @@ class InlineResponse2001(ModelNormal):
         """
         lazy_import()
         return {
-            'sofar_wave_model': (InlineResponse2001SofarWaveModel,),  # noqa: E501
-            'metlog': (InlineResponse2001SofarWaveModel,),  # noqa: E501
-            'sonde': (InlineResponse2001SofarWaveModel,),  # noqa: E501
-            'spotter': (InlineResponse2001SofarWaveModel,),  # noqa: E501
-            'noaa': (InlineResponse2001SofarWaveModel,),  # noqa: E501
-            'hobo': (InlineResponse2001SofarWaveModel,),  # noqa: E501
-            'gfs': (InlineResponse2001SofarWaveModel,),  # noqa: E501
+            'open_meteo': (InlineResponse2001OpenMeteo,),  # noqa: E501
+            'seaphox': (InlineResponse2001OpenMeteo,),  # noqa: E501
+            'sheet_data': (InlineResponse2001OpenMeteo,),  # noqa: E501
+            'hwo': (InlineResponse2001OpenMeteo,),  # noqa: E501
+            'hui': (InlineResponse2001OpenMeteo,),  # noqa: E501
+            'sofar_model': (InlineResponse2001OpenMeteo,),  # noqa: E501
+            'metlog': (InlineResponse2001OpenMeteo,),  # noqa: E501
+            'sonde': (InlineResponse2001OpenMeteo,),  # noqa: E501
+            'spotter': (InlineResponse2001OpenMeteo,),  # noqa: E501
+            'noaa': (InlineResponse2001OpenMeteo,),  # noqa: E501
+            'hobo': (InlineResponse2001OpenMeteo,),  # noqa: E501
+            'gfs': (InlineResponse2001OpenMeteo,),  # noqa: E501
         }
 
     @cached_property
@@ -102,7 +107,12 @@ class InlineResponse2001(ModelNormal):
 
 
     attribute_map = {
-        'sofar_wave_model': 'sofar_wave_model',  # noqa: E501
+        'open_meteo': 'open_meteo',  # noqa: E501
+        'seaphox': 'seaphox',  # noqa: E501
+        'sheet_data': 'sheet_data',  # noqa: E501
+        'hwo': 'hwo',  # noqa: E501
+        'hui': 'hui',  # noqa: E501
+        'sofar_model': 'sofar_model',  # noqa: E501
         'metlog': 'metlog',  # noqa: E501
         'sonde': 'sonde',  # noqa: E501
         'spotter': 'spotter',  # noqa: E501
@@ -152,13 +162,18 @@ class InlineResponse2001(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            sofar_wave_model (InlineResponse2001SofarWaveModel): [optional]  # noqa: E501
-            metlog (InlineResponse2001SofarWaveModel): [optional]  # noqa: E501
-            sonde (InlineResponse2001SofarWaveModel): [optional]  # noqa: E501
-            spotter (InlineResponse2001SofarWaveModel): [optional]  # noqa: E501
-            noaa (InlineResponse2001SofarWaveModel): [optional]  # noqa: E501
-            hobo (InlineResponse2001SofarWaveModel): [optional]  # noqa: E501
-            gfs (InlineResponse2001SofarWaveModel): [optional]  # noqa: E501
+            open_meteo (InlineResponse2001OpenMeteo): [optional]  # noqa: E501
+            seaphox (InlineResponse2001OpenMeteo): [optional]  # noqa: E501
+            sheet_data (InlineResponse2001OpenMeteo): [optional]  # noqa: E501
+            hwo (InlineResponse2001OpenMeteo): [optional]  # noqa: E501
+            hui (InlineResponse2001OpenMeteo): [optional]  # noqa: E501
+            sofar_model (InlineResponse2001OpenMeteo): [optional]  # noqa: E501
+            metlog (InlineResponse2001OpenMeteo): [optional]  # noqa: E501
+            sonde (InlineResponse2001OpenMeteo): [optional]  # noqa: E501
+            spotter (InlineResponse2001OpenMeteo): [optional]  # noqa: E501
+            noaa (InlineResponse2001OpenMeteo): [optional]  # noqa: E501
+            hobo (InlineResponse2001OpenMeteo): [optional]  # noqa: E501
+            gfs (InlineResponse2001OpenMeteo): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -240,13 +255,18 @@ class InlineResponse2001(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            sofar_wave_model (InlineResponse2001SofarWaveModel): [optional]  # noqa: E501
-            metlog (InlineResponse2001SofarWaveModel): [optional]  # noqa: E501
-            sonde (InlineResponse2001SofarWaveModel): [optional]  # noqa: E501
-            spotter (InlineResponse2001SofarWaveModel): [optional]  # noqa: E501
-            noaa (InlineResponse2001SofarWaveModel): [optional]  # noqa: E501
-            hobo (InlineResponse2001SofarWaveModel): [optional]  # noqa: E501
-            gfs (InlineResponse2001SofarWaveModel): [optional]  # noqa: E501
+            open_meteo (InlineResponse2001OpenMeteo): [optional]  # noqa: E501
+            seaphox (InlineResponse2001OpenMeteo): [optional]  # noqa: E501
+            sheet_data (InlineResponse2001OpenMeteo): [optional]  # noqa: E501
+            hwo (InlineResponse2001OpenMeteo): [optional]  # noqa: E501
+            hui (InlineResponse2001OpenMeteo): [optional]  # noqa: E501
+            sofar_model (InlineResponse2001OpenMeteo): [optional]  # noqa: E501
+            metlog (InlineResponse2001OpenMeteo): [optional]  # noqa: E501
+            sonde (InlineResponse2001OpenMeteo): [optional]  # noqa: E501
+            spotter (InlineResponse2001OpenMeteo): [optional]  # noqa: E501
+            noaa (InlineResponse2001OpenMeteo): [optional]  # noqa: E501
+            hobo (InlineResponse2001OpenMeteo): [optional]  # noqa: E501
+            gfs (InlineResponse2001OpenMeteo): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
